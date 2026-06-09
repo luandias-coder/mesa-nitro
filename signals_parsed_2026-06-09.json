@@ -1,0 +1,185 @@
+{
+  "data": "2026-06-09",
+  "analista": "Merato Coelho",
+  "vencimento_padrao": "2026-07-17",
+  "resumo_analista": "Nenhuma virada de tendência hoje. Apenas atualização de preços das 20 posições em aberto. Nenhum ajuste de delta necessário (nenhuma batendo 100%). BRAP bateu 100% intraday (ajuste enviado pelo Tio Uli no Telegram, mas não replicado ao vivo). BRKM também bateu 100% intraday (confirmado por aluno no chat).",
+  "sinais": [],
+  "posicoes_em_aberto": [
+    {
+      "codigo_falado": "PRIO S (PUT, jul)",
+      "underlying": "PRIO3",
+      "tipo": "PUT",
+      "preco": 4.8,
+      "timestamp": "12:28",
+      "nota": "Último negócio 4,8 citado ao atualizar preços. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "PETR S (PUT, jul)",
+      "underlying": "PETR4",
+      "tipo": "PUT",
+      "preco": 2.13,
+      "timestamp": "12:35",
+      "nota": "Último negócio 2,13. Tendência de baixa, manter. Analista referenciou 'Pet S437'."
+    },
+    {
+      "codigo_falado": "MRVE S (PUT, jul)",
+      "underlying": "MRVE3",
+      "tipo": "PUT",
+      "preco": 0.57,
+      "timestamp": "12:45",
+      "nota": "Último negócio 57 centavos. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "MGLU S593",
+      "underlying": "MGLU3",
+      "tipo": "PUT",
+      "preco": 0.63,
+      "timestamp": "14:16",
+      "nota": "Código S593 citado explicitamente. Último negócio 63 centavos. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "BEEF S (PUT, jul)",
+      "underlying": "BEEF3",
+      "tipo": "PUT",
+      "preco": 0.14,
+      "timestamp": "13:14",
+      "nota": "Legenda 'bif'. Último negócio 14 centavos. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "USIM G (CALL, jul)",
+      "underlying": "USIM5",
+      "tipo": "CALL",
+      "preco": 0.23,
+      "timestamp": "13:33",
+      "nota": "Legenda 'Us Minas' / 'Use minas'. Tendência de alta, manter. 23 centavos."
+    },
+    {
+      "codigo_falado": "CYRE S (PUT, jul) / Cirela compra de PUT",
+      "underlying": "CYRE3",
+      "tipo": "PUT",
+      "preco": 0.84,
+      "timestamp": "13:46",
+      "nota": "Legenda 'Cirela'. Último negócio 84 centavos. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "EMBJ S693",
+      "underlying": "EMBJ3",
+      "tipo": "PUT",
+      "preco": 1.67,
+      "timestamp": "14:04",
+      "nota": "Código S693 citado explicitamente. Último negócio 1,67. Tendência de baixa, flag amarelo (quase virou). Manter."
+    },
+    {
+      "codigo_falado": "CSAN S (PUT, jul)",
+      "underlying": "CSAN3",
+      "tipo": "PUT",
+      "preco": 0.34,
+      "timestamp": "15:23",
+      "nota": "Legenda 'COSDAN' / 'cozan'. Último negócio 34 centavos. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "BRAP S (PUT, jul)",
+      "underlying": "BRAP4",
+      "tipo": "PUT",
+      "preco": 1.0,
+      "timestamp": "15:47",
+      "nota": "Último negócio R$1. Tendência de baixa, manter. Atingiu 100% intraday (1,26); ajuste enviado pelo Tio Uli no Telegram. Às 16:30 estava em 58% (voltou)."
+    },
+    {
+      "codigo_falado": "BOVA G (CALL, jul)",
+      "underlying": "BOVA11",
+      "tipo": "CALL",
+      "preco": 4.76,
+      "timestamp": "15:57",
+      "nota": "Legenda 'bova' / 'bovinha'. Vencimento G (jul). Último negócio 4,76. Operação recomendada pelo 'Tio Uli'. Manter."
+    },
+    {
+      "codigo_falado": "CSNA S610",
+      "underlying": "CSNA3",
+      "tipo": "PUT",
+      "preco": 0.43,
+      "timestamp": "16:08",
+      "nota": "Código S610 e strike 610 citados explicitamente. Legenda 'CSMA'. Último negócio 43 centavos. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "BRKM S (PUT, jul)",
+      "underlying": "BRKM5",
+      "tipo": "PUT",
+      "preco": 0.68,
+      "timestamp": "16:18",
+      "nota": "Legenda 'Brasquen'. Último negócio 68 centavos. Tendência de baixa, manter. Aluno confirmou no chat que bateu 100% intraday."
+    },
+    {
+      "codigo_falado": "CMIN S (PUT, jul)",
+      "underlying": "CMIN3",
+      "tipo": "PUT",
+      "preco": 0.22,
+      "timestamp": "16:34",
+      "nota": "Legenda 'Sem' / 'Semin' / 'PR'. Último negócio 22 centavos. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "LREN S (PUT, jul)",
+      "underlying": "LREN3",
+      "tipo": "PUT",
+      "preco": 0.7,
+      "timestamp": "16:46",
+      "nota": "Legenda 'Lojas Renner'. Último negócio 70 centavos. Tendência de baixa; quase virou intraday mas voltou. Flag amarelo. Manter."
+    },
+    {
+      "codigo_falado": "BRAV G (CALL, jul)",
+      "underlying": "BRAV3",
+      "tipo": "CALL",
+      "preco": 0.81,
+      "timestamp": "17:00",
+      "nota": "Legenda 'brave G'. Último negócio 81 centavos. Tendência de alta, manter."
+    },
+    {
+      "codigo_falado": "WEGE G447",
+      "underlying": "WEGE3",
+      "tipo": "CALL",
+      "preco": 1.15,
+      "timestamp": "17:11",
+      "nota": "Legenda 'Vegemos' / 'Veg'. Código G447 citado. Entrada ontem (virada de tendência). Último negócio 1,15. Tendência de alta, manter."
+    },
+    {
+      "codigo_falado": "COGN S (PUT, jul)",
+      "underlying": "COGN3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "17:16",
+      "nota": "Legenda 'Cogna'. Tendência de baixa, manter. Preço não capturado claramente no transcript."
+    },
+    {
+      "codigo_falado": "RENT S (PUT, jul)",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": 1.55,
+      "timestamp": "17:37",
+      "nota": "Legenda 'Localiza'. Último negócio 1,55. Tendência de baixa, manter."
+    },
+    {
+      "codigo_falado": "MBRF S (PUT, jul)",
+      "underlying": "MBRF3",
+      "tipo": "PUT",
+      "preco": 0.73,
+      "timestamp": "18:03",
+      "nota": "Último negócio 0,73 centavos. Tendência de baixa, manter."
+    }
+  ],
+  "avisos": [
+    "NENHUMA virada de tendência ocorreu no fechamento de 09/06/2026. Nenhuma operação nova (entrada) foi gerada ao vivo.",
+    "BRAP (BRAP4): atingiu 100% de lucro intraday (preço ~1,26 vs entrada ~0,63). O 'Tio Uli' enviou alerta no Telegram durante o pregão. Às 16:30 já havia voltado para ~58%. Ajuste de delta NÃO foi executado ao vivo nesta sessão.",
+    "BRKM5 (Brasquen/BRKM): aluno confirmou no chat que também bateu 100% intraday. Não foi possível confirmar código exato da opção pelo transcript.",
+    "WEGE3 (Veg): transcript cita 'Veg G447' (CALL G447) como entrada de ontem (08/06/2026). Alunos que não fizeram ontem foram orientados a vender WEGE S (PUT anterior) e comprar WEGE G447 amanhã (10/06).",
+    "EMBJ3 (Embraer S693): flag amarelo — tendência quase virou intraday mas não confirmou. Código S693 citado explicitamente.",
+    "LREN3 (Lojas Renner): flag amarelo — tendência quase virou durante o pregão mas voltou. Código exato da PUT não mencionado.",
+    "CSNA3: código S610 e strike 610 citados explicitamente pelo analista. Confirmado.",
+    "MGLU3: código S593 citado explicitamente pelo analista.",
+    "PETR4: analista cita 'Pet S437' como código atual (PUT S437). Código R anteriormente citado por aluno já foi encerrado/rolado.",
+    "Legenda embolou 'bif' = BEEF3; 'brasquen/brasquen' = BRKM5; 'Us Minas/Use minas/Z Minas' = USIM5; 'cirela/siri' = CYRE3; 'cozan/CZ/COSDAN' = CSAN3; 'brave G' = BRAV3; 'Veg/Vegemos' = WEGE3; 'Sem/Semin/PR' = CMIN3.",
+    "BOVA11: vencimento G (julho) confirmado pelo analista. Operação originalmente recomendada pelo 'Tio Uli'.",
+    "Rentabilidade acumulada da sala citada: ~1943-1966% (desde início do ano passado).",
+    "Todas as 20 posições estão no vencimento G (julho/2026), após rolagem recente das que venciam em 10 dias."
+  ],
+  "fonte": "live_youtube"
+}
