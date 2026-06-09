@@ -18,3 +18,6 @@ logs/
 .DS_Store
 *.mp4
 subs*/
+
+# vercel
+web/.vercel/

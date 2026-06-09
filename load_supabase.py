@@ -33,14 +33,21 @@ def main():
     req("POST", "/rest/v1/lives", lives, prefer="resolution=merge-duplicates")
     print("lives:", len(lives))
 
-    # sinais — replace tudo (histórico completo)
+    # sinais — replace tudo; enriquece linhas do dia com campos ricos (preço atual/motivo/rel)
     req("DELETE", "/rest/v1/sinais?id=gt.0")
+    rich = {(t["data"], t.get("codigo"), t.get("acao"), t.get("ts")): t for t in data["today"]}
     sinais = []
     for h in data["history"]:
-        sinais.append({k: h.get(k) for k in ("data", "ts", "acao", "underlying", "tipo",
-                       "codigo", "strike", "vencimento", "preco", "conf", "link")})
-        sinais[-1]["preco_limite"] = sinais[-1].pop("preco")
-        sinais[-1]["vencimento"] = (h.get("venc") or None)
+        t = rich.get((h.get("data"), h.get("codigo"), h.get("acao"), h.get("ts")), {})
+        rel = t.get("rel") or {}
+        sinais.append({
+            "data": h.get("data"), "ts": h.get("ts"), "acao": h.get("acao"),
+            "underlying": h.get("underlying"), "tipo": h.get("tipo"), "codigo": h.get("codigo"),
+            "strike": h.get("strike"), "vencimento": h.get("venc") or None,
+            "preco_limite": h.get("preco"), "conf": h.get("conf"), "link": h.get("link"),
+            "preco_atual": t.get("atual"), "delta": t.get("delta"), "metodo": t.get("metodo"),
+            "motivo": t.get("motivo"), "rel_codigo": rel.get("codigo"), "rel_preco": rel.get("preco"),
+        })
     # chunked insert
     for i in range(0, len(sinais), 200):
         req("POST", "/rest/v1/sinais", sinais[i:i+200])
