@@ -23,10 +23,12 @@ async function loadAll(){{
     sbGet("posicoes_analista?select=*"),
     sbGet("execucoes_usuario?select=*")]);
   const latest=lives.length?lives[lives.length-1]:{{}};
-  DATA.meta={{data_latest:latest.data,analista:latest.analista,lives:lives.length,n_pos:pos.length}};
+  const datasComOps=[...new Set(sin.map(s=>s.data))].sort();
+  const filaData=datasComOps.length?datasComOps[datasComOps.length-1]:latest.data;
+  DATA.meta={{data_latest:latest.data,fila_data:filaData,hoje_manutencao:(filaData!==latest.data),analista:latest.analista,lives:lives.length,n_pos:pos.length}};
   DATA.portfolio=pos.map(p=>({{underlying:p.underlying,tipo:p.tipo,codigo:p.codigo,strike:p.strike,venc:p.vencimento,entry:p.entry,atual:p.atual,conf:p.conf,metodo:p.metodo,pnl_real:p.pnl_real}}));
   DATA.history=sin.map(s=>({{data:s.data,ts:s.ts,acao:s.acao,underlying:s.underlying,tipo:s.tipo,codigo:s.codigo,strike:s.strike,venc:s.vencimento,preco:s.preco_limite,conf:s.conf,link:s.link}}));
-  DATA.today=sin.filter(s=>s.data===latest.data).map(s=>({{id:s.data+"__"+s.codigo+"__"+s.acao+"__"+s.ts,data:s.data,ts:s.ts,acao:s.acao,underlying:s.underlying,tipo:s.tipo,codigo:s.codigo,strike:s.strike,venc:s.vencimento,limite:s.preco_limite,atual:s.preco_atual,delta:s.delta,conf:s.conf,metodo:s.metodo,motivo:s.motivo,link:s.link,rel:s.rel_codigo?{{codigo:s.rel_codigo,preco:s.rel_preco}}:null}}));
+  DATA.today=sin.filter(s=>s.data===filaData).map(s=>({{id:s.data+"__"+s.codigo+"__"+s.acao+"__"+s.ts,data:s.data,ts:s.ts,acao:s.acao,underlying:s.underlying,tipo:s.tipo,codigo:s.codigo,strike:s.strike,venc:s.vencimento,limite:s.preco_limite,atual:s.preco_atual,delta:s.delta,conf:s.conf,metodo:s.metodo,motivo:s.motivo,link:s.link,rel:s.rel_codigo?{{codigo:s.rel_codigo,preco:s.rel_preco}}:null}}));
   store={{}}; exe.forEach(e=>{{store[e.op_id]={{status:e.status,preco:e.preco_pago,qtd:e.qtd}};}});
 }}
 async function save(){{
