@@ -51,6 +51,9 @@ new_init = "marketStatus();setInterval(marketStatus,60000);loadAll().then(()=>{d
 t = t.replace(old_init, new_init)
 
 t = t.replace("sua carteira salva neste navegador (localStorage)", "sua carteira no Supabase (nuvem)")
+import json as _json
+_cfg = _json.load(open("config.json")) if os.path.exists("config.json") else {"pool":12000,"caixa_pct":0.25,"peso_pct":0.05,"lote":100}
+t = t.replace("/*__CFG__*/", _json.dumps(_cfg))
 os.makedirs("web", exist_ok=True)
 open("web/index.html", "w").write(t)
 print("OK -> web/index.html", len(t), "bytes")

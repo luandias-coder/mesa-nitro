@@ -1,0 +1,7 @@
+{
+  "pool": 12000,
+  "caixa_pct": 0.25,
+  "peso_pct": 0.05,
+  "lote": 100,
+  "_nota": "pool=capital total; caixa_pct=reserva p/ rolagens; peso_pct=alvo por posição; teto aplicado = pool*(1-caixa_pct). Editável."
+}
