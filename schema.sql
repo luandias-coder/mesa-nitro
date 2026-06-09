@@ -74,3 +74,22 @@ drop policy if exists p_read_sinais on sinais;          create policy p_read_sin
 drop policy if exists p_read_pos on posicoes_analista;  create policy p_read_pos on posicoes_analista for select using (true);
 drop policy if exists p_read_lives on lives;            create policy p_read_lives on lives for select using (true);
 drop policy if exists p_all_exec on execucoes_usuario;  create policy p_all_exec on execucoes_usuario for all using (true) with check (true);
+
+-- fila de ordens (o "gate" humano): dashboard cria pendente → humano aprova → bridge executa no MT5
+create table if not exists ordens (
+  id            bigint generated always as identity primary key,
+  op_id         text,                 -- referência à operação da live
+  conta         text default 'demo',  -- demo | real
+  codigo        text not null,        -- ticker B3 da opção (ex: WEGEG447)
+  acao          text not null,        -- comprar | vender
+  volume        numeric not null,     -- contratos
+  preco_limite  numeric,              -- ordem limitada (nunca a mercado por padrão)
+  status        text default 'pendente', -- pendente | aprovada | executada | erro | cancelada
+  ticket        bigint,               -- ticket do fill no MT5
+  preco_exec    numeric,              -- preço executado
+  resultado     text,                 -- mensagem (retcode/erro)
+  criado_em     timestamptz default now(),
+  atualizado_em timestamptz default now()
+);
+alter table ordens enable row level security;
+drop policy if exists p_all_ordens on ordens; create policy p_all_ordens on ordens for all using (true) with check (true);
