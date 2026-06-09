@@ -1,8 +1,7 @@
 name: captura-diaria
 on:
-  # schedule DESLIGADO até resolver bloqueio YouTube de datacenter (usar cookies/runner residencial)
-  # schedule:
-  #   - cron: '40 21 * * 1-5'
+  schedule:
+    - cron: '40 21 * * 1-5'      # 18:40 BRT (UTC-3) = 21:40 UTC, dias úteis
   workflow_dispatch: {}           # botão de teste manual
 concurrency:
   group: captura
@@ -23,15 +22,23 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
+      - name: Runtime JS (deno) p/ desafio do player YouTube
+        uses: denoland/setup-deno@v2
+        with: { deno-version: v2.x }
       - name: Instalar deps
-        run: pip install -q yt-dlp bgutil-ytdlp-pot-provider anthropic pyyaml
+        run: pip install -q -U yt-dlp bgutil-ytdlp-pot-provider anthropic pyyaml
       - name: Provider PO token (espera subir)
         run: for i in $(seq 1 15); do curl -sf http://127.0.0.1:4416/ping && break || sleep 2; done
-      - name: Achar vídeo do dia (ou usar input)
+      - name: Cookies do YouTube (opcional, se o secret existir)
+        env: { YTC: '${{ secrets.YOUTUBE_COOKIES }}' }
+        run: |
+          if [ -n "$YTC" ]; then printf '%s\n' "$YTC" > cookies.txt; echo "cookies.txt criado ($(wc -l < cookies.txt) linhas)"; else echo "sem cookies (tentando cookieless: deno + PO token)"; fi
+      - name: Achar vídeo do dia
         id: vid
         run: |
+          [ -s cookies.txt ] && CK="--cookies cookies.txt" || CK=""
           DDMM=$(TZ=America/Sao_Paulo date +%d/%m); ISO=$(TZ=America/Sao_Paulo date +%F)
-          VID=$(yt-dlp --flat-playlist --print '%(id)s|%(title)s' "$PLAYLIST" 2>/dev/null | grep -F "$DDMM" | head -1 | cut -d'|' -f1)
+          VID=$(yt-dlp $CK --flat-playlist --print '%(id)s|%(title)s' "$PLAYLIST" 2>/dev/null | grep -F "$DDMM" | head -1 | cut -d'|' -f1)
           echo "iso=$ISO" >> $GITHUB_OUTPUT
           echo "vid=$VID" >> $GITHUB_OUTPUT
           echo "Vídeo de $DDMM: ${VID:-nenhum}"
@@ -40,8 +47,9 @@ jobs:
         run: |
           set -e
           ISO=${{ steps.vid.outputs.iso }}; VID=${{ steps.vid.outputs.vid }}
+          [ -s cookies.txt ] && CK="--cookies cookies.txt" || CK=""
           mkdir -p subs
-          yt-dlp --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID"
+          yt-dlp $CK --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID"
           python vtt_to_transcript.py "subs/$VID.pt-orig.vtt" "transcript_${ISO}.txt"
           python - "$ISO" "$VID" <<'PY'
           import json,sys,os
@@ -52,10 +60,11 @@ jobs:
           python parser.py "transcript_${ISO}.txt" --data "$ISO" --out "signals_parsed_${ISO}.json"
           python resolver.py "signals_parsed_${ISO}.json" --out "signals_resolved_${ISO}.json"
           python load_supabase.py
-      - name: Commit dados do dia (não dispara rebuild do web/)
+      - name: Commit dados do dia
         if: steps.vid.outputs.vid != ''
         run: |
           git config user.name "Luan Dias"; git config user.email "luan.dias@lxlbusiness.com"
+          rm -f cookies.txt
           git add signals_*_*.json transcript_*.txt videos.json 2>/dev/null || true
           git commit -m "dados ${{ steps.vid.outputs.iso }} [skip vercel]" || echo "nada a commitar"
           git push || echo "push falhou (segue)"
