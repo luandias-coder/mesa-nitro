@@ -1,0 +1,60 @@
+name: captura-diaria
+on:
+  schedule:
+    - cron: '40 21 * * 1-5'      # 18:40 BRT (UTC-3) = 21:40 UTC, dias úteis
+  workflow_dispatch: {}           # botão de teste manual
+concurrency:
+  group: captura
+  cancel-in-progress: false
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    services:
+      pot:
+        image: brainicism/bgutil-ytdlp-pot-provider:latest
+        ports: ['4416:4416']
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SECRET: ${{ secrets.SUPABASE_SECRET }}
+      PLAYLIST: 'https://www.youtube.com/playlist?list=PLBXPCoq0WOd7zEXdiGj_I61SmJ-Ces94p'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Instalar deps
+        run: pip install -q yt-dlp bgutil-ytdlp-pot-provider anthropic pyyaml
+      - name: Provider PO token (espera subir)
+        run: for i in $(seq 1 15); do curl -sf http://127.0.0.1:4416/ping && break || sleep 2; done
+      - name: Achar vídeo do dia (ou usar input)
+        id: vid
+        run: |
+          DDMM=$(TZ=America/Sao_Paulo date +%d/%m); ISO=$(TZ=America/Sao_Paulo date +%F)
+          VID=$(yt-dlp --flat-playlist --print '%(id)s|%(title)s' "$PLAYLIST" 2>/dev/null | grep -F "$DDMM" | head -1 | cut -d'|' -f1)
+          echo "iso=$ISO" >> $GITHUB_OUTPUT
+          echo "vid=$VID" >> $GITHUB_OUTPUT
+          echo "Vídeo de $DDMM: ${VID:-nenhum}"
+      - name: Captura + pipeline
+        if: steps.vid.outputs.vid != ''
+        run: |
+          set -e
+          ISO=${{ steps.vid.outputs.iso }}; VID=${{ steps.vid.outputs.vid }}
+          mkdir -p subs
+          yt-dlp --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID"
+          python vtt_to_transcript.py "subs/$VID.pt-orig.vtt" "transcript_${ISO}.txt"
+          python - "$ISO" "$VID" <<'PY'
+          import json,sys,os
+          iso,vid=sys.argv[1],sys.argv[2]
+          d=json.load(open("videos.json")) if os.path.exists("videos.json") else {}
+          d[iso]=vid; json.dump(d,open("videos.json","w"),indent=2,ensure_ascii=False)
+          PY
+          python parser.py "transcript_${ISO}.txt" --data "$ISO" --out "signals_parsed_${ISO}.json"
+          python resolver.py "signals_parsed_${ISO}.json" --out "signals_resolved_${ISO}.json"
+          python load_supabase.py
+      - name: Commit dados do dia (não dispara rebuild do web/)
+        if: steps.vid.outputs.vid != ''
+        run: |
+          git config user.name "Luan Dias"; git config user.email "luan.dias@lxlbusiness.com"
+          git add signals_*_*.json transcript_*.txt videos.json 2>/dev/null || true
+          git commit -m "dados ${{ steps.vid.outputs.iso }} [skip vercel]" || echo "nada a commitar"
+          git push || echo "push falhou (segue)"
