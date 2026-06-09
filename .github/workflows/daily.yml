@@ -1,7 +1,8 @@
 name: captura-diaria
 on:
-  schedule:
-    - cron: '40 21 * * 1-5'      # 18:40 BRT (UTC-3) = 21:40 UTC, dias úteis
+  # schedule DESLIGADO até resolver bloqueio YouTube de datacenter (usar cookies/runner residencial)
+  # schedule:
+  #   - cron: '40 21 * * 1-5'
   workflow_dispatch: {}           # botão de teste manual
 concurrency:
   group: captura
