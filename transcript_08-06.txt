@@ -1,0 +1,1250 @@
+0:01	Fala galera, sejam bem-vindos a mais um
+0:03	fechamento aqui nosso da sala nitro.
+0:07	Vamos lá galera, vamos para cima. Hoje,
+0:09	dia 8 de junho de 2026, agora exatamente
+0:13	16:30,
+0:16	pessoal. Vamos lá, vamos chegando aí,
+0:18	vamos nos acomodando. Turma toda ao
+0:22	vivo.
+0:23	Show de bola, galera. Espero que tenha
+0:26	passado aí um bom final de semana.
+0:29	Beleza? Beleza, boa tarde a todos,
+0:31	galera. Vamos lá, vamos seguir o fluxo.
+0:33	Se você não me conhece, meu nome é
+0:35	Merato Coelho, eu sou analista de
+0:36	Valores Imobiliários e eu estou aqui com
+0:38	vocês, estarei com vocês de hoje até na
+0:42	sexta-feira, fazendo aqui o fechamento
+0:44	da nossa sala nito. Então, como que eu
+0:47	toco a banda aqui com vocês, né, galera?
+0:50	Eu faço da seguinte forma. Primeiro eu
+0:52	vou compartilhar aqui a nossa planilha
+0:56	e através da planilha compartilhada eu
+0:59	vou dar uma olhada em todas as operações
+1:02	aqui já na nossa planilha. Beleza?
+1:07	Beleza.
+1:09	E aí, galera, eu vou olhar o gráfico,
+1:11	vou olhar a planilha e nós vamos
+1:13	capturar aqui juntos mudanças da
+1:16	tendência, né? Então, quando a
+1:18	tendência, o indicador nitro acusa para
+1:21	nós
+1:23	uma tendência de alta,
+1:26	nós vamos estar comprados em calls. E
+1:29	quando o indicador nitro acusa uma
+1:31	tendência de baixa, nós vamos estar
+1:34	comprados em puts. Beleza?
+1:38	Então, turma, vamos lá. Beleza? Vamos
+1:41	olhar aqui ativo por ativo. Fechado.
+1:45	Então, galera, vamos lá. Vamos aqui já
+1:47	compartilhar a nossa planilha, ó.
+1:50	Planilha na tela. Temos aqui todos os
+1:52	filtros das operações em aberto. Então,
+1:55	vamos filtrar aqui todas as operações em
+1:57	aberto. Pessoal, temos aqui 20 operações
+2:00	em aberto. Por quê? Nós temos uma
+2:03	operação também aqui em BOVA, que é uma
+2:05	compra de call, que foi uma recomendação
+2:08	aqui do tio Wi para vocês. Beleza?
+2:10	Então, por isso nós temos 20 operações
+2:14	por enquanto. Então, vamos lá, galera.
+2:16	Primeiro passo, eu vou passar todas as
+2:17	empresas, identificar a tendência e ver
+2:20	se tá na tendência vigente e depois a
+2:22	gente passa aqui atualizando os valores.
+2:25	Então, qual que é a primeira empresa
+2:27	aqui da nossa lista, pessoal? Temos aqui
+2:29	uma compra de [&nbsp;__&nbsp;] dentro de Cogna, né?
+2:33	Então, vamos lá ver. Cógna.
+2:36	Cogna segue na tendência de baixa, né?
+2:39	Meu Deus. Segue na tendência de baixa.
+2:43	Show de bola. Mantemos, né?
+2:46	Temos também a nossa localiza.
+2:51	Localiza segue também dentro da
+2:54	tendência de baixa. Beleza? Nada a se
+2:58	fazer também. Temos também a nossa
+3:01	Brave, que é uma compra de call.
+3:05	Brave 3. A Brave, pessoal, pelo
+3:08	vencimento de Brave, eu vou fazer aqui
+3:10	com vocês o que nós chamamos de rolagem,
+3:14	que é trocar o vencimento dessa opção.
+3:17	Por várias opções aqui do tipo call, nós
+3:20	já estamos pro vencimento G,
+3:24	G de goiaba e a BRAVE é a única que tem
+3:28	aqui vencimento F. Então o que que eu
+3:30	vou fazer com vocês? Eu vou encerrar
+3:32	essa brave e vou comprar uma brave de
+3:34	vencimento G, beleza? Então fica aqui
+3:37	comigo que eu vou fazer junto com vocês.
+3:39	Então nós vamos pegar essa brave, nós
+3:42	vamos vender ela,
+3:45	beleza? Ela agora, pessoal, tá saindo
+3:48	aqui a 94,
+3:50	tá? Então eu vou vender essa brava aqui
+3:52	a 94,
+3:55	beleza? Vou encerrar ela hoje
+3:59	e eu vou comprar uma nova.
+4:03	Vou comprar uma nova. Não é uma nova
+4:06	operação, pessoal. Isso aqui é apenas
+4:09	uma rolagem. Eu estou saindo de um
+4:12	vencimento e indo para outro vencimento.
+4:16	Beleza?
+4:18	Beleza,
+4:19	beleza, beleza. Então, a Brave, pessoal,
+4:22	vou fazer aqui a rolagem dessa opção do
+4:25	tipo call e vou comprar aqui uma nova
+4:29	brave, tá? Vou aqui em estratégia de
+4:31	opções.
+4:34	Brave 3 não é nova recomendação, tá
+4:37	pessoal? É apenas uma rolagem para quem
+4:40	já estava posicionado.
+4:43	Vou pegar aqui para 30 dias.
+4:49	E vou comprar aqui, deixa eu ver por
+4:50	quanto que eu saí dessa Brave. Saí a,
+4:54	vou comprar uma de mesmo valor aqui, né?
+4:57	Eu vou pegar aqui, galera, essa Brave.
+5:00	Vou pegar essa G215, tá?
+5:05	G215, saindo a 70 centavos, tá? Bravo G
+5:09	215.
+5:12	Brav G 215.
+5:15	compra de call
+5:18	hoje, dia 8, né,
+5:22	tá indo aí a 70 centavos operação em
+5:26	aberto. Então, galera, eu fiz
+5:27	basicamente aqui o que nós chamamos de
+5:30	rolagem, tá? Rolagem, beleza? Não é nova
+5:34	recomendação, é para quem já estava
+5:37	posicionado. Beleza?
+5:40	Então, galera, vamos seguindo aqui.
+5:42	Deixa eu só resetar o profit aqui,
+5:44	galera. Tô sentindo que ele tá meio
+5:46	lento. Redundância, né? Porque ele
+5:48	sempre tá lento, né? Mas deixa eu
+5:50	resetar ele aqui.
+5:56	Beleza,
+5:58	ó. Beleza. Então, galera, BRAV tomamos
+6:02	aí as devidas providências dentro de
+6:04	BRAV.
+6:06	Beleza, né? Agora, pessoal, temos aqui a
+6:09	nossa MBRF, que é uma compra de [&nbsp;__&nbsp;]
+6:15	Beleza. Tendência de baixa também, né?
+6:17	Show de bola. Aqui na nossa MBRF,
+6:22	show de bola. Temos a PR, compra de [&nbsp;__&nbsp;]
+6:29	beleza? Também tendência de baixa dentro
+6:32	da Pri. Temos a Petrobras,
+6:38	show de bola. Tendência de baixa. Depois
+6:40	a gente vai conferir aqui os valores,
+6:42	né?
+6:43	Temos a MRV, que é compra de [&nbsp;__&nbsp;]
+6:47	MRV. Pessoal, eu já vou atualizar aqui o
+6:49	preço de MRV porque pode ser que já
+6:52	esteja aqui próximo a fazer um ajuste de
+6:55	delta, né? Papel tá caindo forte no dia
+6:58	de hoje. Então a MRV, estamos aqui na
+7:01	S580,
+7:03	né? Eu vou colocar aqui o valor dela
+7:08	saindo aqui a 59 centavos agora dentro
+7:10	aqui da nossa boleta de compra, né?
+7:13	Então 59 centavos será que cabe ajuste?
+7:17	Pô, quase, né? Mas ainda não. Vamos
+7:19	esperar, né? Vamos esperar. Beleza.
+7:24	Vamos esperar aqui um pouquinho, mas a
+7:25	MRV querendo aqui dar em breve um
+7:28	ajuste. Magalu, compra de [&nbsp;__&nbsp;] também.
+7:34	Show de bola. Magalu também segue na
+7:36	tendência de queda, né?
+7:39	Bif e veg.
+7:42	Bif segue na tendência de queda. Show de
+7:45	bola.
+7:47	Veg e tendência de queda que tá virando
+7:52	hoje, né? Ó, aqui a veg, pessoal, nós já
+7:54	temos aqui o que fazer hoje, né? Temos
+7:57	uma virada de tendência dentro da veg.
+7:59	Eu vou deixar aqui em amarelo para que a
+8:02	gente faça juntos.
+8:05	Beleza?
+8:07	Beleza.
+8:09	Us em Minas temos uma compra de call.
+8:14	Beleza, né,
+8:16	meu amigo? Que plataformazinha
+8:19	difícil.
+8:21	Tendência de alta aqui dentro da US
+8:23	Minas, né? Beleza.
+8:25	Cirela. Compra de [&nbsp;__&nbsp;]
+8:29	Beleza. Também tendência de queda.
+8:34	Show de bola.
+8:36	Embraer. Tendência.
+8:41	Ó, galera, quase virou hoje aqui dentro
+8:44	da Imbraer, né? Quase virando aqui a
+8:48	tendência dentro de Imbraer, mas não
+8:49	virou, tá, pessoal? Então, eu vou apenas
+8:52	colocar um amarelinho aqui pra gente
+8:53	poder olhar mais no final do mercado,
+8:55	né?
+8:57	Note aqui que chegou a virar a
+8:58	tendência, mas não confirmou, né? Não
+9:01	confirmou.
+9:03	Temos também aqui a nossa CZAN, que é
+9:05	uma compra de [&nbsp;__&nbsp;]
+9:09	Beleza, né? A Can, galera, deixa eu dar
+9:11	uma olhada também que o papel hoje tá
+9:13	caindo 4%, então pode ser que caiba aqui
+9:17	um ajuste na nossa S 360, né?
+9:24	Saindo a 31 centavos.
+9:27	Ainda não, né? Ainda não. Vamos aí
+9:30	manter ela.
+9:33	Continuando, pessoal, temos aqui a BRAP,
+9:35	que é uma compra de [&nbsp;__&nbsp;]
+9:38	Bradespar. Deixa eu dar uma olhadinha
+9:40	também nessa Bradespar aqui,
+9:43	porque pode ser que caiba um ajuste, tá?
+9:46	Na S224,
+9:51	saindo a 1 e 14, tá pessoal? Então a 1 e
+9:56	14 ainda não cabe ajuste, né? Então
+9:59	vamos manter por enquanto.
+10:01	Bova é uma operação que nós estamos
+10:03	fazendo a parte no BOVA, tá?
+10:07	E temos aqui as TSNA,
+10:13	compra de [&nbsp;__&nbsp;] dentro da CSNA, beleza,
+10:15	né? Tendência de baixa também. Temos a
+10:19	Brasken, que é uma compra de [&nbsp;__&nbsp;]
+10:23	beleza? Também tendência de queda,
+10:27	semin, compra de [&nbsp;__&nbsp;]
+10:31	beleza? Também tendência de queda,
+10:34	lojas Renner
+10:36	também tendência de baixa, né?
+10:41	E também temos aqui a nossa Brave, que é
+10:43	uma compra de call, que nós já fizemos
+10:46	hoje o ajuste dela. Então, turma, o que
+10:48	que nós temos para hoje aqui? A veg, né?
+10:51	Vamos fazer aqui juntos a operação de
+10:53	Veg. Qual que é o primeiro passo?
+10:55	Primeiro passo é encerrar a operação
+10:58	existente, né?
+11:00	Então, para quem estava em vag, você
+11:03	precisa vender hoje a sua [&nbsp;__&nbsp;] S44.
+11:08	Beleza? Então, vou usar aqui a minha
+11:11	boleta para ver o valor. Ó, ela tá
+11:14	saindo a 74 centavos. nós vamos vender
+11:17	ela por esse valor de 74,
+11:21	tá? Beleza?
+11:25	E agora, pessoal, o que que nós
+11:26	precisamos fazer? Depois de encerrado
+11:28	aqui a nossa querida Veg, nós precisamos
+11:32	agora comprar uma call de vag, né? Por
+11:35	quê? Olha aqui o nosso indicador nito na
+11:38	veg
+11:40	hoje saiu da tendência de queda, foi
+11:43	para uma tendência de alta, né? Então eu
+11:46	preciso vir aqui na grade de opções,
+11:49	comprar uma opção acima de 20 dias úteis
+11:52	para veg, eu vou pegar o vencimento de
+11:54	julho, comprar essa cola aqui de veg, eu
+11:58	vou pegar aqui a vag 447, tá? Vag G.
+12:03	Essa pessoal, todos vocês precisam
+12:06	entrar nela. Todos vocês precisam
+12:08	entrar. Beleza?
+12:12	Fechado.
+12:16	Veg G
+12:18	447.
+12:20	Compra de call. É a nossa operação que
+12:23	teve virada hoje, né? O valor dela tá
+12:26	saindo aqui a 1,72.
+12:30	Essa operação, pessoal, todos vocês
+12:32	podem entrar, tá? Isso aqui é uma virada
+12:34	de tendência.
+12:37	Então, abram aí a boleta de compra,
+12:40	digitem aí vag 447, saindo nesse momento
+12:44	aqui a 170. Cuidado para vocês não
+12:47	entrarem a mercado, tá? Entrem sempre aí
+12:50	com uma ordem limite. Que que é ordem
+12:52	limite? Você vai digitar que você quer
+12:54	comprar a 1,72, a 1,71 e você vai
+12:58	subindos centavos de pouco em pouco, tá?
+13:01	Se você abrir a ordem a mercado, pode
+13:03	ser que você agrida o book de ofertas.
+13:06	Beleza?
+13:09	Então é a operação que nós temos aqui
+13:11	para hoje é a nossa querida Veg. Tá bom,
+13:15	galera? Tinha uma outra que é a Imraer
+13:18	que ameaçou virar, mas não virou, né?
+13:21	Acredito que a Veg, tá? Desculpa, a
+13:24	Imraer, tá? Acredito que não vai virar
+13:27	hoje, tá?
+13:28	Não vai virar. Então, turma, dito isso,
+13:32	vamos aqui fazer o
+13:36	o controle dos preços, né? Vamos fazer
+13:39	aqui o controle dos preços. Vou
+13:41	atualizar todos os preços e depois aqui
+13:43	eu venho na nas perguntas de vocês,
+13:46	beleza?
+13:49	Tem algumas opções aqui, pessoal. Deixa
+13:51	eu dar uma olhada nessa cogna.
+13:58	Cógna 3.
+14:02	Essa opção vencimento R,
+14:05	faltam 10 dias. Esta opção, pessoal,
+14:08	deixa eu ver aqui qual que tá o valor
+14:09	dela.
+14:14	Cogna R30, ela tá saindo a 26.
+14:20	Que que eu vou fazer com vocês aqui em
+14:22	cgna, pessoal? Eu já vou jogar essa
+14:24	cógna para
+14:27	o vencimento
+14:29	de
+14:31	julho, tá? Então o que que eu vou fazer
+14:32	aqui incógna, pessoal? Eu vou vender o
+14:35	vencimento R. Eu vou vender aqui a cogna
+14:38	R303,
+14:40	saindo a 26 centavos, tá?
+14:44	Eu vou encerrar a cogna e eu já vou
+14:46	rolar essa cogna pro vencimento S.
+14:49	Beleza? Então eu vou vender a cogna R.
+14:52	Olha aqui a cógna, pessoal, tendência de
+14:54	queda.
+14:56	Então, quem está posicionado na cógna já
+14:59	pode fazer esse ajuste aqui junto
+15:00	comigo, tá? Você vai sair do vencimento
+15:03	R e vai agora junto comigo comprar uma
+15:06	cogna R.
+15:08	Por que que eu tô fazendo isso, pessoal?
+15:10	A mesma postura de Brave.
+15:14	Quero ter mais dias para vencimento, tá?
+15:18	Qual opção que eu vou pegar, galera?
+15:20	Deixa eu ver se eu acho aqui uma de 16
+15:22	centavos.
+15:26	Ó, eu vou pegar aqui a cogna S 273, tá?
+15:30	Cógna S 273, beleza?
+15:36	Cogna S273,
+15:40	compra de [&nbsp;__&nbsp;] data de hoje,
+15:44	saindo aqui a 13 centavos, tá? Então,
+15:47	galera, eu fiz uma rolagem,
+15:52	uma rolagem de cóg, beleza?
+15:56	Temos uma outra aqui que tem um
+15:58	vencimento também, R, que é a localiza.
+16:01	Vamos dar uma olhada nela aqui.
+16:05	Rente TR,
+16:08	galera. Localiza também. Eu já vou jogar
+16:11	pro próximo vencimento, tá? Estamos na
+16:14	R433.
+16:15	Deixa eu ver aqui qual que foi o valor
+16:17	dela agora, né? 2,68.
+16:24	2,68.
+16:26	Galera, eu também já vou encerrar essa
+16:29	operação aqui de localiza e vou jogar
+16:32	ela para o vencimento S para que eu
+16:35	ganhe mais tempo dentro dessa operação.
+16:38	Como eu comprei essa opção a 2,10 e tô
+16:41	vendendo agora a 268, eu quero rolar
+16:44	pagando no máximo 2,10 para que eu não
+16:47	desenvolve, né? E fique aqui com leve
+16:50	lucro dos 268 que eu vendi, tá? Então,
+16:54	galera, eu vou aqui na grade de opções e
+16:58	vou comprar uma rente S.
+17:05	Ó, eu vou comprar aqui 2,10, né?
+17:09	Deixa eu ver se eu acho uma opção aqui
+17:11	nessa linha, pô. Acho até mais barato.
+17:14	Eu vou pegar a rent 403.
+17:22	Rente S.
+17:23	403
+17:25	compra de [&nbsp;__&nbsp;] tá? Então, galera, mais
+17:29	uma rolagem. Isso não é operação nova, é
+17:32	operação para quem já está posicionado,
+17:36	tá? É operação para quem já está
+17:40	posicionado. Beleza? Que que eu fiz?
+17:43	Eliminei vencimentos,
+17:46	vencimentos perto de 10 dias úteis e tô
+17:49	jogando sem custo para 30 dias úteis.
+17:52	Tá, fizemos aqui em três empresas, tem a
+17:55	MBRF que dá paraa gente fazer também,
+17:57	né?
+18:02	MBRF,
+18:06	ó, MBRF, pessoal, essa nossa [&nbsp;__&nbsp;] que é a
+18:10	R167,
+18:11	ela tá saindo a 1,54.
+18:15	Pô, ótima rolagem também, né? Porque já
+18:18	tem 71% de lucro. Então, galera, o que
+18:21	que eu vou fazer? Eu também vou rolar
+18:24	essa operação
+18:26	para o próximo vencimento. Lembrando,
+18:30	lembrando, são operações para quem já
+18:33	está posicionado, beleza?
+18:38	Para quem já está posicionado.
+18:40	Então, nós vamos comprar aqui, pessoal,
+18:42	a MBRFS.
+18:47	Galera, se você é iniciante, você não
+18:49	precisa estar fazendo essas operações.
+18:53	Para quem é iniciante, a operação de
+18:55	veg,
+18:57	beleza?
+19:00	A MBRF eu vou comprar essa S151, tá?
+19:07	MBRF S151.
+19:18	Beleza, galera. Pô, já fizemos aqui
+19:20	basicamente todas as rolagens
+19:23	necessárias para os vencimentos aqui
+19:26	próximos, né?
+19:29	Beleza.
+19:34	Perfeito, né?
+19:36	Perfeito.
+19:43	Então, pessoal, resumo. Se você tá
+19:46	começando agora, qual é a operação para
+19:48	você fazer hoje? A operação de vegante
+19:54	é para comprar a vag47,
+19:58	tá? Veg447.
+20:04	Beleza?
+20:08	Vamos atualizar aqui os preços da das
+20:10	outras, pessoal, pra gente depois
+20:13	responder aqui as dúvidas.
+20:16	Ó, Pri 650. Vamos atualizar o preço dela
+20:22	e aí eu já vou responder as dúvidas de
+20:25	vocês, tá?
+20:27	369, o último valor dela.
+20:32	Temos a Pets 437.
+20:36	Vamos ver aqui o último valor dela.
+20:40	2,8
+20:45	MV MRV.
+20:47	Vamos atualizar aqui também o valor. Eu
+20:49	já tinha atualizado, né? Mas vamos
+20:51	atualizar novamente. 057.
+20:59	Magalu, compra de putos.
+21:09	Aqui, galera, eu só tô atualizando os
+21:11	preços, tá?
+21:14	Bif.
+21:16	O que tinha para fazer hoje, nós já
+21:18	fizemos 14 centavos.
+21:24	Veg, encerramos.
+21:27	Use Minas
+21:33	28 centavos.
+21:36	Beleza,
+21:38	Cirela.
+21:41	Estou apenas atualizando os preços aqui,
+21:44	pessoal, para deixar a planilha
+21:45	atualizada.
+21:50	Embraer,
+21:52	deixa eu ver seer virou aqui, né?
+21:54	Acredito que não. Não virou, né?
+21:57	Não virou.
+22:02	Quase que a gente faz duas operações
+22:04	hoje, mas não foi o caso.
+22:08	1,45.
+22:13	Cosan. Vamos atualizar aqui o preço
+22:16	também.
+22:17	31 centavos. Atualizei. Brapp
+22:28	também.
+22:30	Bra
+22:35	4:48
+22:40	CSN.
+22:45	Finalizando aqui, já vou responder todas
+22:47	as perguntas, pessoal. Tô apenas
+22:49	atualizando os preços. Tudo que era para
+22:52	ser feito de operação hoje já foi feito,
+22:54	tá?
+22:57	79 centavos.
+23:02	Semim
+23:08	24 centavos
+23:12	e a nossa lojas Renner
+23:18	75 centavos.
+23:21	Beleza, pera aí. 75.
+23:24	Todas as operações, galera, para quem é
+23:26	novo, tem que entrar na vag47,
+23:32	tá? Veg447.
+23:35	As demais são todas rolagens, como eu
+23:38	expliquei aqui para vocês, tá? Como eu
+23:40	expliquei aqui para vocês, tá bom?
+23:45	Vamos lá, galera, vamos responder as
+23:47	perguntas, ó.
+23:49	Vou cravar o negócio na pedra aqui para
+23:51	vocês. 90% das perguntas que eu vou
+23:54	responder são dúvidas que já estão
+23:55	gravadas em aulas gravadas e vocês estão
+23:59	perdendo tempo de tá executando, de est
+24:03	assistindo os conteúdos de base e estão
+24:05	repetindo perguntas, tá pessoal? Por que
+24:07	que eu tô falando isso aqui? Eu tô
+24:08	falando de coração, tá? Eu tô falando
+24:10	com o maior coração do mundo aqui. Você
+24:13	precisa assistir as aulas de base.
+24:17	Você precisa assistir as aulas de base,
+24:20	pessoal.
+24:23	Beleza? Eu tenho o maior coração do
+24:25	mundo aqui para responder todos vocês,
+24:27	cara. Mas muitas perguntas que vocês
+24:28	fazem, pessoal, é pergunta de ou chegou
+24:32	atrasado e não voltou à aula ou não
+24:35	assistiu o conteúdo de base. Beleza?
+24:40	poderia fazer gentileza de analisar
+24:41	essas opções.
+24:44	Veg, mudamos hoje a tendência. Susana, a
+24:47	gente não opera e em Braer e a gente tá
+24:50	na [&nbsp;__&nbsp;] ainda. Beleza,
+24:56	show de bola, galera. Boa tarde. Boa
+24:58	tarde. Não vou passar os boa tardes
+24:59	aqui, tá? Vou só passar aqui pelas
+25:01	perguntas.
+25:03	Já nos orienta aqui o que fazer com o
+25:04	Ibov que pediu para comprar. Pode
+25:06	manter. Beleza.
+25:09	Essa semana iremos rolar. Rolamos aqui.
+25:12	Beleza. Flank Punkle.
+25:15	Não consegui comprar Siri S
+25:19	204.
+25:24	Cara, Cirela foi do dia 3, cara. Hoje é
+25:27	dia 8, irmão.
+25:30	Hoje é dia 8.
+25:33	Eu deixaria para entrar nas novas, tá?
+25:35	Essa operação aí já passou, cara.
+25:40	Vamos para cima. Tamos junto.
+25:44	Se eu compro uma opção de [&nbsp;__&nbsp;] e ela cai,
+25:46	eu não deveria ganhar. Mas aqui nos
+25:48	dados da corretora está o contrário.
+25:50	Então você precisa que a ação caia, tá,
+25:52	Vittor? Se a se o valor da sua puto,
+25:56	é sinal que a sua [&nbsp;__&nbsp;] está
+25:58	desvalorizando. Por exemplo, comprei uma
+26:00	[&nbsp;__&nbsp;] a 50 centavos e essa [&nbsp;__&nbsp;] tá 40
+26:03	centavos, eu tô perdendo dinheiro. Eu
+26:06	ganho dinheiro quando eu compro uma
+26:07	opção por um preço e vendo ela mais
+26:09	cara, tá?
+26:12	Essa confusão ela é totalmente normal,
+26:14	porque você acha que a [&nbsp;__&nbsp;] caindo é o
+26:17	ativo caindo, mas não, né? Quando eu
+26:19	compro uma [&nbsp;__&nbsp;] de Petrobras, por
+26:21	exemplo, eu quero que Petrobras caia.
+26:24	Quero que Petrobras caia,
+26:27	tá? Então, se Petrobras subir, ficar de
+26:30	lado, a sua putorizar,
+26:33	entendeu?
+26:35	Pô, Veg mudando aí, bem lembrado. Boa
+26:38	tarde. Se você não consegui comprar Lin,
+26:41	comprei hoje a 1,50. Tudo bem? Não, tudo
+26:43	certo. Se não conseguiu fazer na na
+26:45	sexta-feira, não tem problema não.
+26:51	Boa tarde, pô. Show de bola. Ágata,
+26:54	conseguiu pegar aí a veg?
+26:57	Conseguiu pegar a veg?
+27:02	Rolamos aí a localiza.
+27:11	Pera aí.
+27:17	E cara, o chat travou. Não, brava é para
+27:20	quem já tava posicionado.
+27:22	Estou com uma [&nbsp;__&nbsp;] de Axia S53 e a
+27:24	quantidade total apareceu -1. Como
+27:27	resolvo? Você precisa comprar 100 Axia
+27:30	53, tá, Cléber? A sua custódia tá
+27:34	negativa, tá? Você tá vendido em 100
+27:38	puts de Xia S53. Como que você zera
+27:41	isso? Você precisa comprar 100 axa 53,
+27:46	men 100 com mais 100 para você zerar os
+27:49	fatores. Beleza?
+27:54	Já respondi.
+27:57	Fala, meu boa tarde. Você tem o
+27:58	percentual de acerto e o percentual de
+27:59	lucro da planilha por de opção putall?
+28:01	Cara, eu não tenho essa informação, tá
+28:03	Leandro? Ela tá aqui na planilha em
+28:05	algum local. O tio UK geralmente faz
+28:08	algumas aulas aqui e passam para vocês.
+28:10	Beleza?
+28:19	Para de espancar boleta, pô. Não, não
+28:21	entrem a mercado, tá, pessoal?
+28:25	Pessoal, cheguei agora. Beleza, depois
+28:28	volta aí. Eu não consegui comprar o Bob.
+28:30	O que eu faço? Eu eu acho que pode
+28:32	deixar quieto, tá, Estela? Não precisa
+28:34	comprar, tá?
+28:37	Não precisa comprar. Pode deixar quieto
+28:39	aí, tá?
+28:41	MBRF, ajustamos aqui com vocês.
+28:45	Veg a nossa operação de hoje.
+28:48	Para mim, a MRV já ajustou. Pode indicar
+28:50	o código para ajustar,
+28:53	Leonardo, para você não depender de mim,
+28:56	porque às vezes eu vou ter que passar
+28:57	aqui toda a aula e todo o chat. Que que
+28:59	você pode fazer, cara? Comprar uma opção
+29:02	por metade do preço da que você vendeu,
+29:04	tá? Mas geralmente,
+29:09	geralmente
+29:10	o que que vai acontecer?
+29:14	Ou você pega uma opção na metade do
+29:16	preço, ou você vai pegar uma opção aqui
+29:19	entre a faixa de delta entre 40 e 50,
+29:22	tá? Poderia ser aqui a S520
+29:26	ou a S540, tá? As duas aí são totalmente
+29:30	OK para você comprar, beleza?
+29:36	Fechou.
+29:38	Mas aí, Léo, depois anota aí, cara, no
+29:41	caderno, cara, vendi uma opção. Se você
+29:44	vendeu por 80 centavos, você vai tentar
+29:47	comprar uma nova por 40 centavos pela
+29:49	metade do preço. Beleza? Isso te ajuda
+29:52	muito, cara, para talvez não depender de
+29:54	mim até eu chegar aqui, entende?
+29:58	Espero
+30:01	que tenha dado certo aí, irmão.
+30:05	Maisa, boa tarde. Alguém está operando
+30:07	via Genial? Conseguiram acessar o
+30:09	Profit?
+30:10	Pois fala aí, galera. Genial não tá
+30:13	abrindo aqui. Pô, Aline, entra em
+30:15	contato aí com o suporte, cara. Talvez
+30:17	seja internet. Não,
+30:21	essa é operação de boba, né?
+30:24	Boa tarde. Se durante o dia der 100%
+30:26	podemos vender e comprar outra pela
+30:27	metade, eu preciso deixar para fazermos
+30:29	aqui. Kener, o o meu o nosso objetivo
+30:33	aqui é que você já faça isso ao longo do
+30:36	dia, tá? Eu entro aqui com vocês às
+30:39	16:30. Quando você vê uma operação, que
+30:41	foi o caso aí até do do Leonardo, que a
+30:45	dele deu 100%, cara, viu 100% já faz
+30:49	durante o dia, tá? Não precisa nem
+30:51	esperar.
+30:52	Isso é até um sinal que você, cara, tá
+30:55	no nível acima que já tá pegando aqui a
+30:57	coisa na veia, tá? Pode fazer, não
+31:00	precisa me esperar.
+31:04	O link, o link da planilha para vocês
+31:06	preencherem ficar lá no grupo do
+31:07	Telegram, tá?
+31:10	Vendo e depois compro. É, o ideal é você
+31:12	vender a [&nbsp;__&nbsp;] e comprar a call, tá?
+31:16	Resumo aí que a pergunta foi da Vegeta
+31:22	tá fixada. Show de bola. Veg foi TM. Foi
+31:26	ligeiramente fora do dinheiro, tá,
+31:28	Fernando? Ligeiramente fora do dinheiro.
+31:30	ATM.
+31:34	Qual o valor de venda de veg falamos
+31:36	aqui?
+31:38	Foi na boleta aqui, saiu a 74 centavos,
+31:41	tá?
+31:45	Boa tarde. Qual o rail da Veg, cara?
+31:47	Você tem que jogar lá na planilha do
+31:49	start milionário para ter esse dado.
+31:51	Beleza, consultório.
+31:56	Beleza.
+31:58	Explique mostrando na boleta a compra a
+32:00	mercado ou não. Então, a compra a
+32:03	mercado, pessoal, o que que eu peço para
+32:04	vocês não comprarem a mercado? Quando
+32:07	você colocar aqui o código vag
+32:10	G,
+32:13	acho que é 447, né? Você não vai
+32:16	selecionar aqui o a mercado, tá? Você
+32:19	vai comprar uma ordem limite, ou seja,
+32:21	você vai colocar um preço
+32:24	antes de dar aí o OK na compra, beleza?
+32:29	Porque se você seleciona aqui o A
+32:31	mercado, quer dizer que você tá querendo
+32:32	comprar por qualquer valor, beleza?
+32:42	Veg, estou com dúvida em relação à
+32:44	validade na boleta. Qual devo manter
+32:46	hoje até cancelar tudo ou nada, até o
+32:47	dia? Coloca a validade para hoje, tá,
+32:50	Fernanda? Você coloca a validade para
+32:53	hoje. Por quê? O o qual que é o racional
+32:57	dessa função? Quando você usa o a
+33:00	validade até hoje, você tá dizendo pro
+33:02	mercado que você quer comprar essa opção
+33:05	até hoje. Se fechar o mercado e você não
+33:07	conseguir comprar, esta ordem vai
+33:09	cancelar. Beleza? Então você sempre
+33:12	deixa selecionado hoje, tá?
+33:18	Tem como melhorar a nitidez, irmão?
+33:19	Geralmente é problema do seu YouTube,
+33:22	tá? Dá uma olhada aí na engrenagem do
+33:24	seu YouTube e aumenta a qualidade do
+33:26	vídeo. Aqui eu transmito para vocês em
+33:29	1080, tá? Então às vezes aí é a sua
+33:32	internet, a qualidade do vídeo do seu
+33:34	YouTube. Vai na engrenagem, tenta
+33:35	colocar aí em HD.
+33:41	Vag G447. Eu não tô conseguindo comprar
+33:43	pela Clear, tá cancelando sozinho as
+33:45	minhas ordens. Irmão, peço que você
+33:46	entre em contato com o suporte da
+33:48	corretora, tá? que é algo aqui que
+33:50	realmente foge,
+33:52	foge aqui da minha capacidade de
+33:54	solução. Beleza?
+34:02	Boa tarde. Tem vag 444 e tenho que
+34:05	encerrar vender. Devo. Então, a gente
+34:08	não vende a preço de mercado, tá, Cle?
+34:10	Foi o que eu tava falando para vocês
+34:11	agora.
+34:13	Você precisa vender por esse valor que
+34:15	eu passei para vocês, tá? vender a 74
+34:18	centavos. Se não sair, você vai
+34:21	diminuindo a quantidade, vai diminuindo
+34:24	o valor, tá? Você vai colocar uma boleta
+34:26	74, não saiu, coloca 72, coloca 71,
+34:30	coloca 70 até sair, tá?
+34:37	Rolagem eh você trocar de vencimento, é
+34:40	o que eu expliquei para vocês, né? O que
+34:42	que nós fizemos aqui? Eu vendi a Brave
+34:45	que faltava 10 dias pro vencimento, que
+34:48	é uma Brave F de vencimento F, e comprei
+34:51	uma Brave G vencimento de 30 dias, tá?
+34:57	Se é o seu primeiro dia, tá, Daniele? É
+34:59	completamente normal você ficar meio
+35:02	desconexa, tá, pessoal? Para todo mundo
+35:05	que é novo, para todo mundo que é novo,
+35:08	é totalmente normal você ficar meio
+35:11	perdido. É normal. É a primeira vez que
+35:13	você tá tendo contato com isso aqui.
+35:18	E é por isso que você tá aqui, tá? É por
+35:20	isso que antes de responder a dúvida, eu
+35:22	falei para vocês, olha, assista o
+35:25	conteúdo de base, assistam as aulas
+35:27	gravadas, tá? Para que você não entre
+35:29	aqui meio que num tiroteio,
+35:32	tá bom?
+35:35	MBRF. Aí fizemos
+35:39	primeiro dia na aula. Estou achando
+35:40	muito rápido, não consigo acompanhar.
+35:42	Exatamente. Tá, Gerson. É o seu primeiro
+35:44	dia, cara. Vão tranquilo, tá, galera?
+35:46	Vão, vão tranquilo, cara.
+35:50	Assistam o conteúdo gravado. Vai
+35:51	responder 99% da das dúvidas de vocês,
+35:54	tá?
+35:58	CSNA aqui a gente mantém, tá?
+36:06	O que acontece se o iniciante comprar
+36:08	uma rolagem? Cara, não acontece nada,
+36:11	digamos assim, tá, artéria? O problema,
+36:14	cara, é que não é uma operação nova.
+36:16	Então, eu recomendo para que todos os
+36:18	iniciantes peguem comigo primeiro as
+36:21	operações que são novas, que são viradas
+36:23	de tendência, tá? Tem um problema entrar
+36:26	na rolagem, cara? Não, mas você tá
+36:29	pegando um movimento que já tá andando.
+36:31	Não é legal. Não é legal, tá? Eu prefiro
+36:34	que você crie a disciplina para entrar
+36:36	nas viradas de tendência. E você vai ver
+36:38	que ao longo do tempo, cara, rapidamente
+36:40	você vai est aí com todos os ativos
+36:42	dentro da sua custódia, tá?
+36:45	Sempre tá virando uma tendência. Beleza?
+36:53	Olá a troca de vencimento.
+36:56	Respondi aí. Você
+36:59	pode pausar o vídeo, tá, Thiago? Você
+37:01	pode pausar o vídeo, você pode tirar
+37:03	print do vídeo, você pode pausar ele,
+37:05	dar um zoom aí pelo telefone, tá? Tem n
+37:08	formas, galera, de vocês aí colocarem a
+37:10	planilha, tá?
+37:16	O Bova pode manter. Beleza.
+37:20	Como faz para comprar VG no app do
+37:22	Genial? Nunca fiz isso. Assista as aulas
+37:24	de base, tá, Bruno? Mas tudo é dentro de
+37:27	uma boleta, como eu mostrei para vocês.
+37:29	Você vai procurar aí no seu aplicativo
+37:31	da Genial, vai abrir uma boleta de
+37:33	compra, vai digitar aí Veg G 447
+37:39	e vai comprar esse código pelo preço que
+37:42	eu te mandei. Beleza?
+37:55	Posso comprar essa Vega Mã Wcado ou
+37:57	tenho que comprar até 15 minutos após
+37:58	operação realizado por você? Pode
+38:00	comprar amanhã, tá, Evelyn? Só que eu
+38:02	recomendo que vocês façam ao vivo aqui
+38:04	junto comigo, beleza?
+38:07	Eu recomendo que você passa aqui junto
+38:09	comigo ao vivo, tá?
+38:17	Veg finalizou entre em qual? Galera,
+38:19	outra coisa interessante, entrou
+38:21	atrasado, entrou 4:40, entrou 4:35,
+38:26	volte a aula desde o início e usem o
+38:29	Instagram como ferramenta para ajudar
+38:30	vocês. Vocês podem pegar o vídeo lá no
+38:33	no YouTube, desculpa, abre o vídeo no
+38:36	YouTube, pega uma barrinha e volta o
+38:39	vídeo e você coloca a velocidade vezes 2
+38:42	x 1,5. Beleza?
+38:45	Por que que eu falo isso para vocês?
+38:46	Senão, galera, a gente fica num papo de
+38:48	maluco aqui. Todo mundo vai entrar quase
+38:50	5 horas da tarde perguntando o que que
+38:52	aconteceu, tá? Aí eu não consigo ajudar.
+38:54	E outra, eu não consigo também premiar
+38:56	quem é tá entrando no horário. Beleza?
+39:00	Beleza, Leandro, volta o vídeo e pega
+39:02	todo o raciocínio para você entender o
+39:03	que que foi feito. Show.
+39:08	A planilha fica fixada no grupo do
+39:09	Telegram, tá, Cleonis?
+39:14	Beleza. Boa tarde. Eu não tenho as
+39:16	plenas. Me antecipo dizendo que perdi
+39:17	tempo procurando os anexos. Telegram não
+39:19	é minha praia. Ô Luiz, ele fica fixado
+39:22	lá no grupo do Telegram, tá? Depois eu
+39:24	peço que você dê uma olhadinha lá.
+39:33	Na sexta eu não consegui comprar. Hoje
+39:34	fui comprar a indicação brasque por 94
+39:37	estava 21. Nesse caso, o que eu faço?
+39:43	BRMS
+39:45	110.
+39:50	Então aqui tem aqui a BRKMS 900, tá,
+39:55	Regina?
+39:58	Essa 110 ela não tá no meu controle
+40:00	aqui, tá?
+40:02	A gente tá posicionado aqui na S900.
+40:05	Beleza?
+40:08	Será que não é recomendação de outro
+40:09	local?
+40:19	Nossa posição aqui a S900. Beleza?
+40:26	Isso. Exatamente. A rolagem, pessoal,
+40:29	eh, o que que o o que que é a rolagem?
+40:33	Essa brave aqui que eu vou colocar aqui
+40:36	em laranja.
+40:38	Qual que é o problema dessa opção aqui
+40:40	agora? Ela falta 10 dias para vencer.
+40:43	Então, ela tá muito perto do vencimento.
+40:46	Quanto mais perto do vencimento, mais eu
+40:49	tô sujeito ao efeito do teta, da
+40:52	passagem do tempo, e o efeito do gama
+40:54	também. Ou seja, essa posição, ela vai
+40:57	ficando cada vez mais derretida perto do
+40:59	vencimento. Então, qual é a atitude que
+41:02	eu faço? Como tá faltando 10 dias úteis,
+41:05	eu posso pegar o mesmo valor que eu
+41:07	coloquei nesse vencimento F e comprar um
+41:11	vencimento maior, que é aqui a brave G.
+41:15	Por que que eu tô fazendo isso? Porque a
+41:17	tendência continua de alta, né? Olha lá.
+41:21	Então o que que eu tô fazendo? Estou
+41:22	ganhando tempo.
+41:25	Estou ganhando tempo. Beleza?
+41:28	é uma atitude para que eu permaneça
+41:30	agora mais 30 dias exposto dentro dessa
+41:33	tendência. É uma atitude que vocês vão
+41:35	ver a gente aqui fazendo sempre quando
+41:37	falta perto de 10 dias pro vencimento.
+41:40	Falta 10 dias pro vencimento, a gente
+41:42	vai tomar essa decisão aqui. Nós vamos
+41:44	fazer uma rolagem, vamos ganhar tempo
+41:46	com as nossas posições. Beleza?
+41:49	Praticamente é isso, tá, Juliana? É o
+41:50	ato de ganhar tempo sem colocar dinheiro
+41:54	novo. Porque note, eu tinha comprado a a
+41:57	F a 65 centavos, vendia a 94 centavos,
+42:02	eu comprei uma nova a 70 centavos, ou
+42:06	seja, fiquei com lucro.
+42:08	Então eu fiz uma rolagem até com lucro
+42:11	aqui nessa posição, tá?
+42:14	Então é o ato de ganhar tempo, tá?
+42:20	O que era para fazer em Bova, não
+42:21	precisa se preocupar com Bova, tá? Bova
+42:23	foi uma operação que foi passada pelo
+42:25	UL. Quem não pegou, não precisa pegar,
+42:27	tá?
+42:30	Por não comprou a Veg, pode ser a Veg
+42:32	G442, tá? A gente tá indo na mesma
+42:34	direção.
+42:36	Beleza.
+42:45	Acabei executando a Embraer porque não
+42:46	poderia estar aqui na hora da live. É a
+42:48	Ibra que não virou a tendência. Se mudar
+42:50	amanhã, né? Tá uma beiradinha de virar
+42:52	aqui, né?
+42:54	Tá uma beiradinha de virar tendência
+42:56	amanhã, né?
+43:02	Talvez vire amanhã, né?
+43:09	Show. Para rolagem por conta do tempo.
+43:11	Segue o mesmo racional delta 05, metade
+43:13	do preço, caso esteja dando lucro.
+43:15	Exatamente. Pode usar o mesmo racional,
+43:17	tá?
+43:21	Siri, essa é a 94. Depois dá uma voltada
+43:24	na aula aí, tá, irmão?
+43:27	Mas
+43:30	é, a gente comprou a 94, tá? Mas não era
+43:33	recomendação,
+43:34	não era recomendação. Era uma operação
+43:36	que já tava rodando.
+43:43	Bola. A tendência muda quando tem três
+43:45	velas seguidas? Não necessariamente, tá?
+43:47	I muda quando o indicador nitro altera,
+43:51	mas ele não necessariamente precisa de
+43:53	três velas, tá? Não é assim que é
+43:55	formado esse indicador, tá?
+44:03	Verdade. É que eu não tive tempo de ver
+44:04	todas. Só me responde mais uma. Como é
+44:05	feita a rolagem? Eu eu acho que eu
+44:08	expliquei aí, né? Expliquei algumas
+44:09	vezes a rolagem. É porque eu tô vendo as
+44:10	perguntas aqui, galera, para eu tô vendo
+44:13	as perguntas aqui na ordem cronológica,
+44:15	né?
+44:23	Respondemos aí. Beleza.
+44:26	Onde encontra a lista que gerou essas
+44:27	opções que estamos operando e qual
+44:28	critério foi utilizado para seleção?
+44:30	Então, eh, esses dados eles ficam
+44:33	disponíveis, eles ficam disponíveis
+44:35	dentro da Master Business, tá? dentro da
+44:38	Master Business que esse tipo de
+44:40	conteúdo é disponibilizado, tá? Lê aqui
+44:43	o nosso foco é em execução. São 19
+44:46	empresas que se adequa ao método. Semana
+44:48	que vem pode mudar, pode mudar, pode
+44:51	mudar, tá?
+44:54	Eu não sei se você faz parte da Master
+44:55	Business, tá, irmão? Dentro da Master
+44:57	Business que a gente fala com mais
+44:59	profundidade quais são os critérios que
+45:01	a gente usa para essa seleção, tá?
+45:03	Inclusive convido a todos vocês, pô,
+45:07	entrarem na Master Business, sabe?
+45:12	Seria interessante para as pessoas que
+45:13	não tm experiência com deixar a linha
+45:15	com alguma cor em caso de rolagem,
+45:17	encerramento e a fiz. Então, galera, eu
+45:19	recomendo sempre que vocês voltem o
+45:20	vídeo, tá? Essa é a minha recomendação
+45:23	sempre para vocês. Porque o que que
+45:25	acontece?
+45:27	Se você entra no meio da aula, você já
+45:30	perdeu o raciocínio, cara.
+45:36	Comprei, mas tem como fazer na próxima
+45:38	vez mais devagar. Compre e venda.
+45:40	Marlon, assista o conteúdo gravado, tá?
+45:43	É muito importante para você ir gerando
+45:45	familiaridade
+45:48	aqui, galera. Como eu entro com vocês
+45:49	4:30, eu preciso ser diretão, tá? Mas
+45:53	amanhã, se tiver mais uma nova operação,
+45:56	vamos ver se BR vira. Eu faço ela mais
+45:58	com calma. Beleza?
+46:02	Valeu, Re.
+46:04	Perdemos então na veg porque caiu o
+46:06	valor. Exatamente. Tá. A veg a gente
+46:08	encerrou ela com prejuízo.
+46:14	Éa.
+46:20	Quem é novo por aqui? Entrar somente nas
+46:21	operações novas e não estão em
+46:23	andamento. Assistam as aulas. Métro dá
+46:24	certo, pô. Concordo totalmente.
+46:30	Estou com uma operação de AXA com menos
+46:32	100. Ah, eu te falei aí, tá, Clever?
+46:33	Conseguiu fazer. Você tem que comprar
+46:35	agora 100, beleza?
+46:40	Você tem que comprar 100 Axs 53 para
+46:43	zerar a custódia. Beleza?
+46:46	Você
+46:47	tem que abrir uma boleta de compra,
+46:51	comprar, digitar aí a S 53
+46:57	e fazer isso. Cara, faz isso aí amanhã,
+46:59	tá? Não come bola com isso aí, não. Você
+47:01	tá descoberto. Faça isso amanhã, beleza?
+47:06	Se você não conseguir fazer por conta,
+47:08	entra na minha aula amanhã, 10 horas da
+47:10	manhã, que eu te ajudo, tá?
+47:15	Não encontrei veg G4.
+47:20	Depois vê se colocou o código certinho
+47:22	aí, tá, Joanas? É Veg G447, tá?
+47:31	Falamos aí da planilha, não consegui
+47:33	pegar Bravo G 215,
+47:37	tá 84. Cara, provavelmente alguém
+47:39	agrediu o book de ofertas, mas pode
+47:42	pegar, tá? Não tem problema. Pode pegar.
+47:47	[&nbsp;__&nbsp;] ação que tem que cair. Qual ação
+47:50	subir quando você
+47:52	irmão, não, não, não entendi. Tá.
+47:55	É, o titular tem o direito. É
+47:57	exatamente. Quem compra, quem compra
+47:59	opções é titular, tá?
+48:04	É titular.
+48:09	pode mostrar como configurar essas
+48:10	linhas amarelas de tendência no gráfico.
+48:13	Então, esse esse é um indicador da sala
+48:15	nitro, tá? Aqui o nosso foco, Igor, é
+48:18	focado em execução, tá? O indicador é um
+48:21	é um item restrito da Master Business,
+48:24	tá? Então, o nosso foco aqui é execução
+48:27	e não compartilhar o indicador, tá? É
+48:29	uma informação fechada da Master
+48:31	Business, beleza?
+48:34	O que esperar dessa vag? que dê muitas
+48:37	alegrias, né?
+48:40	Eu tinha 100 [&nbsp;__&nbsp;] da veg, vendia 100,
+48:44	compra 200 calls. É dessa forma.
+48:49	Então tem que ver se tá dentro do seu
+48:50	gerenciamento de risco. E R Albukerk,
+48:54	mas o ideal talvez seria você ter
+48:57	vendido as 100 puts de vag, zerado as
+49:00	puts e comprado 100 calls, tá? Mas se
+49:03	você comprou 200 calls, tranquilo também
+49:06	não tem problema não. Só verifica se tá
+49:08	dentro do seu gerenciamento de risco,
+49:09	tá?
+49:18	O importante é o buquerk, veja se você
+49:20	não tem mais nada de puts aí dentro,
+49:22	beleza? Se você não tem mais nenhuma
+49:24	[&nbsp;__&nbsp;] tá
+49:29	genial? Beleza. Ah, fiz isso quando eu
+49:32	vi que não ia chegar tempo da mensagem.
+49:34	Ah, beleza, beleza, galera. Beleza. Pô,
+49:36	pessoal, eu tento aqui dar o melhor para
+49:38	ir pegando todas as mensagens, tá? Eu
+49:40	tento responder todo mundo aqui com na
+49:42	maior precisão possível. Aí as perguntas
+49:44	que são repetidas, eu acabo pedindo para
+49:46	voltar à aula para pra gente também
+49:48	otimizar o tempo.
+49:55	Ah, show de bola.
+49:58	Ah, a planilha, né?
+50:00	Beleza.
+50:03	Ah, não achei. Acho que todo vídeo, como
+50:06	tem gente nova, poderia deixar fixada a
+50:08	planilha com as operações. Então, a
+50:10	planilha com operações, ela é restrita
+50:11	para master business, tá?
+50:15	Ideal é esperar 100% ou posso fazer
+50:17	corte sempre para garantir logo? O espal
+50:19	é, o ideal é esperar 100%, tá? Paul.
+50:30	Beleza, beleza.
+50:39	Ah, meu amado, estou aqui a 40 dias das
+50:40	minhas operações encerradas. Tive 30% de
+50:42	sucesso com 100% de lucro, mas tive 70%
+50:44	com 64 prejuízos. Sou operando como
+50:46	pequena. Vamos, vamos reverter com o
+50:48	tempo, irmão. Eh, assim, o que eu falo
+50:51	para você é, é difícil eu falar vai
+50:54	reverter com o tempo, entendeu? E o
+50:56	mercado é o mercado e ele faz o que ele
+50:57	tem que fazer, cara. O ponto é, enquanto
+51:01	você não tiver aí pelo menos umas 300
+51:03	operações, essa amostragem sua, ela é
+51:06	insignificante.
+51:07	Ela é insignificante, tá?
+51:16	No mínimo, cara, você precisa de umas
+51:17	300 operações para você começar a
+51:19	validar o método, tá?
+51:26	Não necessariamente, tá? Eli uma ótima
+51:28	pergunta, tá? A regra quando bate 100% e
+51:31	pegar outra na metade do preço, não tem
+51:33	questão se é dentro, fora do dinheiro,
+51:34	não tem. Pode pegar metade do preço, tá?
+51:41	A planilha tá aqui, tá, pessoal? Porque
+51:42	se eu colocar ela inteiro, se eu colocar
+51:44	ela inteira, vai ficar aqui o zoom ruim
+51:47	para caramba, tá?
+51:50	Que que eu recomendo? Voltem depois a o
+51:52	nosso encontro aqui e peguem as linhas
+51:54	de cima, tá? Eu vou voltar um pouco
+51:56	aqui, mas não fica muito bom, tá?
+52:00	Não fica muito bom
+52:04	assim, ó. Beleza.
+52:09	Exatamente.
+52:11	Sou novo, só observando ainda. Tamos
+52:13	junto, Ivan. Pô, quando você vai colocar
+52:15	a mão na massa aí, irmão?
+52:21	Quero você operando junto comigo, irmão.
+52:24	Não leia sobre andar de bicicleta. Ande
+52:26	de bicicleta, táivando.
+52:29	Separa aí, cara, o mínimo possível para
+52:31	você comprar pelo menos o lote mínimo
+52:33	aqui junto comigo, tá? Você vai sair da
+52:35	zona de conforto quando você começar a
+52:37	aplicar. Conta comigo na jornada, irmão.
+52:40	Tamos junto.
+52:45	Show de bola, Isabel. Tamamo junto.
+52:49	Isso. Exatamente.
+52:53	Você só iniciam novas operações quando
+52:54	as tendências viram. Exatamente.
+52:58	Exatamente.
+53:00	Sempre quando a tendência vira, né?
+53:12	Aos em Minas para mim já caiu 50%. Não
+53:13	deveríamos fazer não, porque a gente
+53:15	opera com 1% do capital, tá?
+53:22	Lá o W explica como funciona todas as
+53:24	operações. Exatamente, pessoal. Tem o
+53:25	Marcos Zé, tem um curso lá para vocês
+53:27	assistirem gravado, tá?
+53:29	Em vez de rolar uma opção no lucro, não
+53:31	compensa fazer uma realização parcial e
+53:32	seguir exposto com valor investido
+53:33	inicialmente?
+53:37	Po, pode ser também.
+53:39	Pode ser também. Só que aqui a gente não
+53:41	aqui a gente não faz parcial, a gente
+53:43	vai protegendo a operação, né? É uma
+53:45	forma de realizar parcial, né?
+53:52	Ah, essa informação a gente não
+53:54	compartilha aqui dentro da sala, tá?
+54:02	Será que é? Será que é? Não sei.
+54:09	Parabéns pelas explicações de dádico,
+54:10	professor. Consegui entender mais o
+54:11	mundo das opções. Pô, tamos junto,
+54:13	Andrezinho.
+54:14	Pô, galera, às vezes eu dou umas
+54:15	voadoras aí, mas é pro bem, tá?
+54:21	Comprei Veg, o status tá como aberto.
+54:23	Demora para concluir, eu tenho que
+54:24	esperar o mercado fechar. Minha primeira
+54:25	compra. Então, Fernanda, se a ordem tá
+54:27	aberto, é porque ela não foi executada,
+54:30	tá? Que que você tem que fazer nos
+54:32	casos, quando a sua operação tá em
+54:33	aberto, você precisa subir o preço. Isso
+54:36	aí é um sinal que não apareceu ninguém
+54:38	para negociar junto com você. Então,
+54:40	essa operação nesse momento, ela está em
+54:41	aberto, tá? Tá em aberto. Hoje, como o
+54:45	mercado fechou, o que que você vai
+54:46	fazer? Amanhã você vai realizar essa
+54:48	compra de novo. Só que você tem que
+54:50	certificar que a operação tem que ser
+54:52	executada.
+54:54	Se ela ficar em aberto, significa, por
+54:56	exemplo, eu tô querendo comprar, [&nbsp;__&nbsp;]
+54:58	a laranja a R$ 1, não tem ninguém
+54:59	querendo me vender a R$ 1, Eu vou ficar
+55:01	com o dinheiro na mão. Enquanto eu não
+55:04	for lá e pagar 1,10, que é o que o cara
+55:05	quer me vender, não vai sair. A lógica é
+55:08	a mesma. Então você precisa editar essa
+55:10	ordem e subir de dois em 2 centavos até
+55:12	que saia, tá,
+55:15	irmão? Eu vou eu vou passar o contato do
+55:18	Pablito aqui, tá?
+55:20	Eu vou passar o contato do Pablito aqui
+55:22	para vocês. Qual que é o requisito para
+55:24	entrar na Master Business? Precisa ter R
+55:26	1 milhão deais investidos, tá?
+55:32	Os Minas virou para tendência de baixa.
+55:34	Virou não, tá? Os Minas tá em tendência
+55:37	de alta. Tá.
+55:43	Valeu, Juliano.
+55:46	É, Brasquen. Brasquem já foi, galera.
+55:48	Essas operações que já foram aí, elas já
+55:50	vão até encerradas, tá? Eu nem consigo
+55:51	acompanhar aqui.
+55:56	VG
+55:59	tem que mandar mensagem pro Ti passo
+56:00	contato entrevista pro master. Pô, show
+56:02	de bola. Obrigado aí, Silv.
+56:06	Eu eu entraria assim mesmo, tá?
+56:15	Beleza, beleza, Cleid?
+56:20	Ah, a Veg, a Veg mudou a tendência, tá,
+56:22	pessoal? Aqui eu sigo a metodologia, tá?
+56:25	Veg mudou a tendência hoje, tá, Márcio?
+56:28	Mudou a tendência aqui, a gente virou,
+56:31	tá?
+56:35	Para CMV precisa de 1 milhão, tá,
+56:36	Franklin?
+56:38	Vai sair uma planilha de recomendações
+56:40	atualizadas para entrar, não conseguir
+56:41	acompanhar ou vamos comprando uma a uma.
+56:42	Então agora
+56:44	foi de entrando hoje. Isso. As
+56:46	recomendações são de hoje, tá? Aqui para
+56:49	vocês acompanharem as recomendações
+56:50	comigo, vocês precisam estar aqui todos
+56:52	os dias, tá?
+56:59	Essa informação ela é sensível da Master
+57:01	Business. Já respondi.
+57:03	Como faz para entrar na call amanhã?
+57:05	Você abre uma boleta de compra e compra
+57:06	amanhã, tá?
+57:10	E pode comprar amanhã, beleza? Se não
+57:11	conseguiu comprar hoje, pode comprar a
+57:13	Veg amanhã.
+57:15	Então, quem não conseguiu comprar a Veg
+57:17	G447 hoje, pode entrar amanhã, tá?
+57:22	Ax Fernando,
+57:24	beleza.
+57:28	No Telegram tem um ambiente lá chamado
+57:30	links e avisos, tá? Links e avisos.
+57:33	Clica lá nele que vai mostrar para vocês
+57:35	a minha aula 10 horas.
+57:48	Beleza. Beleza.
+58:05	Ah, galera falando da planilha, pessoal.
+58:07	A planilha tá fixada lá no grupo do
+58:09	Telegram, tá? Vocês t que ir lá no
+58:10	fixado e pegar ela, tá?
+58:20	Por que comprar [&nbsp;__&nbsp;] de lojas se está
+58:22	subindo? Aqui a gente segue o indicador,
+58:24	tá? E não teve nenhuma compra de [&nbsp;__&nbsp;] de
+58:26	lojas, não. A última foi na sexta, tá?
+58:29	Aqui a gente segue o indicador. Beleza.
+58:33	Eu comprei a primeira opção com vag.
+58:35	Mostra congelada. Deve concluir amanhã.
+58:37	Então, se mostra congelada é porque o o
+58:39	mercado fechou e essa ordem não foi
+58:41	executada, tá? Você pode fazer amanhã,
+58:44	tá?
+58:51	Ó, sigam essa dica aí.
+58:54	Mirimata Genial, não dá o mesmo preço de
+58:56	venda ou como que você tá colocando na
+58:57	planilha. A ordem fica aberta, não
+58:59	consigo vender num das operações. Então,
+59:01	Estela, qual que é o ponto? Quando eu
+59:03	mando a recomendação para vocês aqui, o
+59:05	preço da opção ele é vivo. Então, pode
+59:07	ser que eu mande a recomendação aqui
+59:08	para vocês de 80 centavos, pô, e o
+59:11	negócio explode, sacode aqui o preço
+59:14	todo, tá? Então, pode ser que eu coloque
+59:16	80 centavos e o preço foi para 82, foi
+59:19	para 79, foi para 75, tá?
+59:25	Beleza? Eu eu não não fiquem, pessoal,
+59:27	aqui o preço que eu coloco é um preço de
+59:29	referência, tá? Pode ser. Que que você
+59:31	comprou? 5 centavos mais caro ou 5
+59:33	centavos mais barato, tá? Não se apega
+59:35	muito a isso não. Beleza.
+59:49	Então, amanhã às 10 horas, se a ordem
+59:51	estiver aberta, eu ainda aumento o preço
+59:52	ou quando abrir o mercado, tenho que
+59:53	cancelar e fazer uma nova conta. Amanhã,
+59:55	Fernanda, essa ordem você nem vai
+59:57	conseguir ver mais ela, tá? porque ela
+59:59	já vai ser cancelada hoje mesmo. Então o
+60:02	que que você vai fazer amanhã? Você vai
+60:03	abrir uma nova compra da Veg447
+60:06	e vai fazer ela. Ficou na dúvida? Eu
+60:09	tenho uma aula 10 horas da manhã que eu
+60:10	faço a abertura do mercado com vocês.
+60:12	Vai lá na minha aula que eu consigo te
+60:14	ajudar lá também, beleza?
+60:17	Mas amanhã você vai repetir o mesmo
+60:18	processo que você fez hoje. Basicamente
+60:20	é isso, tá?
+60:25	Mera brava reflete o
+60:28	mercado nacional porque às vezes ela
+60:29	sobe a pé do PRI cai. Isso é uma
+60:31	observação, não tem nada que explique,
+60:32	só curiosidade. A Brave tem o boato que
+60:36	eles extraem bosta do solo, né? Uma
+60:39	empresa extremamente alavancada e que
+60:41	tem alguns problemas operacionais. A
+60:43	Petrobras tem a ingerência estatal em
+60:45	cima dela e a Prioginho,
+60:48	né? é a mais, digamos assim, menos
+60:51	blindada a variação estatal e e
+60:54	ingerência do governo e não extraem
+60:56	bosta do fundo da terra, né, que é o
+60:58	caso de BRAV. Então, a BRAV ela tende a
+61:00	não ter uma correlação muito boa com
+61:02	essas empresas, que a Prietro, né? Mas
+61:06	isso é a visão do do analista que vos
+61:11	fala aqui, tá? Mas nem sempre essa
+61:13	correlação vai ser existente, beleza?
+61:17	MRV. Já olhamos aqui.
+61:20	O mercado já fechou, tá pessoal? O
+61:22	mercado já fechou. Ele fecha à 5:15, tá?
+61:29	Show.
+61:32	Beleza. Beleza, galera. Dito isso, vou
+61:35	ficando por aqui. Forte abraço a todos.
+61:37	Aula bem movimentada. Galera, assistam
+61:40	as aulas gravadas, tá? Assistam as aulas
+61:43	gravadas para que vocês consigam estar
+61:47	aqui no pare. Eu sempre vou estar
+61:50	ajudando vocês, mas assistam as aulas
+61:51	gravadas, tá? Quebrem essa barreira.
+61:54	Beleza? Fechado, galera. Fiquem com Deus
+61:56	aí. Forte abraço, beijo no coração e
+62:00	fui.

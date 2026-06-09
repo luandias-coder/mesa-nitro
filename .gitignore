@@ -1,0 +1,20 @@
+# segredos
+.env
+*.key
+/tmp/
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# provider (clone vendorizado do bgutil-pot-provider; setup à parte)
+provider/
+
+# dados gerados/efêmeros
+subs/
+logs/
+*.xlsx
+.DS_Store
+*.mp4
+subs*/

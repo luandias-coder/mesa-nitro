@@ -1,0 +1,315 @@
+0:02	Fala aí, galera. Boa tarde. Boa tarde. Tudo bom com vocês?
+0:07	Vamos para cima. Vamos começar aqui mais uma sala nitro.
+0:11	Hoje dia 5/06, sexta-feira aqui de feriadão. Vamos que vamos.
+0:18	Mais um anitro aqui começando. Temos coisas a serem feitas hoje. Então, prestem muita atenção, hein?
+0:28	Vamos lá, pessoal. Para quem não me conhece aí, meu nome é Caio. Eh, hoje vamos fazer aqui análise das nossas
+0:35	tendências através do nosso indicador nitro, perfeito? E a nossa aula é dividida basicamente em dois momentos,
+0:42	tá? É muito simples. Primeiro momento, eu preciso que todo mundo preste muita atenção, porque nós vamos analisar os
+0:50	gráficos das nossas ações. Nós temos uma lista específica de ações que nós operamos a metodologia aqui da sala
+0:58	nito. E nessas ações eu vou passar o gráfico na tela para nós monitorarmos as tendências.
+1:05	Quando o ativo começa a subir, rompendo a média das máximas, né, quando os preços vão ficando cada vez mais caros,
+1:13	o nosso indicador nitro vai ficar verde indicando o início de uma tendência de alta. Quando identificarmos o início de
+1:20	uma tendência de alta, a nossa recomendação aqui para todo mundo vai ser uma compra de opções do
+1:27	tipo calls. Comprando uma opção do tipo call, você tá exposto positivamente a tendência de alta. Se os preços dos
+1:35	ativos continuarem subindo, você vai ganhar dinheiro e tudo será recomendado aqui ao vivo junto com vocês, tá? A
+1:43	partir do momento que o ativo começa a cair, renovando a média das mínimas dos preços para BYU, o indicador deixa de
+1:52	estar verde e vai aparecer uma linha vermelha no gráfico. Você vai ver tudo isso aqui comigo. Quando houver essa transição do verde pro vermelho, o
+2:00	indicador tá mostrando pra gente o início de uma tendência de baixa. Quando isso acontecer, nós faremos as compras das opções do tipo puts para ganhar dinheiro com a queda do do mercado.
+2:12	Então, quem estava posicionado nas calls vai encerrar as calls e comprar as puts.
+2:16	Quem não tava posicionado em nada vai simplesmente montar uma nova compra de [ __ ] aqui junto comigo. Toda operação nova de virada de tendência é para todo
+2:25	mundo entrar. E eu vou est sempre reforçando isso em voz alta aqui para vocês, beleza? Cada operação que eu
+2:34	localizar aqui para vocês, ela vai ser cantada em voz alta, ela vai ser escrita na planilha, repetida várias vezes. O
+2:42	seu papel vai ser simplesmente abrir a conta na corretora, né? Acessar sua conta na corretora, digitar o código do ativo que eu vou repetir aqui para
+2:50	vocês, e clicar em comprar. Toda operação se inicia com uma compra de opções. Na tendência de alta é a compra
+2:58	das calls. Na tendência de baixa é a compra das puts. Aqui o mais importante é que você respeite duas coisas. O
+3:06	gerenciamento de risco, que é innegociável. Toda operação deve buscar ter o mesmo peso financeiro frente ao seu patrimônio e não deve exceder 1% do
+3:16	seu capital. O segundo ponto é o respeito à metodologia. É muito mais importante você entrar em uma grande
+3:23	quantidade, né, em todos os sinais que você conseguir dentro dos ativos que nós estamos operando, do que você ficar se contatando com uma boa operação que deu lucro, uma outra operação que deu lucro.
+3:35	Aqui nós operamos uma metodologia validada e ela só dá muito certo por conta da lei dos grandes números, que no
+3:42	nos diz justamente que quanto mais operações nós fizermos, maior vai ser a expectativa matemática aqui na
+3:50	expectativa de sucesso de desse operacional para o longo prazo. Beleza?
+3:55	Então, entre em todos os sinais dos ativos que vocês estiverem operando.
+3:59	Tudo vai ser feito aqui ao vivo. Vamos para cima pro nosso primeiro momento aqui. Vai participando no chat aí, pessoal, porque eu vou tirar todas as dúvidas de vocês aqui também. Apesar de
+4:07	que eh teve uma teve um aulão aí com Uli, né, nos últimos dias e eu acho que a maior parte das dúvidas já foram sanadas.
+4:17	Então, nesse primeiro momento, vamos analisar gráfico. No segundo momento, nós vamos paraa planilha, justamente para atualizar as posições que estão em aberto, colocar o preço aqui na tela
+4:26	para vocês, as rentabilidades, tudo com a máxima transparência, tá bom? Vamos que vamos aí. Boa tarde para todo mundo que tá chegando, 350 pessoas ao vivo. Aí
+4:35	sim, vai participando no chat aí, tá bom? Então vamos lá. Bif 3 é o primeiro ativo do dia. Deixa eu colocar aqui no gráfico diário, né? Sempre gráfico
+4:43	diário, tá bom? A BF 3 hoje e ela está subindo 3.63%,
+4:51	né? Uma alta boa, só que o ativo segue em tendência de baixa, tá? E só para vocês verem que um dia, dois dias não
+4:59	faz necessariamente uma reversão de tendência. O mercado ele vai estar sempre comportando em ondas de impulso e
+5:05	correção. Pulso e correção, porque é uma eterna barganha em tempo real entre compradores e vendedores, né? tentando ver quem que é o otário e quem que é o
+5:14	malandro da vez. Compradores sempre querendo comprar mais barato, os vendedores querendo sempre vender mais caro, né? Bif 3 em tendência de baixa
+5:22	ainda e Bradespar entrando em tendência de baixa. Beleza?
+5:28	Vocês podem ver aqui, ó, que a Bradespar ela entrou em tendência de baixo na quarta-feira, né, antes do feriado.
+5:36	E por isso nós compramos uma [ __ ] Você pode ver isso aqui, ó. O ativo tava mostrando aqui uma linha verde, né,
+5:44	indicando uma tendência de alta. A partir do momento que rompe a média das últimas mínimas para baixo, a linha vermelha aparece, o ativo entrou em
+5:51	tendência de baixa, nósamos as calls e compramos as puts, não é isso? A Brave 3
+5:58	é uma petroleira que está em tendência de alta, subindo 1.4% hoje. Brasquen segue em tendência de baixa, caindo 6%.
+6:06	Provavelmente hoje aqui as nossas puts de Brasquem atingiram 100% de lucro.
+6:12	Quando isso acontece? Para manter expulsão a toda essa tendência aqui, ó, que tá linda, né? Mas zerando o nosso
+6:20	risco, nós fazemos o ajuste de delta, que é a troca de uma opção muito valorizada por uma nova de volta ali pra
+6:28	linha do dinheiro com um novo bom potencial de valorização. Então nós faremos hoje isso aqui juntos, tá? Vou deixar a Brasquen separada, que
+6:37	provavelmente teremos essa operação nela para ser feita e você vai poder seguir esse passo a passo junto comigo. Hoje a Semin, que é uma mineradora, a CSN
+6:45	mineração, ela está entrando em tendência de baixa. Então, perfeito, perceba, nós temos aqui um indicador verde em tendência de alta. Hoje os
+6:53	preços estão caindo 2.89%, rompendo a média das últimas mínimas dos preços, entrando assim em uma tendência
+7:00	de baixa. Então hoje nós temos uma virada de tendência acontecendo na semi e todo mundo vai comprar essa [ __ ] junto comigo, tá?
+7:11	A CGNA segue em tendência de baixa, a Cosan também segue em tendência de baixa, a CSNA3
+7:20	hoje está virando a tendência mais uma vez. Então, perceba aqui, ó, que que a CSN, que é uma das melhores empresas que
+7:29	existem, tá, para seguir tendência, ela tá meio lateralizada, né, nos últimos tempos aqui. Como nós assumimos 100%
+7:39	que nós não sabemos quando o ativo vai dar aquela porrada, o nosso papel aqui é entrar em todos os sinais. E o que faz a gente sobreviver a esse tipo de momento
+7:47	aqui, ó, onde o ativo lateraliza, né, e fica revertendo a tendência várias vezes, é o gerenciamento de risco. É isso que faz a gente sobreviver. Então, hoje aqui o ativo tá desabando 10%.
+7:59	Voltando pra tendência de baixa, é mais uma operação que vai ser feita hoje aqui, ó. Todo mundo hoje vai entrar comigo também em puts de CSN A3, tá?
+8:10	Hoje nós temos também Cirela em tendência de baixa, BRAER em tendência de baixa também, ó. Perceba
+8:19	quebraer ao longo do dia estava aqui revertendo a tendência novamente pra alta, né? Tá subindo hoje quase 5%, mas
+8:27	a tendência no fim das contas segue de baixo, nada a se fazer. Lojas Rener também entrando em tendência de baixa semana, né? reverteu recentemente.
+8:40	E aí nós temos aqui MBRF3, que ainda está em tendência de baixa. A Magalu hoje sobe 2%, mas segue em tendência de
+8:48	baixa. MRV também em tendência de baixa e Petrobras seguindo em queda também.
+8:59	Petrol Rio, mais uma petroleira em tendência de baixa, localiza também em tendência de baixa. A US Minas hoje
+9:06	caindo 2.4%, mas segue numa linda tendência de alta, né, que já dura desde do dia 24/03,
+9:14	cara, quase 3 meses completos aí. E a Veg hoje subindo 1.89, seguindo ainda em tendência de baixa, tá? Então hoje nós
+9:22	temos duas novas operações certamente para serem feitas, tá? Vamos paraa planilha acompanhar isso agora.
+9:30	Vamos que vamos. Então, deixa eu deixar a nossa boleta preparadinha aqui já.
+9:36	Eu vou dar um zoom nessa tabela para todo mundo poder enxergar bem.
+9:42	Aqui na tela, pessoal, estão as nossas operações em aberto.
+9:51	Perfeito.
+9:55	Então, seguinte, vamos começar aqui atualizando a operação da cógna.
+10:01	Temos aqui a cogna R3, é uma [ __ ]
+10:12	que tá saindo a 20 centavos nesse momento. 21 centavos foi a última negociação dessa [ __ ] de cogna. A [ __ ] de
+10:20	localiza é a rente R 433.
+10:28	Tá saindo aqui a 2,76.
+10:32	Ativo segue em tendência de baixa. A Brave F205.
+10:41	que está saindo a 90 centavos com 38% de lucro. A loja Zenner F148
+10:57	está saindo aqui a 0,54.
+11:03	A CSN682
+11:20	aqui é 007 CSNF 682 007 com ativo desabano.
+11:31	10% nesse momento. Que que a gente vai fazer aqui, pessoal? A CSNA3 tá revertendo a tendência. Então, o
+11:39	primeiro passo aqui para seguir essa tendência é encerrar a opção anterior, que é uma call. Então, essa call aqui,
+11:47	ó, CSNF 682, nós vamos dar encerramento a ela nesse momento, tá?
+11:54	Hoje, dia 5/06.
+12:08	E vamos montar uma compra de [ __ ]
+12:19	que vai ser uma CSN F. logicamente o vencimento lá de julho.
+12:29	Então essa [ __ ] que eu vou recomendar aqui agora, CSNA 3,
+12:37	eu vou lá na grade de opções. Essa [ __ ] aqui agora todo mundo tem que entrar. O vencimento mensal tradicional acima de 20 dias úteis está lá em julho, 17 de julho.
+12:49	Eu vou pegar aqui, ó, uma [ __ ] que tá nesse momento com delta. 046
+12:58	é a TS na S610.
+13:05	CS 610.
+13:12	Hoje dia 5/06 e ela está saindo nesse momento por 46 centavos.
+13:27	46 centavos nesse momento a nova operação da CSNA.
+13:36	Então hoje aqui, ó, todo mundo tem que entrar, todo mundo tem que entrar na CSN610.
+13:45	Todo mundo vai lá na conta da corretora e vai digitar o código dessa opção aí.
+13:51	Compra input. Abre a boleta desse jeitinho aqui, ó.
+13:58	CSNA S610. Você vai clicar em comprar.
+14:06	Bota aí, ó, 46 centavos. Coloca a quantidade, a senha.
+14:13	Perfeito.
+14:16	Bom, dando continuidade aqui às nossas operações paraa gente não perder tempo, eu tenho MBRF
+14:24	R167, tá saindo aqui a 1,20
+14:34	preest, 57
+14:47	Petro S 437 tá sendo a 2,39
+15:01	MRV S 580
+15:09	tá sendo a 043 3 BR kms
+15:16	110 tá sendo a 2,29.
+15:26	Então atenção aqui, ó, BRKMS 110 ultrapassou o 100% de lucro. Vamos ajustar essa operação trocando a BRKMS
+15:36	110 que tá custando R,29 por uma outra nova opção de metade desse valor, no máximo metade desse valor. Então vou dar
+15:44	encerramento a ela para fazer esse ajuste. Lembrando que ajustes de operações antigas, a entrada é opcional
+15:56	para quem para quem não está na operação antiga, né? é obrigatória para quem tá na operação antiga e opcional para quem não tá.
+16:07	E aí nós vamos entrar aqui em uma nova opção
+16:15	de metade do valor,
+16:28	que vai ser uma BRKMs próxima ali de 1 e 10.
+16:40	Então, um abraço quem que segue tendência de baixo. Cá estamos nós, ó.
+16:50	Eu vou lá no vencimento de julho.
+16:52	Perceba que eu não estou fazendo rolagem, só tô fazendo ajuste, não tô trocando o vencimento. O vencimento vai ser igual.
+17:02	E eu vou pegar uma opção aqui que esteja próximo da linha do dinheiro novamente, ó, que inclusive tá custando menos da metade. Então, tá ótimo. É a BRKM S890.
+17:14	Aqui, na verdade, vou pegar até mais acima, ó. BRKMS9 vai ser a troca que nós faremos aqui agora. BRKMS 900.
+17:26	Beleza? Delta dela tá aqui em 0,45. Tá ótimo.
+17:30	Então, o ajuste é vender a S 110 e trocar para S 900.
+17:39	Ele tá saindo nesse momento a 94.
+17:46	Então, encerrei uma por 2,29 e voltei com uma nova de 94 centavos. Embolsei todo o resto do dinheiro, a Semin G485.
+17:57	Era uma call da semin, tá saindo a 10
+18:04	centavos porque a semin também está virando a tendência. A senin também tá virando a tendência.
+18:13	Então, qual que é a nossa conduta? Todo mundo que estava posicionado nas calls de seminar
+18:21	encerramento agora e todo mundo junto vai comprar uma [ __ ] Então, quem tava na semin G485, dá tchau para ela.
+18:34	Dá tchau para ela aí.
+18:37	Ela tá sendo a 10 centavos nesse momento
+18:44	e vira a mão para uma semin s semin s.
+18:57	Qual vai ser essa [ __ ] Vai ser essa aqui, ó.
+19:04	Vai ser assim S 50. Perceba que o código dessa opção ele é um pouquinho diferente. Ao invés de ter três números
+19:12	lá no final, tem só dois. Isso pode acontecer, é normal, tá? Então, Semin S50 é a [ __ ] que todo mundo vai comprar,
+19:20	tá saindo a 20 centavos. De novo, você vai abrir a boleta de compra, vai digitar sem
+19:27	c I N S 50. Semin S50
+19:36	21 centavos é o que você vai tentar pagar aí, pessoal. sempre ordem limitada, nunca
+19:45	ordem a mercado. Coloca ordem limite para você não pagar muito mais caro do que o preço que tá sendo negociado. Os
+19:53	preços oscilarem para cima é normal, isso vai oscilar conforme oferta e demanda.
+19:58	Agora, ficar colocando ordem limite, você vai ficar jogando o preço lá para ficar colocando ordem a mercado, você vai ficar jogando o preço lá para cima.
+20:05	Você vai praticamente sempre comprar mais caro. Então, utilize a ordem limitada, tá bom? Perfeito.
+20:13	Já vou tirar as dúvidas de vocês aí no chat. Vamos acabar aqui.
+20:19	Magalu S593 tá saindo a 68 centavos.
+20:31	Bif S346 tá saindo a 11 centavos.
+20:44	Veg S44
+20:57	sendo negociado aqui a 1,28 nesse momento. O Zin G130
+21:10	tá saindo a 28 centavos.
+21:17	Siri S204 tá saindo a 1,25.
+21:29	A a putut debraé MJS693
+21:38	está saindo a 1,58 1,58.
+21:51	Cosan S360 saindo a 22 centavos.
+22:08	Brap S224 tá saindo aqui a 106.
+22:18	Andando bem.
+22:20	E bova G52 tá sendo aqui a 501.
+22:32	Beleza.
+22:37	Lojas Renner virou, mas deve ter virado na
+22:46	deve ter virado no leilão, né, na quarta-feira.
+22:51	virou no leilão na quarta-feira. O que que nós paremos aqui, pessoal? Tem que virar a mão na Henner também aqui, tá?
+22:59	Tem que virar a mão na Renner aqui também.
+23:16	Deixa eu ver aqui. Deixa eu ver aqui.
+23:21	Então aqui hoje, pessoal, como não, só conferindo aqui, nós não
+23:29	teve realmente operação na Renner, nós faremos a virada de mão na Henner aqui também, ó.
+23:37	A Lin F148 precisa ser encerrada.
+23:43	Lin F18 precisa ser encerrada. Ela tá saindo a 54 centavos.
+23:50	E aí temos mais uma nova operação para ser feita, que é entrar numa [ __ ] de renner.
+24:01	Vai ser uma Lin S.
+24:04	Então, perceba aqui, ó, que a Renner fechou abaixo das últimas mínimas no apagar das luzes, né, e acabou virando a tendência. Tava em indefinição.
+24:14	Então, é hora de comprar essa [ __ ] aqui.
+24:25	E aí será uma lojas Renner S1.
+24:31	151.
+24:36	Lin S151 que tá saindo nesse momento a 76 centavos.
+24:50	Pendurem a ordem aí, ó. Pendurem a ordem aí.
+24:55	Hoje tivemos três viradas de tendência, né? A BRM900 é um ajuste
+25:04	e as outras três aqui foram viradas de tendência.
+25:15	Certo?
+25:17	Bom, deixa eu dar uma olhadinha no chat aqui agora.
+25:29	Vamos lá. Tem pergunta para caramba. 1% do capital em todas as operações ou cada uma das 20 ações. Cada operação deve ter
+25:37	no máximo 1% de peso frente a todo seu patrimônio, tá? Beleza.
+25:50	Caio, aponta o dedo pra galera aprender o básico. Ele tá falando aqui de uma prática desrespeitosa que eu utilizo na
+25:58	aula das 3 da tarde, que é apontar o dedo aqui na sua cara, ó, para você que tá vacilando aí, ó.
+26:06	Vamos que vamos. Deixa eu ver aqui.
+26:13	Hum, pera aí que eu tô vendo aqui as as operações, tá?
+26:29	Pessoal pedindo para deixar todas na tela aqui. Então, deixa eu deixar todas na tela.
+26:39	Pronto, todas as importantes estão aí.
+26:59	Ah, Caio, na última aula você sugeriu a Siri S309.
+27:04	Cara, acho que você copiou errado, Kiko, porque não tem esse código não, cara. Você deve estar falando dessa aqui, ó.
+27:12	Siri de Cirela. Siri é CR E. Tá, tá escrito aqui na tela, pessoal. Dá uma olhadinha aí certinho.
+27:28	Bom, tentei comprar hoje a a Puch Brad Spar recomendada ontem, anteontem, né?
+27:32	Mas não tinha sido executada. Quando isso acontecer, o que eu devo fazer?
+27:36	Você tem que entrar novamente na boleta dela, ver direitinho qual que é o preço que ela tá sendo negociada e ajustar
+27:43	esse preço, tá? Provavelmente a ordem, o valor que você tá colocando aí, como ela foi atrasada, né? Não tem mais ninguém querendo negociar nesse preço.
+27:53	Cai, eu não consegui fazer a oferta da Brad Spar e hoje pela manhã o preço subiu demais, não consegui efetuar a compra. O que me sugere, sempre que isso acontecer, pessoal, ou você edita o
+28:01	preço, ou você abre a grade de opções e entra em uma nova opção na linha do dinheiro, tá?
+28:11	Ã, professor, deixa o filtro no profit sempre para todas as bolsas. Perdão se foi ensinado, eu já perdi o filtro. Qual o filtro, Gabriel, que
+28:20	você tá falando, cara? Qual o filtro que você tá falando? Da grade de opções, cara. Acho que você olhar o IBOV já é suficiente, tá?
+28:28	Se foi isso que você tá falando, por favor, mostra as operações sendo colocadas no home broker para replicar.
+28:34	Ô, Alejandro, cada corretora tem o seu home broker, cara. A gente utiliza o profit aqui justamente porque o profit é igual em qualquer corretora, entendeu?
+28:45	Ah, olá, boa tarde. A aula sobre como configurar o prof que você deu ficou para o dia 3 às 15, mas eu não acho. Eu dei essa aula sim, tá? Dei essa aula sim, pessoal.
+28:55	Dei sim.
+28:57	Eh, e eu posso fazer isso na segunda-feira novamente, tá bom?
+29:06	Segunda-feira eu posso fazer essa essa aula de configuração do Profit novamente lá na aula das 3 da tarde, tá? Caio, ontem teve uma entrada na Bradespar,
+29:14	como vi a gravação da aula hoje o preço tava fora. Novamente isso aqui já foi respondido. Beleza, acho que o Edson entendeu.
+29:23	Teremos sala nitro hoje, cara. Acho que vai ter sim. Cá estamos, né? Cá estamos.
+29:34	Ã, eu tava na CSNAF, mas a quantidade estava negativa em menos 6.000. É normal isso? Não, não é normal. O que que acontece? Você iniciou a operação
+29:42	vendendo essa call. Você precisa, Pablo, recomprar essa quantidade de opções aqui urgentemente.
+29:50	Urgente. Nunca fique vendido em calls.
+29:53	Se você tá com uma posição na sua carteira que tá aparecendo menos na frente da quantidade, a quantidade tá negativa, é porque você tá vendido nessa
+30:01	opção. O Pablo, recompre.000 agora. Agora tá.
+30:15	Todas as puts que compram na Genial, o meu lucro é quando ela sobe. Por quê?
+30:21	Quando você compra [ __ ] você quer que o ativo objeto caia, mas a [ __ ] se valorize, né? Sempre que o ativo objeto
+30:29	cair, a [ __ ] vai se valorizar. Então, quando você compra uma [ __ ] você quer que a [ __ ] se valorize. É isso.
+30:41	Beleza.
+30:50	Aí, ó, o pessoal quando que a Rener virou no leilão. Boa, deu tempo de fazer.
+30:57	Deixa eu ver aqui.
+31:06	Quando for para comprar, vai falar: "Cara, ô Leonardo, olha só, é fundamental que você assista todo o início dessas aulas, porque a gente
+31:15	passa um disclaimer lá explicando tudo que acontece aqui na aula e isso é repetido diversas vezes, tá?
+31:21	Importantíssimo que você veja o conteúdo completo. Virou a tendência, os novos entram.
+31:28	Certo. Certo. Isso aí, cara. Entrei uma nova trava de cedo com o Meramotro. Meramotro vai ser um japonês do Meramato. Foi a primeira.
+31:40	Me perdi aqui. Perdão, perdão. Deixa eu voltar pra seriedade. Foi a primeira que entrei, mas me ocorreu como eu saio da posição quando der lucro ou prejuízo.
+31:49	Para você sair de uma trava, é só você inverter as posições. Então, a trava, como é que ela funciona? Você compra uma opção e vende outra, não é? Para você encerrar, você
+31:58	inicia recomprando a que você vendeu e vendendo a que você tinha comprado.
+32:06	Beleza?
+32:33	Deixa eu ver aqui.
+32:38	A partir da semana que vem, todas as operações com vencimento em junho serão roladas, tá? Todas serão roladas.
+32:50	Deixa eu ver aqui. Deixa eu ver. Renner virou a tendência. Sim, sim, sim, sim.
+33:13	Ah, o tio mandou comprar bola na quarta.
+33:15	Mantemos ou que devemos fazer? Se ele mandou comprar e você comprou, é para você manter, tá?
+33:22	Isso aí. Todo mundo tinha que ter entrado na Renner. Exatamente. Boa, Léo.
+33:39	Vamos lá. Boa tarde. Gostaria muito de entender mais sobre o indicador. Você falou que é o high low, mas qual o período? O desvio tudo isso aí o tio
+33:47	passou para vocês na na mentoria que ele deu ontem, né? Se eu não me engano, aliás, ontem anteontem, né? À noite, tá?
+33:54	Então ele divulga isso em uma live fechada para todos os alunos, tá bom?
+34:00	Vale fazer preço médio? Não, nunca, nunca não faça preço médio. Uma perda de tempo. Isso aí
+34:08	poderia ser S445 também. Deixa eu ver aqui se faz sentido.
+34:15	Vamos ver se faz sentido.
+34:18	O que mais importa, pessoal, é que seja uma opção na linha do dinheiro.
+34:23	Então, a minha S445, a gente consegue ver que ela tá aqui, ó, levemente fora do dinheiro. Faz sentido sim, Fernando, não tem problema.
+34:38	Pode passar um panorama para eu compreender o que faz com a Veg, mesmo em tendência de baixa, crescer e o valor do ativo diminuir.
+34:46	Bom, a Veg está em tendência de baixa.
+34:51	Ela tá em tendência de baixa, só que ela tá aqui, ó, algum alguns dias meio que de lado, né? Se você olhar bem, a volatilidade da Velga tá caindo muito.
+35:04	Quando a volatilidade cai, as opções perdem valor. Então, por mais que o ativo esteja ainda em tendência de
+35:12	baixo, a opção ainda não ganhou o corpo, não se sensibilizou. Isso é normal.
+35:21	A rolagem sempre vai buscar o melhor delta para alongar a operação da tendência? Nem sempre.
+35:29	Se você tá falando ali do ajuste de delta, a nossa intenção sim é buscar trazer a operação de volta paraa linha
+35:37	do dinheiro para potencializar o lucro, tá?
+35:42	Tem que analisar emer, por favor. A gente atualizou ali o preço da Embraé e ela segue em tendência de baixo. Só que
+35:50	se você perceber bem, ela quase reverteu a tendência hoje. Quase,
+36:02	Caio, como sempre fazendo lentinho. Gosto muito. Que isso, cara?
+36:11	Que isso, cara? Gosto muito das aulas e dessas viradas.
+36:18	Estou operando sozinho. Algumas estou vendo aula, estou indo bem. Agradeço.
+36:21	Parabéns, PH. Muito bom. Bom saber que eu que eu te satisfaço assim.
+36:28	Oi. Se eu perder a hora das 16:30, posso fazer depois? Sim. Aí você pode fazer na abertura do dia seguinte, tá?
+36:36	Dá uma ansiedade verotina subindo quando eu estou em [ __ ] Sou novo aqui, Juanito. Isso é totalmente normal, cara.
+36:42	Totalmente. Tá, isso aí é prática. É prática. Vai ter que ir criando casca, tá bom?
+36:56	O que fazemos com o Bova, que o Will pediu para comprar ontem? Bom, segue a orientação dele, pessoal. Segue a orientação dele.
+37:05	Hoje é o meu primeiro dia na sala. Só confirmando, o recomendado será entrar nas trocas de posição ou podemos entrar em todas conforme a planilha? Ô, Marcel,
+37:12	você vai entrar em todas as operações que são novas. E eu sempre deixo muito claro isso. Eu sempre falo, pessoal,
+37:20	todo mundo vai entrar nessa opção, não é? Nessas opções que eu falar isso, você vai entrar com toda certeza, tá bom?
+37:29	Cai linha do dinheiro ao valor do lançamento ser próximo ao valor da cotação atual do ativo ou a opção que está sendo mais negociada? Ô Kendle, boa
+37:36	pergunta, tá? Linha do dinheiro é onde estão os strikes mais próximos do preço atual do ativo.
+37:44	Loja Zen está em leilão, correto? Devo colocar a ordem com validade até segunda-feira? Não, coloca com validade até hoje. É só você deixar a ordem pendurada lá. Teve gente aqui já falando
+37:52	que conseguiu executar. Se não der certo, você vai na segunda-feira colocar essa ordem novamente, tá bom?
+38:02	Essa ordinha, por onde chega o link? Lá no Telegram também. Beleza.
+38:15	Não consegui operar o menindes para ter o profit de graça. Diz que o risco tá muito alto. Isso será porque ele está despencando? Não, Eliane, provavelmente deu trava de risco porque você não tem
+38:24	garantias alocadas na corretora. Chama o seu assessor e pede para ele te explicar como que você faz para alocar a garantia para esse day tradezinho que você tem
+38:31	que fazer, tá bom? Só para ter o profit de graça.
+38:36	Na boleta do home broker, como coloco a ordem na aba compra ou compra stop? Compra. Compra só, tá?
+38:44	A aula das 15 é pelo YouTube. Exatamente.
+38:54	Beleza.
+39:18	Beleza. Uma pergunta fora do contexto daqui. Quero sair da XP porque é muito caro ir para genial. Minas posições. Se tiver que finalizar ficaria muito intrível. Tem alguma solução? Pedir a
+39:27	transferência de custódia. Renato pede a transferência de custódia, tá bom? Não precisa vender nenhuma posição sua para poder trocar de corretora.
+39:37	Cara, o valor da operação no profit é limitada no copilot da Genial. Não consegui operar com ele. Sim, dá para
+39:45	colocar ordem limitada em qualquer mecanismo de compra que você esteja utilizando, tá?
+39:55	No BTG eu não pago taxas da corretora.
+39:57	Acho que tem apenas os emolumentos. Pô, aí sim, velho. Acho que isso é o único do BTG que tá assim. Quando fica as ordens em aberto recomeça na segunda-feira ou preciso cancelar?
+40:06	Depende da validade que você colocou a sua ordem. Acompanha isso na segunda, professor. Uma sugestão começar com as opções que viram a tendência e com as
+40:15	operações primeiro. Aí dá tempo de entrar antes do fechamento. Fiquei de fora da Ren. Beleza? Anotado.
+40:26	Se eu comprar 20.000 para as opções e colocar 1% em cada ativo, vou estar com 2000 investidos. Os outros 18 fica em LFTB1. Exatamente. Deixa em LFTB1, tá?
+40:40	você vai usar os recursos conforme você for precisando. Tá bom, pessoal? O que aconteceu com a Renner? A
+40:49	Renner para mim aqui, ela não tava virando hoje, ela tinha virado na terça-feira, só que depois a gente percebeu que ela virou no leilão e não tinha sido feita uma nova operação, tá?
+40:57	Então, foi só por isso que a gente fez ela muito próximo do fechamento.
+41:08	Caio, eu deveria ter o lucro da [ __ ] cai, mas as minhas puts aí quando ela sobe fica no verde, quando
+41:18	cai fica no prejuízo com a call. Ô Mar, olha só, você tá confundindo isso.
+41:24	A [ __ ] ela se valoriza quando ativo o objeto cai. Então se você comprou uma [ __ ] de Petrobras e a Petro 4 cai, a sua [ __ ] vai ficar no positivo.
+41:36	Você quer que a sua [ __ ] vá pro positivo, que ela dê lucro, certo? Perfeito.
+41:52	A aula que você deu sobre as configurações do prático gravado, não consegui acessar. Sim, fica sempre gravado, mas você precisa ter o link para você acessar, né?
+42:01	Minha ordem da Renner não executou.
+42:03	Executa a segunda, sem problema, se vai dar tempo, cara. Confirma com o Uli se ele não esqueceu da operação do Bob, pois ele entrou ao vivo na quarta.
+42:11	porque tinha caído muito as opções. Daí ele mandou comprar bova para caso desse um repique.
+42:20	Perfeito. Vamos confirmar isso aqui.
+42:23	Rapaz, eu tô entendendo o processo, mas nesse momento a planilha tá sangrando.
+42:27	Normal, normal.
+42:31	Fiz uma compra errada. Ao invés de comprar a semin, comprei essa SNA e comprei também essa SN S610.
+42:37	Aqui você comprou errado, você tem que encerrar imediatamente, tá bom? Sempre assim.
+42:52	Deixa eu ver aqui.
+42:56	Beleza. Acho que foi tudo bem explicado, pessoal. O mercado já fechou, tá? Não adianta ficar vendo a Rener aí agora, não.
+43:07	A validade sempre coloca até hoje, tá?
+43:11	Beleza, cara. Se puder, por favor, disponibilizar pra gente a aula de configuração do Profit. Galera, eu tenho
+43:19	eu tenho essa aula aqui. Vamos fazer o seguinte, me chama lá no meu direct do Instagram, cara, que eu tenho o link dessa aula que eu expliquei como configurar o profit, como teu profit de
+43:27	graça. Eu envio para vocês o link lá no Instagram, sem problemas, tá bom?
+43:34	para vocês matarem o profit aí logo. Tô vendo que vocês estão tendo muita dor de cabeça aí com Home Broker. Eu quero todo mundo aqui no mesmo degrau, beleza?
+43:45	Tem a aula na disso na comunidade também, tá? O Tiu, ele colocou lá no grupo o link dessa aula aí do Profit também, ó. Tá bom?
+43:53	Beleza, galera.
+43:56	Pessoal, estamos junto. Então, as dúvidas foram todas respondidas aqui.
+44:02	Quem não conseguiu pegar a recomendação da Henner, pode fazer isso na segunda-feira, sem problemas, tá bom? Estaremos aqui ao vivo também.
+44:11	Tranquilo?
+44:13	Deixa eu ver isso aqui, cara. Caio, estamos com a Cosan S360 e a Cosan S 50.
+44:21	Não, deixa eu ver aqui, ó.
+44:28	Nós temos aqui a CZ S360 e as TSNA
+44:40	S610 e aqui é Semin S50. São três ativos diferentes, pessoal,
+44:48	tá bom? Três ativos diferentes, um é Czan e outro é CSN, tá?
+44:57	Lojas Renem Leilão. Mercado já fechou, não vai pegar agora essa ordem não, tá bom? Agora já tá com a porta fechadinha já.
+45:05	Tranquilo, pessoal. Galera, melhora tá por vir. Obrigado pela semana aí. Bom descanso para todos vocês e até semana
+45:12	que vem. Valeu,

@@ -1,0 +1,60 @@
+# gabarito_analista.yaml
+# CÓDIGOS REAIS lidos da planilha (Google Sheets "SALA NITRO") do analista,
+# extraídos dos 3 prints enviados pelo Luan em 2026-06-08.
+# Esta é a FONTE DE VERDADE para validar parser+resolver.
+#
+# Planilha do analista (lida da barra de endereço dentro do vídeo):
+#   docs.google.com/spreadsheets/d/1UXPeOwFpiGpiR_USXDkE3_tQLcchxf2lA7xn4EntWt0/edit#gid=2135859504
+#   (ID por OCR — export CSV deu 404: ou ID tem 1 char errado, ou planilha é privada.
+#    Se o Luan conseguir o link de leitura, dá pra reconciliar 100% automático.)
+#
+# CAVEAT: prints estão rolados — cada dia mostra só ~10-16 linhas, não a carteira inteira.
+# Colunas da planilha: CÓDIGO | ESTRUTURA | DATA INICIO | DATA FINAL | DIAS | RECEBIDO | PAGO | RESULTADO | SUCESSO
+
+fonte: "prints da planilha do analista (2026-06-08)"
+sheet_id_ocr: "1UXPeOwFpiGpiR_USXDkE3_tQLcchxf2lA7xn4EntWt0"
+sheet_gid: "2135859504"
+
+dias:
+  "2026-06-02":
+    print: "98b8bc...jpg  (watch?v=CTDht2slsvs&t=509s)"
+    codigos:
+      - {codigo: COGNR303, estrutura: PUT,  recebido: 0.16, pago: 0.16, resultado: "0,00%",   status: Aberta}
+      - {codigo: RENTR433, estrutura: PUT,  recebido: 1.85, pago: 2.12, resultado: "-11,90%", status: Aberta}
+      - {codigo: BRAVF205, estrutura: CALL, recebido: 0.64, pago: 0.63, resultado: "-1,54%",  status: Aberta}
+      - {codigo: LRENF148, estrutura: CALL, recebido: 0.96, pago: 0.70, resultado: "37,14%",  status: Aberta}
+      - {codigo: CSNAF682, estrutura: CALL, recebido: 0.51, pago: 0.34, resultado: "50,00%",  status: Aberta}
+      - {codigo: MBRFR167, estrutura: PUT,  recebido: 1.13, pago: 0.90, resultado: "25,56%",  status: Aberta}
+      - {codigo: PRIOS650, estrutura: PUT,  recebido: 3.82, pago: 3.58, resultado: "6,70%",   status: Aberta, nota: "Luan confirmou: PRIOS650 (put julho)"}
+      - {codigo: CYREG234, estrutura: CALL, recebido: 0.93, pago: 1.26, resultado: "-26,19%", status: Aberta}
+      - {codigo: PETRS437, estrutura: PUT,  recebido: 1.83, pago: 1.83, resultado: "10,38%",  status: Aberta}
+      - {codigo: EMBJG753, estrutura: CALL, recebido: 2.77, pago: 3.87, resultado: "-28,42%", status: Aberta}
+    # ...demais linhas abaixo do corte do print (não visíveis)
+
+  "2026-06-03":
+    print: "9d6b46...jpg  (watch?v=T0eVXLngc1k&t=1345s)"
+    codigos:
+      - {codigo: CMING485, estrutura: CALL, nota: "topo do print, parcial"}
+      - {codigo: BRAPG234, estrutura: CALL, data_final: "03/06/2026", dias: 7, recebido: 0.71, pago: 1.10, resultado: "-35,45%", status: "Encerrada (virou PUT)"}
+      - {codigo: MGLUS593, estrutura: PUT,  recebido: 0.68, pago: 0.43, status: Aberta}
+      - {codigo: BEEFS346, estrutura: PUT,  recebido: 0.18, pago: 0.22, status: Aberta}
+      - {codigo: WEGES444, estrutura: PUT,  recebido: 1.62, pago: 1.53, status: Aberta}
+      - {codigo: USIMG130, estrutura: CALL, recebido: 0.54, pago: 0.58, status: Aberta}
+      - {codigo: CYRES204, estrutura: PUT,  data_inicio: "03/06/2026", recebido: 0.94, status: "Aberta (nova no dia)"}
+    # print rolado no fim da tabela; topo (COGN/RENT/etc) não visível
+
+  "2026-06-05":
+    print: "60c046...jpg  (watch?v=3mXB4MVn004&t=620s)"
+    codigos:
+      - {codigo: LRENF148, estrutura: CALL, data_final: "05/06/2026", recebido: 0.54, pago: 0.70, resultado: "-22,86%", status: "Encerrada"}
+      - {codigo: CSNAF682, estrutura: CALL, data_final: "05/06/2026", pago: 0.07, resultado: "-79,41%", status: "Encerrada"}
+      - {codigo: MBRFR167, estrutura: PUT,  pago: 0.90, resultado: "33,33%",  status: Aberta}
+      - {codigo: PRIOS650, estrutura: PUT,  recebido: 4.57, pago: 1.58, resultado: "27,65%", status: Aberta, nota: "Luan confirmou: PRIOS650 (put julho)"}
+      - {codigo: PETRS437, estrutura: PUT,  pago: 2.30, resultado: "30,60%", status: Aberta}
+      - {codigo: MRVES580, estrutura: PUT,  pago: 0.31, resultado: "38,71%", status: Aberta}
+      - {codigo: BRKMS110, estrutura: PUT,  data_final: "05/06/2026", recebido: 2.29, pago: 1.03, resultado: "122,33%", status: "Encerrada (ajuste→S900)"}
+      - {codigo: CMING485, estrutura: CALL, data_final: "05/06/2026", recebido: 0.23, pago: 1.03, resultado: "-56,52%", status: "Encerrada"}
+      - {codigo: MGLUS593, estrutura: PUT,  recebido: 0.68, pago: 0.43, resultado: "58,14%", status: Aberta}
+      - {codigo: BEEFS346, estrutura: PUT,  recebido: 0.11, pago: 0.43, resultado: "-50,00%", status: Aberta}
+      - {codigo: WEGES444, estrutura: PUT,  resultado: "-16,88%", status: Aberta}
+      - {codigo: USIMG130, estrutura: CALL, data_inicio: "02/06/2026", pago: 0.58, resultado: "0,00%", status: Aberta}

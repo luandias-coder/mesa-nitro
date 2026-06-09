@@ -1,0 +1,198 @@
+{
+  "data": "2026-06-02",
+  "analista": "Caio",
+  "vencimento_padrao": "2026-07-17",
+  "resumo_analista": "1 virada (WEGE3: encerra call G442, compra put S44) + 1 ajuste delta (USIM5: encerra G15, compra G130)",
+  "sinais": [
+    {
+      "underlying": "WEGE3",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Veg G442",
+      "strike": 44.2,
+      "vencimento": "2026-07",
+      "preco_sugerido": 1.11,
+      "delta": null,
+      "motivo": "Tendência virando para baixa; encerrar call antes de comprar put. 43% de prejuízo.",
+      "confianca": "alta",
+      "timestamp": "13:00",
+      "trecho": "vag G 442 precisa ser encerrada hoje. Ela tá saindo aqui a 1,11, R$ 1,11, 43% de prejuízo.",
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "WEGE3",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Veg S44",
+      "strike": 44.0,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 1.54,
+      "delta": 0.44,
+      "motivo": "Virada de tendência para baixa. Operação para TODOS os participantes. Vencimento julho (17/07), ATM, delta ~0,44.",
+      "confianca": "alta",
+      "timestamp": "14:29",
+      "trecho": "a vag s44, ela tá com delta aqui de 0,44 ... Veg S442. É a opção que a gente tá comprando agora.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "Veg G442",
+        "preco": 1.11
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "USIM5",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Uzin G130",
+      "strike": 13.0,
+      "vencimento": "2026-07",
+      "preco_sugerido": 0.58,
+      "delta": null,
+      "motivo": "Ajuste de delta: Zin G15 atingiu +119-120% de lucro (saindo a 1,25). Nova call G130 custa 58 centavos (~metade de 1,25/2=0,625). Obrigatório apenas para quem já estava posicionado na G15.",
+      "confianca": "alta",
+      "timestamp": "21:01",
+      "trecho": "eu tenho que trocar pela uzin G130 que tá custando 58 centavos.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "Zin G15",
+        "preco": 1.25
+      },
+      "codigo_resolvido": null
+    }
+  ],
+  "posicoes_em_aberto": [
+    {
+      "codigo_falado": "Cogna R30",
+      "underlying": "COGN3",
+      "tipo": "PUT",
+      "preco": 0.16,
+      "timestamp": "8:29",
+      "nota": "Saindo a 16 centavos. Tendência de baixa mantida."
+    },
+    {
+      "codigo_falado": "Rente R433",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": 1.85,
+      "timestamp": "8:45",
+      "nota": "Localiza em tendência de baixa. Posição mantida."
+    },
+    {
+      "codigo_falado": "Brave F20",
+      "underlying": "BRAV3",
+      "tipo": "CALL",
+      "preco": 0.64,
+      "timestamp": "9:03",
+      "nota": "Brava em tendência de alta. Posição mantida."
+    },
+    {
+      "codigo_falado": "Lojas Ren F18",
+      "underlying": "LREN3",
+      "tipo": "CALL",
+      "preco": 0.96,
+      "timestamp": "9:16",
+      "nota": "Lojas Renner em tendência de alta. +37% de lucro citado."
+    },
+    {
+      "codigo_falado": "CSN F682",
+      "underlying": "CSNA3",
+      "tipo": "CALL",
+      "preco": 0.51,
+      "timestamp": "9:37",
+      "nota": "CSN em tendência de alta forte (+8%). ~50% de lucro."
+    },
+    {
+      "codigo_falado": "MBRF R167",
+      "underlying": "MBRF3",
+      "tipo": "PUT",
+      "preco": 1.13,
+      "timestamp": "9:53",
+      "nota": "MBRF em tendência de baixa."
+    },
+    {
+      "codigo_falado": "Si 234",
+      "underlying": "CYRE3",
+      "tipo": "CALL",
+      "preco": 0.93,
+      "timestamp": "11:35",
+      "nota": "Cirela lateralizada, tendência de alta. Código incerto: possivelmente SIRI C/G/234."
+    },
+    {
+      "codigo_falado": "Petro S437",
+      "underlying": "PETR4",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "11:43",
+      "nota": "Petrobras em tendência de baixa. Preço não citado explicitamente neste trecho."
+    },
+    {
+      "codigo_falado": "AMRV S580",
+      "underlying": "MRVE3",
+      "tipo": "PUT",
+      "preco": 0.26,
+      "timestamp": "12:07",
+      "nota": "MRV em tendência de baixa apesar de subir 4% no dia."
+    },
+    {
+      "codigo_falado": "Zin G15",
+      "underlying": "USIM5",
+      "tipo": "CALL",
+      "preco": 1.25,
+      "timestamp": "18:22",
+      "nota": "Usiminas call G15 encerrada por 1,25 com ~120% de lucro. Substituída por G130."
+    },
+    {
+      "codigo_falado": "BRKM S110",
+      "underlying": "BRKM5",
+      "tipo": "PUT",
+      "preco": 1.47,
+      "timestamp": "17:06",
+      "nota": "Braskem em tendência de baixa. Possível ajuste citado mas não confirmado."
+    },
+    {
+      "codigo_falado": "Cuz S400",
+      "underlying": "CSNA3",
+      "tipo": "PUT",
+      "preco": 0.26,
+      "timestamp": "17:28",
+      "nota": "Ticker incerto — pode ser COSAN (CSAN3) ou outra. Registrado em avisos."
+    },
+    {
+      "codigo_falado": "Semin G85",
+      "underlying": "CMIN3",
+      "tipo": "CALL",
+      "preco": 0.28,
+      "timestamp": "17:47",
+      "nota": "CSN Mineração em tendência de alta (+5,29%)."
+    },
+    {
+      "codigo_falado": "Abrap G234",
+      "underlying": "BRAP4",
+      "tipo": "CALL",
+      "preco": 1.26,
+      "timestamp": "18:01",
+      "nota": "Bradespar em tendência de alta (+3,85%)."
+    },
+    {
+      "codigo_falado": "Amagalu S593",
+      "underlying": "MGLU3",
+      "tipo": "PUT",
+      "preco": 0.53,
+      "timestamp": "18:08",
+      "nota": "Magalu em tendência de baixa, caindo 1,72%. Possível ajuste mencionado."
+    }
+  ],
+  "avisos": [
+    "WEGE3 (WEG): legenda canta 'vag'/'veg'/'feg' alternadamente — casado com WEGE3 pelo contexto e pelo código S (PUT julho). Código correto inferido: WEGE S44.",
+    "Analista corrigiu ao vivo: primeiramente disse 'Veg G442', depois 'Veg S442', depois 'Veg S44' — o código de saída é WEGE G442 (CALL jul) e o de entrada é WEGE S44 (PUT jul).",
+    "Também disse 'Veg W442' e 'Veg S442' antes de se corrigir para 'Veg S44' — sinal emitido com código_falado 'Veg S44' conforme correção final.",
+    "'Cuz S400' (timestamp 17:28) — ticker ambíguo; legenda pode estar cantando COSAN (CSAN) ou CSN (CSNA). Não há clareza suficiente: underlying marcado como CSNA3 com baixa confiança. Registre em avisos.",
+    "'Si 234' (Cyrela, timestamp 11:35) — código mal transcrito; raiz da opção de CYRE3 é SIRI. Strike/mês incertos pela transcrição.",
+    "'AMRV S580' (MRV, timestamp 12:07) — raiz da opção deveria ser MRVE; legenda cantou 'AMRV'. Código inferido MRVE S580.",
+    "BRKM S110 (timestamp 17:06): strike '110' parece muito alto para BRKM5 (~R$17-20). Possível erro de legenda — registrado como citado.",
+    "Petro S437 (timestamp 11:43): preço não foi citado neste trecho da transcrição.",
+    "PIF3 (timestamp 3:44) — ativo não identificado na lista. Pode ser PRIO3 mal transcrito. Não emitido como sinal por falta de confiança.",
+    "Analista menciona possível ajuste em Braskem (puts) mas não confirma operação concreta — não emitido como sinal."
+  ],
+  "fonte": "live_youtube"
+}

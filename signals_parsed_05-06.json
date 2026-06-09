@@ -1,0 +1,313 @@
+{
+  "data": "2026-06-05",
+  "analista": "Caio",
+  "vencimento_padrao": "2026-07-17",
+  "resumo_analista": "3 viradas de tendência (CMIN, CSNA3, LREN3) + 1 ajuste de delta (BRKM5)",
+  "sinais": [
+    {
+      "underlying": "CSNA3",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "CSNF682",
+      "strike": 6.82,
+      "preco_sugerido": 0.07,
+      "vencimento": "2026-06-20",
+      "motivo": "Ativo reverteu tendência para baixa (caindo 10%); encerrar call antes de montar put",
+      "timestamp": "11:47",
+      "trecho": "CSNF 682, nós vamos dar encerramento a ela nesse momento",
+      "confianca": "alta",
+      "delta": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "CSNA3",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "CSNA S610",
+      "strike": 6.1,
+      "preco_sugerido": 0.46,
+      "vencimento": "2026-07-17",
+      "motivo": "Virada de tendência para baixa na CSN; delta ~0,46; vencimento julho",
+      "timestamp": "12:58",
+      "trecho": "é a TS na S610... CS 610... ela está saindo nesse momento por 46 centavos",
+      "confianca": "alta",
+      "delta": 0.46,
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "CSNF682",
+        "preco": 0.07
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "CMIN3",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Semin G485",
+      "strike": 4.85,
+      "preco_sugerido": 0.1,
+      "vencimento": "2026-07-17",
+      "motivo": "Semin (CSN Mineração) reverteu tendência para baixa; encerrar call",
+      "timestamp": "18:21",
+      "trecho": "quem tava na semin G485, dá tchau para ela... ela tá sendo a 10 centavos nesse momento",
+      "confianca": "alta",
+      "delta": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "CMIN3",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Semin S50",
+      "strike": 0.5,
+      "preco_sugerido": 0.21,
+      "vencimento": "2026-07-17",
+      "motivo": "Virada de tendência para baixa na Semin (CMIN3); delta próximo da linha do dinheiro",
+      "timestamp": "19:04",
+      "trecho": "Vai ser assim S 50... Semin S50 é a put que todo mundo vai comprar, tá saindo a 20 centavos",
+      "confianca": "media",
+      "delta": null,
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "Semin G485",
+        "preco": 0.1
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "LREN3",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Lin F148",
+      "strike": 14.8,
+      "preco_sugerido": 0.54,
+      "vencimento": "2026-06-20",
+      "motivo": "Renner virou tendência para baixa (virada no leilão na quarta-feira); encerrar call",
+      "timestamp": "23:43",
+      "trecho": "A Lin F148 precisa ser encerrada. Ela tá saindo a 54 centavos.",
+      "confianca": "alta",
+      "delta": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "LREN3",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Lin S151",
+      "strike": 15.1,
+      "preco_sugerido": 0.76,
+      "vencimento": "2026-07-17",
+      "motivo": "Virada de tendência para baixa na Renner; nova put no vencimento de julho",
+      "timestamp": "24:36",
+      "trecho": "Lin S151 que tá saindo nesse momento a 76 centavos",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "Lin F148",
+        "preco": 0.54
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "BRKM5",
+      "acao": "saida",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "BRKM S110",
+      "strike": 1.1,
+      "preco_sugerido": 2.29,
+      "vencimento": "2026-07-17",
+      "motivo": "Opção atingiu mais de 100% de lucro; ajuste de delta — encerrar posição valorizada",
+      "timestamp": "15:26",
+      "trecho": "BRKMS 110 ultrapassou o 100% de lucro. Vamos ajustar essa operação trocando a BRKMS 110 que tá custando R$ 2,29",
+      "confianca": "alta",
+      "delta": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "BRKM5",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "BRKM S900",
+      "strike": 9.0,
+      "preco_sugerido": 0.94,
+      "vencimento": "2026-07-17",
+      "motivo": "Ajuste de delta: trocar S110 (muito valorizada, R$2,29) por S900 (~linha do dinheiro, delta ~0,45, R$0,94); mesmo vencimento julho",
+      "timestamp": "17:14",
+      "trecho": "BRKMS 900 vai ser a troca que nós faremos aqui agora... Delta dela tá aqui em 0,45... encerrei uma por 2,29 e voltei com uma nova de 94 centavos",
+      "confianca": "alta",
+      "delta": 0.45,
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "BRKM S110",
+        "preco": 2.29
+      },
+      "codigo_resolvido": null
+    }
+  ],
+  "posicoes_em_aberto": [
+    {
+      "codigo_falado": "Cogna R3",
+      "underlying": "COGN3",
+      "tipo": "PUT",
+      "preco": 0.21,
+      "timestamp": "10:12",
+      "nota": "21 centavos última negociação"
+    },
+    {
+      "codigo_falado": "RENT R433",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": 2.76,
+      "timestamp": "10:20",
+      "nota": "Localiza PUT R433"
+    },
+    {
+      "codigo_falado": "Brave F205",
+      "underlying": "BRAV3",
+      "tipo": "CALL",
+      "preco": 0.9,
+      "timestamp": "10:32",
+      "nota": "38% de lucro"
+    },
+    {
+      "codigo_falado": "Lojas Renner F148",
+      "underlying": "LREN3",
+      "tipo": "CALL",
+      "preco": 0.54,
+      "timestamp": "10:41",
+      "nota": "Encerrada no dia — virada de tendência"
+    },
+    {
+      "codigo_falado": "CSNF682",
+      "underlying": "CSNA3",
+      "tipo": "CALL",
+      "preco": 0.07,
+      "timestamp": "11:20",
+      "nota": "Ativo desabando 10%; encerrada no dia"
+    },
+    {
+      "codigo_falado": "MBRF R167",
+      "underlying": "MBRF3",
+      "tipo": "PUT",
+      "preco": 1.2,
+      "timestamp": "14:24",
+      "nota": "Marfrig/BRF PUT R167"
+    },
+    {
+      "codigo_falado": "Petro S437",
+      "underlying": "PETR4",
+      "tipo": "PUT",
+      "preco": 2.39,
+      "timestamp": "14:47",
+      "nota": "Petrobras PUT S437"
+    },
+    {
+      "codigo_falado": "MRV S580",
+      "underlying": "MRVE3",
+      "tipo": "PUT",
+      "preco": 0.43,
+      "timestamp": "15:01",
+      "nota": "MRV PUT S580"
+    },
+    {
+      "codigo_falado": "BRKM S110",
+      "underlying": "BRKM5",
+      "tipo": "PUT",
+      "preco": 2.29,
+      "timestamp": "15:09",
+      "nota": "Braskem PUT S110 — ajustada no dia para S900"
+    },
+    {
+      "codigo_falado": "Semin G485",
+      "underlying": "CMIN3",
+      "tipo": "CALL",
+      "preco": 0.1,
+      "timestamp": "17:57",
+      "nota": "CSN Mineração CALL G485 — encerrada no dia (virada tendência)"
+    },
+    {
+      "codigo_falado": "Magalu S593",
+      "underlying": "MGLU3",
+      "tipo": "PUT",
+      "preco": 0.68,
+      "timestamp": "20:19",
+      "nota": "Magazine Luiza PUT S593"
+    },
+    {
+      "codigo_falado": "Bif S346",
+      "underlying": "BEEF3",
+      "tipo": "PUT",
+      "preco": 0.11,
+      "timestamp": "20:31",
+      "nota": "Minerva (BEEF3) PUT S346"
+    },
+    {
+      "codigo_falado": "Veg S44",
+      "underlying": "WEGE3",
+      "tipo": "PUT",
+      "preco": 1.28,
+      "timestamp": "20:44",
+      "nota": "WEG PUT S44"
+    },
+    {
+      "codigo_falado": "Zin G130",
+      "underlying": "USIM5",
+      "tipo": "CALL",
+      "preco": 0.28,
+      "timestamp": "20:57",
+      "nota": "Usiminas CALL G130 — ativo em tendência de alta"
+    },
+    {
+      "codigo_falado": "Siri S204",
+      "underlying": "CYRE3",
+      "tipo": "PUT",
+      "preco": 1.25,
+      "timestamp": "21:17",
+      "nota": "Cyrela PUT S204"
+    },
+    {
+      "codigo_falado": "EMBJ S693",
+      "underlying": "EMBJ3",
+      "tipo": "PUT",
+      "preco": 1.58,
+      "timestamp": "21:29",
+      "nota": "Embraer PUT S693 — legenda cantou 'MJS693', corrigido para EMBJ"
+    },
+    {
+      "codigo_falado": "Cosan S360",
+      "underlying": "CSAN3",
+      "tipo": "PUT",
+      "preco": 0.22,
+      "timestamp": "21:51",
+      "nota": "Cosan PUT S360"
+    },
+    {
+      "codigo_falado": "Brap S224",
+      "underlying": "BRAP4",
+      "tipo": "PUT",
+      "preco": 1.06,
+      "timestamp": "22:08",
+      "nota": "Bradespar PUT S224"
+    },
+    {
+      "codigo_falado": "Bova G52",
+      "underlying": "BOVA11",
+      "tipo": "CALL",
+      "preco": 5.01,
+      "timestamp": "22:20",
+      "nota": "ETF Ibovespa CALL G52 — citado como posição em aberto; Uli teria recomendado na quarta"
+    }
+  ],
+  "avisos": [
+    "13:05 — Analista canta 'TS na S610' e depois 'CS 610'; código correto inferido como CSNA S610 (CSN Siderúrgica, PUT julho, strike 6,10). Confirmar ticker e strike na grade.",
+    "19:04 — 'Semin S50' tem strike com apenas dois dígitos (S50), incomum. Analista confirma ao vivo que é normal. Strike interpretado como 0,50 (formato de ação de baixo preço). Confirmar na grade de opções da CMIN3.",
+    "21:29 — Legenda canta 'putut debraé MJS693'; interpretado como PUT de Embraer (EMBJ3), código EMBJ S693. 'MJS' pode ser erro de transcrição de 'EMBJ S'. Registrado como aviso de ambiguidade.",
+    "15:09 — Legenda canta 'BR kms 110' e depois 'BRKMS 110'; confirmado como BRKM5 (Braskem) PUT S110. Consistente com contexto.",
+    "20:44 — Legenda canta 'Veg S44'; interpretado como WEGE3 (WEG) PUT S44. Strike 44 pode ser S4400 ou S440 dependendo da cotação — confirmar na grade.",
+    "20:57 — Legenda canta 'Zin G130'; interpretado como USIM5 (Usiminas) CALL G130 (letra G = julho, CALL). Ativo citado como em tendência de ALTA, consistente com CALL.",
+    "22:20 — 'Bova G52' interpretado como BOVA11 CALL G52. Analista menciona que foi recomendação do 'Uli' na quarta-feira; confirmar se é posição oficial da sala.",
+    "17:14 — Analista menciona primeiro 'BRKMS890' e depois corrige para 'BRKMS900'. Registrado como BRKM S900 (código final confirmado pelo analista)."
+  ],
+  "fonte": "live_youtube"
+}

@@ -1,0 +1,411 @@
+0:02	Fala aí, galera. Estamos ao vivo, oficialmente ao vivo. Vamos para cima que hoje, dia 2/06,
+0:10	vamos começar mais uma sala nitro, rapaziada aí chegando em peso, muitos alunos novos.
+0:18	Vamos lá, galera. Seguinte, seguinte, como que a banda toca aqui, hein? Atenção, atenção, hein?
+0:26	É muito importante que toda aula você veja o início da aula. Toda aula você vai chegar aqui e vai ver o início da aula. Beleza?
+0:35	Como que funciona a nossa sala nitro? Preste muita atenção.
+0:41	Nós vamos tomar decisões aqui com base nas tendências do mercado. Então eu vou monitorar as viradas de tendências
+0:48	através de um indicador objetivo. Esse indicador vai me dizer quando que eu vou operar na alta e quando que eu vou
+0:56	operar na tendência de baixa. Quando os preços começarem a subir, renovando máximas para cima, o indicador vai ficar verde.
+1:08	preços estão rompendo a média das últimas máximas. Como indicador fica verde, nós queremos lucrar na tendência de alta. Para lucrar na tendência de
+1:15	alta, nós faremos compras das opções do tipo calls.
+1:20	Uma vez que o preço for se desenvolvendo na alta, nós faremos ajustes, faremos rolagens, tudo será explicado detalhadamente aqui ao vivo. Você vai aprender junto comigo.
+1:31	Em algum momento a tendência vai reverter, o preço vai começar a cair. Se os preços começarem a renovar mínimas para baixo, rompendo a média das últimas mínimas, o indicador vai ficar vermelho.
+1:43	Esse é o sinal de que uma tendência de baixa. Na tendência de baixa, nós encerramos as calls e compramos puts.
+1:53	Perfeito. Maravilha. E da mesma forma, se o mercado continuar caindo, nós faremos ajustes, faremos rolagem. Tudo
+2:00	isso será cantado em voz alta aqui. Qual a opção que você compra, qual que você encerra, quando fazer, por quanto fazer,
+2:07	tudo será orientado aqui ao vivo. Eu vou falar em voz alta, eu vou escrever na planilha, é só você prestar atenção no
+2:14	que tá escrito, no que tá sendo dito e executar na sua corretora. Não precisa ter o profit para fazer essas operações.
+2:22	Você só precisa ter a conta aberta na corretora, tá? Apesar de que hoje eu vou ensinar como que você faz para configurar o profit, montar as suas operações por lá. Bem tranquilo, né?
+2:34	Lembre sempre, toda recomendação nova de virada de tendência, eu vou avisar todo mundo, ó, galera, todo mundo tem que entrar nessa aqui. Você vai abrir uma
+2:41	boleta de compra, vai digitar o código do ativo e vai clicar em comprar. Essa tem que ser uma ordem limite. Não entre
+2:49	a mercado, pessoal. Não entre mercado, faça a ordem limite para que você saiba exatamente quanto que você tá pagando e não pague por acidente um preço mais
+2:57	caro. Beleza? Nessa primeira parte da aula, eu vou dar uma olhada nas tendências da nossa lista de ativos. Então eu vou olhar todas as tendências.
+3:05	Eu vou te falar o que que tá continuando a subir, continuando a cair e o que que tá virando a tendência. Então já fica ligado porque nessa primeira parte você já vai entender o que que a gente vai
+3:13	fazer no restante da aula, beleza? Deixa a sua dúvida no chat, participe, porque assim que eu acabar tudo eu vou tirar as
+3:21	dúvidas de vocês. Tranquilaço. No mais é só acompanhar a aula tranquilo aqui.
+3:26	Chegou agora, chegou atrasado, arrasta a aula pro início aí e assiste desde o início, tá bom? Bom, vamos começar aqui
+3:34	porque a palestrinha hoje já foi grande demais. 3 minutos falando para caramba.
+3:38	Sim, hoje vai ter a aula do profit, já falei. Beleza, vai ter aula do profit.
+3:44	Vamos que vamos. Então galera, gente bonita do meu Brasil, PIF 3, primeiro ativo aqui da nossa lista.
+3:52	Perceba que o indicador aqui em cima tá vermelho. O ativo segue em tendência de baixa. Hoje ele tá próximo do 0 a Z0, tá
+4:00	subindo 0,86, mas a tendência segue de baixa, tá? Inclusive foi uma operação que nós fizemos ajuste ontem, né? O Brades Spar está em tendência de alta.
+4:09	Perceba que a Brades Spar hoje tá subindo 3.85%.
+4:13	Então, a tendência de alta está voltando a fluir depois de alguns dias de lado.
+4:18	Maravilha. Quem está posicionado nas calls é só manter, tá bom? Já adianto para todo mundo, hoje tem operação nova para ser feita, hein? Fica aqui comigo que tem operação nova para ser feita,
+4:27	pelo menos por enquanto, né? Que eu tô vendo aqui. Brave 3 está em tendência de alta. Nada a se fazer aqui. Quem tá posicionado nas cols é só manter, tá
+4:36	bom? Abra quen está esticando aqui a sua tendência de baixo, ó. Desde que ela virou a tendência de baixa, ela já caiu 12%.
+4:46	Provavelmente, não sei ainda, mas provavelmente podemos ter ajustes para serem feitos aqui na Brasquen. Então, quem tá posicionado nas fits de Brasquen, fica ligado aí, porque a gente
+4:55	pode ajustar essa posição a fim de zerar risco e manter a exposição na tendência de bas, né?
+5:02	A semin hoje tá subindo incríveis 5.29%, tendência de alta começando a ganhar força. Bom para quem tá posicionado nas
+5:11	calls, não é? A cogna segue em tendência de baixa. Perceba como que a cogna alguns dias atrás ela chegou a quase
+5:18	virar, mas não virou, voltou a cair. Por isso que é muito importante operar junto comigo aqui no fechamento do mercado para você pegar as confirmações. É o
+5:27	caso aqui, ó, já vou chegar lá, né? A CZ COZAN segue em tendência de baixa. E o caso que eu queria falar com vocês é da
+5:34	CSN. Ontem a CSN3 quase virou a tendência, ó. Quase deixou esse pavio aqui, né? O pavio representa aonde os
+5:43	preços tentaram chegar e não conseguiram, não é isso? Então, galera, quem queimou a largada aqui, quem foi
+5:51	precoce, quis comprar Putin ontem de CSN, mas não era para comprar. A gente falou disso aqui na aula ontem. Então,
+5:57	repique tendência de alta, não é? Hoje a CSN3 tá subindo 8%,
+6:04	engatando aqui numa alta bem forte, logo mantém aí a exposição a tendência de alta. A Cirela segue em tendência de
+6:13	alta, porém aqui um pouco mais fraca, né? Tá mais lateralizada.
+6:17	A Imraé segue também tendência de alta um pouco mais fraca, mas a tendência é de alta. Aqui eu não vou operar o que eu quero, o que eu acho, o que eu tô
+6:25	rezando, não. Eu vou operar com objetividade. O indicador tá me dizendo para manter a exposição a alta. Lojas Renner, a tendência segue de alta,
+6:32	subindo 3.13% hoje. Muito bom. Também tá se desenvolvendo. A MBRF tá em tendência
+6:39	de baixa aqui ainda hoje próxima do 0 a0. Magalu esticando sua tendência de
+6:46	baixa, caindo 1.72. Vamos ver se tem ajuste também em Magalu, não é?
+6:52	MRV hoje tá subindo 4%, muita coisa, né?
+6:56	Mas a tendência segue de baixo. Então eu faço o quê? Não faço nada porque eu sei que dentro dessa tendência de baixa nós já tivemos altas, quedas maiores, altas
+7:06	pequenas, quedas maiores, altas pequenas e quedas maiores, impulso e correção.
+7:11	Preço funciona assim, é uma eterna barganha entre compradores e vendedores.
+7:15	Então, o preço não se não se move em linha reta, ele vai sempre corrigindo e se impulsionando em direção da
+7:22	tendência, né? A Petrobráas também está em tendência de baixa, hoje caindo 0,70.
+7:27	E a PRIO também em tendência de baixa, caindo 0,53. Localiza, tá subindo 1.48, mas a tendência segue de baixa. A US
+7:35	Minas, incrível, a US Minas subindo muito forte hoje, 8% de alta. Vai ter ajuste aqui na US Minas, hein? Tá
+7:43	decolando. Tendência segue de alta linda também. É só manter as calls. E hoje nós temos uma nova operação. Todo mundo vai
+7:52	entrar comigo nisso aqui, hein? Todas as 390 pessoas que estão aqui ao vivo comigo vão entrar em uma [ __ ] de vag. [ __ ]
+8:01	de veg. Nós faremos uma compra de [ __ ] Eu vou te falar qual que é essa [ __ ] já já. Fique aí comigo, beleza? Então vamos
+8:08	lá paraa planilha atualizar as nossas posições.
+8:13	Eu vou atualizar todas as posições e eu vou te dizer exatamente qual opção que você vai ter que comprar, qual opção que você vai ter que vender.
+8:21	Faço assim, tá? Então, a primeira que nós vamos ver aqui, ó, é a cogna R30.
+8:29	A gente vai passar por cada uma e ver se tem ajuste. Por que que eu vou deixar a nova recomendação um pouco mais pro final? pra gente pegar a confirmação do
+8:36	fim do dia, tá? Então, Cogna R30, ela tá aqui saindo a 16 centavos, foi o
+8:45	último negócio dela. Ela tá aqui no 0 a0, a rente R433.
+8:53	Fique comigo aqui porque hoje todo mundo vai entrar em uma nova operação, hein? A Rente R43 tá saindo a 1,85.
+9:03	A Brave F20 tá saindo a 0,64.
+9:16	A Lojas Ren F18 está saindo a 96 centavos.
+9:31	Já batendo aqui 37% de lucro. A CSN F682.
+9:37	Atenção aí, ó. CSN F682 está batendo nesse momento 51 centavos.
+9:48	51 centavos. Chegou aqui, ó, a 50% de lucro.
+9:53	A MBRF R 167
+10:04	e está saindo a 1,13. Pessoal, lembrando que o mais importante aqui é você entender que o nosso, a nossa
+10:11	estratégia, ela se baseia na lei dos grandes números. Então nós entraremos em muitas operações e é esse somatório de
+10:18	operações que vai fazer com que o retorno venha no médio longo prazo. Nós temos, pessoal, um lucro acumulado nesse
+10:26	momento de 1842%, com uma taxa de acerto de apenas 40%, porque aqui a gente perde pequeno e
+10:33	ganha grande. Então eu não preciso beirar a perfeição para poder ser lucrativo. Eu só preciso seguir o método
+10:40	de forma clara. Então, cada operação você vai montar com no máximo 1% do seu capital. O ideal é que todas as suas posições tenham o mesmo peso para que
+10:50	nenhuma se sobressaia diante da outra. E esse processo de diversas operações nos ativos,
+10:59	diversas viradas de tendência vão construir um retorno muito acima da média. Beleza? Então você que está aqui, você precisa estar comprometido com essa
+11:06	metodologia, tá? Isso significa que você precisa normalizar qualquer perda que você tenha
+11:14	e normalizar qualquer ganho que você tenha. Porque um ganho muito grande, um ganho muito fora da curva, ele também
+11:22	vai ser exceção. Ele não vai significar nada dentro de uma lógica maior.
+11:35	A si 234. tá bem lateralizado, tá aqui ainda 093.
+11:43	Ah, Petro S 437.
+11:48	Eu já vou tirar todas as dúvidas de vocês aí, tá, pessoal? Só tô atualizando tudo aqui. Vai participando no chat aí que a gente vai acelerar bastante hoje,
+11:55	hein? Lembrando que hoje no pós horário tem aula aqui de como configurar o profit, tá?
+12:07	277, AMRVS 580.
+12:16	Ela tá saindo aqui a 0,26.
+12:21	E aqui nós chegamos na vag, tá? A veg nesse momento eu vou pintar ela de vermelho. Por quê?
+12:29	Porque ela vai ser uma operação encerrada nesse momento, tá?
+12:36	Perfeito. Nós vamos pegar aqui a call da vag e encerrar ela
+12:43	porque a tendência tá virando para baixo. Então, perceba, ó, o indicador ontem tava verde, a tendência era de alta. Hoje os preços estão rompendo a
+12:51	média das últimas mínimas. O indicador tá ficando vermelho, entrando em tendência de baixa. Então, nós vamos comprar uma [ __ ] Mas o primeiro passo
+13:00	para quem tava posicionado na vag42 é encerrar essa colba. Então, vag G 442
+13:11	precisa ser encerrada hoje. Ela tá saindo aqui a 1,11, R$ 1,11, 43% de prejuízo. Vamos encerrar essa
+13:21	operação hoje, dia 2 do6. Vamos fazer isso aqui com a máxima transparência, né?
+13:29	E aí nós vamos comprar uma [ __ ] porque a tendência agora é de baixo.
+13:39	Essa [ __ ] ela vai ser lá no vencimento de julho, então ela vai ser uma vag.
+13:45	Qual que é essa opção que eu vou escolher? Eu vou lá na grade de opções, eu vou em estratégia de opções,
+13:51	eu vou digitar aqui a Veg 3, eu vou no vencimento mensal tradicional
+13:59	acima de 20 dias úteis. O vencimento mensal tradicional acontece toda terceira sexta-feira de cada mês. Então, tá com dúvida, abre o calendário aí,
+14:07	conta sextas-feiras. O julho mensal é dia 17/07, 33 dias úteis, eu vou comprar uma [ __ ] E
+14:17	essa [ __ ] ela vai tá aqui, ó, na linha do dinheiro, tá? Eu tenho aqui,
+14:23	no caso, uma vag, veja só, a vag s44,
+14:29	ela tá com delta aqui de 0,44, tá bem OK, né? Veg S44, vamos colocar lá na planilha, tá?
+14:38	Então aqui vocês recebem por escrito na planilha vag s444.
+14:44	Para você executar essa operação, você vai lá na sua conta da corretora, vai digitar esse código que eu tô te
+14:50	falando em voz alta aqui, ó. Veg w E G mais um G 442.
+15:00	Veg, perdão, perdão, perdão. Veg S442.
+15:08	É a opção que a gente tá comprando agora. Primeiro você encerrou a G. Agora eu tô comprando a S. Ô Jesus, vag s44, perdão.
+15:19	Beleza. Ela tá saindo aqui, pessoal, por 1,54 nesse momento. Então, 1:54
+15:27	é o preço que você vai tentar pagar nela. Feg S44.
+15:33	Beleza, eu troquei as bolas aqui nesse belo travaalíngua, tá bom?
+15:43	1,54 é o preço dela aqui, ó, nesse momento, tá? Vag S44.
+15:52	Essa é a PU que você vai comprar para estar exposto à tendência de baixa. Tranquilo?
+16:00	Então, quem estava na call encerra a call. E agora todo mundo, todo mundo,
+16:07	todos os novos alunos vão montar essa compra de [ __ ] junto comigo. É para todo mundo entrar. Preciso repetir isso. Você
+16:17	vai entrar com quanto? No máximo 1% do seu capital. Ah, car, não sei quanto que é 1% do meu capital. Sou muito iniciante. Entra com lote no mínimo, sem
+16:26	opções. Ou seja, o custo mínimo para essa operação é de R$ 156.
+16:34	Tá bom, Lima. Eu vou, eu vou eu vou crer que você está de sacanagem comigo.
+16:45	Eu vou crer, tá? Pelo amor de Deus.
+16:53	Belezinha, galera. É só entrar na conta da corretora. No mesmo lugar que você pesquisa o código de uma ação, de uma ação, você vai digitar o código da opção que eu falei, vag s44.
+17:04	Tá bom?
+17:06	Todo mundo tem que entrar nessa. Agora nós vamos seguir aqui para olhar a BRKM S110.
+17:17	BRKM S10 tá saindo aqui a 1,47.
+17:28	Acuza PS400. Lembrando que é ordem limite, pessoal.
+17:39	Ordem limite não é para entrar a mercado. Cuz S400 tá saindo a 026.
+17:47	A Semin G85. Está sendo 028.
+18:01	Abrap G 2 3 4.
+18:08	Tá saindo a 1,26. Amagalu S.
+18:19	593.
+18:22	Tá saindo a 0,53, a Zin G15, que já é fruto de ajuste, né?
+18:31	Já é fruto de ajuste. O o Zin G15 tá batendo aqui 1,25.
+18:40	Atenção, ó, o Zin G15 tá batendo 119% de lucro. Vamos ajustar essa posição. Quem
+18:47	está posicionado na G15 vai fazer um ajuste de delta junto comigo aqui. Então nós vamos encerrar essa call.
+18:59	Vamos encerrar essa call atual da US Minas porque ela está batendo mais de 100% de lucro, né?
+19:14	E vamos montar uma nova compra de qual?
+19:28	Uma nova compra de qual eu tô trocando a Zin G15, tô encerrando
+19:35	ela por 1,25 com 120% de lucro quase e eu vou comprar uma nova call. zerando o meu risco, mantendo exposição a essa baita tendência que aos em Minas tem.
+19:49	Como que eu vou fazer isso? Primeiro, eu já encerrei a operação antiga.
+19:59	Essa operação é um ajuste de delta, então ela é obrigatória para quem estava posicionado na call, ela é opcional para quem quer
+20:08	entrar agora, tá? Eu particularmente não entraria. Eu esperaria uma nova virada de tendência. Então essa operação 12 Minas ela não é obrigatória para todo
+20:16	mundo, só para quem já estava posicionado. Perfeito. Ao contrário da operação da Veg, que era para todo mundo, everybody, todas as personas.
+20:25	Beleza? Então eu tô encerrando aqui por 1,25.
+20:30	Como que funciona o ajuste de delta, pessoal? Eu pego o preço que eu tô encerrando, que é 1,25.
+20:37	Eu vou dividir ele por dois. Eu vou achar aqui, ó, 62 centavos. Esse é o valor máximo da nova call que eu tenho
+20:47	que comprar para fazer um ajuste correto. Então, eu vou lá na grade de opções, no mesmo vencimento, vencimento
+20:54	de julho, né, que é o vencimento G. Eu vou procurar aqui uma opção que esteja custando pelo menos 62 centavos. Tem uma
+21:01	custando 67 aqui. Ela que eu vou comprar, não, eu vou pegar no máximo 62 centavos. Então eu tenho que trocar pela uzin G130 que tá custando 58 centavos.
+21:13	Uzin G 130
+21:23	que está custando 58 centavos.
+21:34	Perfeito. Essa é a nossa operação.
+21:44	Tranquilo? Show de bola.
+21:52	Olha aí a Veg o mínimo é 100 mesmo. O mínimo é 100, tá? Todas as operações aqui no mínimo é 100. São 100.
+22:01	A Veg44 stop loss. Não operamos com stop loss. O stop loss, pessoal, é o quanto você aceita perder em uma operação. E
+22:08	nós já estamos montando a operação aqui com o chamado capital de risco, que é o quanto a gente aceita perder na operação. Então não tem stop loss, é
+22:16	para você entrar na operação com capital que você aceita perder. E isso tem que ser no máximo 1% do seu capital, tá?
+22:25	Beleza?
+22:28	Deixa eu dar uma olhadinha aqui nas dúvidas de vocês. Pessoal, entra na corretora.
+22:36	Entra na corretora.
+22:39	Abre o mesmo lugar que você pesquisa lá para comprar uma ação, né? É o mesmo lugar.
+22:48	Você vai preencher o código Veg S44.
+22:55	Essa é a operação que todo mundo tem que entrar hoje. Ela tá saindo aqui nesse momento a 1,54.
+23:01	Digitor Veg S44, você vai colocar aí, ó, 1,54, no máximo 1,55. Coloca a quantidade que você quer comprar, ordem
+23:09	limite, digita sua senha e clica em comprar. Toda operação nós começamos comprando. A partir do momento que você
+23:18	faz uma operação em um ativo, você precisa estar comprometido em entrar em todos os próximos sinais para que você
+23:25	tenha à exposição a lógica da lei dos grandes números, que é o que vai fazer
+23:31	você ter muito retorno. Um número grande de acontecimentos, um número grande de
+23:39	operações é o que vai trazer essa simetria para você. Beleza? Olha só, eu falo da lei dos grandes números, ele brota nada. Olha isso. Eu tava aqui sem
+23:48	fone, cara. Eu cheguei até a ficar arrepiado.
+23:52	E aí, irmão, como é que você tá? Tudo bem?
+23:54	Beleza, irmão. Tudo bem. Você acabei de entregar aqui um master business muito especial com uma pessoa muito bacana. Pessoal tá se comportando
+24:03	bem aí. Como é que tá aí o clima dessa galera? Ô Caio, muitos ansiosos. Tem muita gente agoniada. Tá 1 aqui, cara.
+24:09	Pô, pessoal, pessoal tá já tá deixando o depoimento aqui emocionado, ó. Que emoção. Cadê? Deixa eu achar aqui.
+24:17	Que emoção. Minha primeira operação. Eu vi aqui, mas aqui, ó. Olha aí, pessoal. Tá com tudo aqui, pô.
+24:25	Que bom, que bom. Seguinte, galera, eh, hoje a gente tem o nosso segundo encontro de imersão.
+24:32	Vai, vai começar às 8 horas da noite. Lá eu vou explicar dúvidas aí como, ah,
+24:40	explica como é que foi aquela operação de trava que o Fernando falou para fazer.
+24:46	Tudo isso a gente vai explicar nos mínimos detalhes, tá bom? Alguém falou ali que a Ion não aceita operação a
+24:54	descoberto. É por isso que a gente fala para operar pela Genial, porque a Genial ela é uma corretora
+25:02	para quem é do mercado, né? E um é do Itaú lá, os caras estão querendo só falar que tem. E eu não recebo nada da
+25:10	Genial não, tá? Se quiser fazer pela XP pode fazer, só que é mais caro. E BTG é muito bom. E rico também é bom, né, Caio?
+25:19	Exatamente. Eu falo isso aqui com a galera que a gente não tem compromisso com nenhuma, então eu falo da Clear, falo da Rico, falo da Genial. Todas essas aí vão te atender de forma muito parecida.
+25:28	Uhum. Eh, galera, aqui a gente tem uma parada que é o seguinte,
+25:35	eu dou umas pancada na cara mesmo, porque tem muita gente que precisa acordar pra realidade, tá? Que é o
+25:44	seguinte, o que que tu acha que eu vou falar, Caio?
+25:48	Rapaz, olha, tem algumas coisas aqui no chat que eu que eu te imagino falando, cara, que é o seguinte, não sei, não sei. Fala aí, fala aí.
+25:58	Se tu comprou o microondas, lê o manual do microondas. Não pode botar um gato dentro do microondas.
+26:06	Se você comprou um carro, para tu ligar ele, tu tem que apertar o botão de start.
+26:14	Você tem que ler o manual do carro. Você se tá aqui na sala querendo operar, perguntando como é que faz tal coisa, como é que faz crava, como é que faz
+26:22	para comprar, como é que faz para vender, meu amigo, minha amiga, existe um curso completo com todas essas respostas.
+26:33	E aqui eu quero que vocês entendam um negócio que é muito importante.
+26:39	Caio, eu te pago para responder por perguntas ou pelo tempo que tu tá aqui na live?
+26:45	Por aula. Por aula. Você me paga por aula.
+26:47	Então a gente tem que ficar aqui respondendo. O problema não é responder.
+26:52	O problema é você ficar travado e agoniado porque você não tem a resposta. Então o que que a gente quer?
+27:01	A gente quer que você vá lá nas aulas e veja para que você não perca tempo sem resposta.
+27:08	Beleza? O marco zero das opções tem todas as aulas por definição. Eu tô fazendo a imersão ao vivo com vocês essa semana exatamente porque eu sei que tem
+27:17	gente que não vai ver as aulas. Aí você vem para cá. Essa aula é só pra gente passar a leitura das tendências e as
+27:26	operações. Aí você acha que essa aula aqui é uma aula para tirar dúvida de conceito? Não é. É por isso que tem o
+27:33	Meramata às 10 da manhã. É por isso que tem o Felipe às 1 da tarde, é por isso que tem o Caio às 3 da tarde, é por isso que tem.
+27:43	Porque não colocaram gato no microondas?
+27:45	Porque existe um processo. O Caio ele é ele é advogado. Vocês não sei se vocês sabem. Tu conhecia esse processo, né, ô Caio.
+27:54	Perfeito. Sim, sim.
+27:56	Esse esse processo é famoso. A mulher pegou o gato e botou no microondas. Aí por isso que tem lá no manual, não coloque o gato no microondas, porque a
+28:05	mulher quis processar a a Philips, sei lá. Olha só, eu não sou contra Ágora, eu não sou contra Ion, eu não sou contra Touro.
+28:15	O problema é que essas corretoras elas não são as melhores, tá bom?
+28:23	Mas o José Antônio ali tá satisfeito. Ô tio, e eu posso eu posso falar aqui, tem três anos que a gente tá aqui na comunidade, tem vários alunos que
+28:31	chegavam que eram da I do próprio Inter no Bank, que trocaram de corretora para trás de um serviço melhor. Então a gente fala aqui também, pessoal, da
+28:39	experiência que os alunos trazem pra gente, tá? Tem nada pessoal com ninguém, não.
+28:45	Tudo que eu pergunta ali do Lucas, tudo que eu faço fica gravado. Sabe por quê?
+28:52	que todo sempre, todo dia pergunta assim, vai ficar gravado? Vai tá bom,
+29:01	tio. Onde acha essa planilha? Essa planilha, ela só tá no Master Business, tá? Mas você pode construir uma planilha igual para você.
+29:09	E como é que você faz isso? Eu vou mandar agora no grupo aí para vocês.
+29:17	Eu vou mandar para vocês no no grupo como que você faz uma planilha igual a
+29:24	essa aí, tá bom? Isso foi um presente lá do Master Business para vocês, que foi
+29:32	entregue pelo nosso amigo Thiago Maranhão, queridaço Thagão.
+29:39	Então eu vou achar isso aqui, ó. E eu vou mandar para vocês.
+29:57	Pode continuar aí, ô Caião, que eu vou achar aqui essa planilha e vou mandar lá, tá?
+30:02	Show de bola. Então, vou lendo aqui as dúvidas de vocês, pessoal.
+30:06	E aí, como o tio vai est também eh fazendo esse encontro com vocês aqui, ele vai tratar de muitas dessas dúvidas que eles estão perguntando aqui hoje à
+30:13	noite também, tá? Então, importante é que você que você acompanhe. Tranquilo?
+30:20	Ah, deixa eu achar aqui onde eu tava. Cadê? Cadê?
+30:28	Ó, mostra aqui. Chama-se H 10. A planilha, tá?
+30:35	Desculpa.
+30:37	Mandou lá no grupo do Telegram, né? Não é isso? É no grupo do Telegram.
+30:41	Boa. Isso aí, ó. Mostra qual botão clica aí, porque aqui aparece tudo diferente, pessoal.
+30:47	Olha só, cada corretora, ela vai ter a sua a sua plataforma, tá? Então, tem uma razão da gente operar aqui através do
+30:56	profit, né? essa boletinha que eu tenho aberto aqui, porque o profit ele basicamente padroniza tudo. Então, quando a gente fala para você ter um profit é porque é um passo a mais, né,
+31:03	para você tá operando aqui igualzinho a gente, vai ser mais fácil você acompanhar. Só que na prática, pelo home broker da sua corretora, cara, é só você
+31:11	digitar o código que eu tô te falando aqui em voz alta e clicar em comprar. É só isso. E toda corretora vai ser a mesma coisa, tá?
+31:19	Então, se você quer tá achando ruim aí que tá tudo diferente, cara, entra na sua corretora aí, baixa o profit que você vai ter acesso, tá?
+31:31	Tentei comprar a Vega aqui, mas recebi uma mensagem. Ã, imagino que seja uma mensagem de recuso aí, cara. Isso pode ter a ver com o seu perfil de
+31:38	investidor, tá? Chama o seu assessor, pede orientação para ele, porque às vezes o seu perfil de investidor tá como conservador e aí a corretora te proíbe de fazer essa operação, tá bom?
+31:52	sobre a Axia falada no grupo. Pode explicar, Adriano? Essa é uma operação do Fernando, tá? O Fernando, ele respeita uma estratégia específica dele.
+31:59	Acredito que o Tiul vai falar um pouco disso com vocês nessa próxima live que ele tá que ele tá falando com vocês.
+32:05	Então, por enquanto eu não vou opinar sobre a estratégia do Fernando, tá? É algo a parte aqui do nosso projeto, da nossa sala, tá bom?
+32:15	Ô car, entrei na vag, só não entendi como fazer para encerrar quando você fez essas outras opções, como faz para encerrar no home brook, que é onde eu
+32:22	estou fazendo. Marcele, boa pergunta, tá? Toda opção que você comprar para você encerrar ela, você vai fazer o oposto, você vai clicar em vender, tá?
+32:31	Então vai, tem um botão aí na sua corretora, você pode olhar que ao invés de clicar em comprar, você vai clicar em vender. É assim que você encerra uma operação no mercado financeiro, tá bom?
+32:42	Entendi a estratégia, mas só uma dúvida se seria melhor comprar a seco ou fazer uma trava. Poderia esclarecer qual seria melhor. Aqui na sala nitro nós operaremos a seco, tá?
+32:54	Falando, tá lindo, mas aqui na minha tela não sei qual botão clicar. Você vai clicar no botão de comprar, beleza? Você vai entrar na conta corretora, preencher o código do ativo, clicar em comprar.
+33:05	E de novo, pessoal, assista o marco zero das opções, né? Como encerrar a operação do profit? Tá vendo que essa boleta aqui tá tá amarela? É uma boleta de compra.
+33:15	Para encerrar, você vai abrir a boleta de venda, ó. Ela vai ficar verdinha aqui, ó. Venda. E aí você vai digitar o código do ativo, o preço e vai clicar em vender.
+33:32	Cara, se na hora de você fizer o ajuste, de você fazer o ajuste e pegar a outra metade, um preço, essa opção da metade do preço que está com delta inferior a 40, longe do dia, não tem problema? Não,
+33:41	geralmente isso vai acontecer, tá? Isso vai acontecer. Beleza?
+33:54	Qual CSNG comprar? A minha deu mais de 100% e vendi. Pode me ajudar? Você tem que pegar aquela que tá custando metade dessa que você acabou de encerrar. Tá bom.
+34:08	Aon não aceita venda descoberto. Aqui nós não estamos vendendo descoberto, tá? Nós estamos fazendo compra de opções.
+34:16	Olha o César aí fechando duas com 100% hoje. Boa, boa água. Tá muito bom aí, irmão. Alquei
+34:26	o valor na genial, mas não consigo comprar no profit que tá falando não ter saldo.
+34:31	Chama o seu assessor para ver o que tá rolando aí. Não é normal.
+34:37	me ensina como se eu nunca tivesse entrado, porque eu nunca entrei. É exatamente esse o passo a passo que eu acabei de falar várias vezes durante a
+34:43	aula, pessoal. Você tem que abrir ou a sua conta na corretora ou você vai vir pelo profit aqui, ó, vai vir aqui em
+34:51	cima, tem a boleta de compra lá na conta da corretora. É a mesma coisa, tem um lugar lá que você pesquisa os ativos,
+34:58	não tem? Você vai clicar nesse lugar, vai digitar o código da opção, que nesse caso aqui, ó, a operação que foi para todo mundo foi a Veg S44.
+35:10	É normal ter essa dificuldade no início, pessoal. Normal, vocês vão aprender. Tem que ir mexendo aí na corretora. Tem que ir aprendendo a fazer.
+35:19	Digitou o código do ativo e o preço, clicou em comprar. Tá bom.
+35:24	Tem que seguir o método comum como uma venta, pois já tentei de tudo, mas o método funciona muito bem, já validei várias vezes.
+35:32	Não entendi aqui o seu ponto. Ian, não entendi aqui o seu ponto, tá? Mas tem que seguir o método junto com a
+35:40	gente aqui. Qual a importância de marcar? Sou trader no app da corretora genial.
+35:46	Cara, não sei qual que é a diferença, tá? Não sei, mas você é trader.
+35:53	Descobriu. Chá revelação. É trader. Eu não sei comprar. Achei o ativo. Agora coloca o preço. Isso aí. Coloca o nome
+36:00	do ativo, coloca o preço e clica em comprar. Tem que olhar as aulas básicas. Exatamente.
+36:09	Beleza. Isso aqui já foi respondido.
+36:14	Se comprar o lote vai dar mais de 1% no meu capital investido. Sendo assim, eu não compro. Opera com lote mínimo. Opera com lote mínimo, mesmo que sendo um pouco esse 1%. Tá.
+36:23	Opero pela Rico e estou super bem atendido. Boa. Bom feedback aí. Faço direto pela boleta e acho muito prático.
+36:30	Boa, Mateus. Ótimo feedback. A prova de que não precisa ter o profit para fazer.
+36:36	Tá ótimo. Não consigo fazer a operação do Fernando. Nem pela Genialva.
+36:43	Por que que não conseguiu? Ô Gabriel, pessoal, todos esses erros aí de travas na hora de fazer uma operação, vocês tm que encher o saco do assessor lá. Enche
+36:51	o saco da corretora. Eles estão travando por algum motivo. Tá bom.
+37:04	Ol ali, ó. Tem um genial há 4 anos, nunca tive problema.
+37:13	Deixa eu ver aqui.
+37:19	Ã, não tem nada a ver com a sala, mas tô com mais 100% de lucro em Bitcoin.
+37:23	Graças a você, tio. E o Paulo, Paulinho é [ __ ] demais, Paulinho. Cadê Paulinho?
+37:28	Podia tá aqui, hein, professor Carl, fiz a compra da Putwag S44, certinho, porém na lista de ordens não dá para identificar se se foi call
+37:37	ou [ __ ] Existe algum outro lugar para verificar essa informação? Você vai verificar vendo se tem um S no código
+37:46	da opção que você comprou. Tem que ser veg S44. Esse S te traz a informação de
+37:54	que isso é uma putimento em julho, tá?
+38:04	Todas as pessoas. É isso aí.
+38:12	Eu não consegui o profit pelo BTG. A regra para ter gratuito precisa gerar 240 corretagem, operar 10 minis. Então,
+38:19	na Clear e na Genial são as que eu sei que você consegue com mais facilidade, tá boa, Welson.
+38:31	Tá bom. Deixa eu ver aqui.
+38:42	O indicador é o high low, tá? Mas daí quando eu tenho ajuste de delta, por exemplo, eu tava com 5.000 posições, eu entro com essa mesma
+38:50	posição. Sim, só que você vai trocar a opção para uma de metade do valor.
+38:55	Mantém a quantidade de opções, mas o volume financeiro vai diminuir, você vai botar lucro no bolso, tá?
+39:04	O cai advogado do Vasco. Pessoal, não fala de Vasco comigo, pelo amor de Deus.
+39:09	Tá vendo esse sorriso aqui? Vocês querem isso nos próximos dias? Não fala de Vasco comigo, Ti? Essa imersão das 20 horas vai ficar gravada? Vai.
+39:20	Se tá escrito é porque tem história, a história do gato, né? Como encerrar a operação após atingir o objetivo? Não tem objetivo, tá? A gente vai deixar
+39:28	essa operação correr o quanto der, a não ser que gere um ajuste. E aí, como que você vai fazer? Você vai pegar a opção que você tem comprada e vai colocar ela
+39:36	na boleta de novo. Digita o código novamente, o preço e você vai clicar em vender, como a gente fez hoje aqui com a US Minas. Pessoal, assista a aula desde o início. Eu explico tudo na aula.
+39:47	Explico tudo na aula.
+39:52	Santander. Eu não sei como é que é, tal, Márcio, não sei mesmo.
+39:59	Essas aulas que falou das 10, das 13 e das 15, fica onde o link? Você recebe também lá no Telegram, tá? A minha aula, por exemplo, é das 15 horas. Tem muita
+40:06	gente que acompanha aqui a sala nitro que tá comigo ali às 15 horas, né? Lá a gente vai analisar o mercado de outras formas também, outros ativos. Vale muito a pena acompanhar.
+40:18	Beleza?
+40:25	Ó, tem uma clear e o home broker não mostra as opções. Home broker não mostra grade de opções. Quem mostra a grade de
+40:32	opções é o profit. Beleza? Por isso que a gente usa o profit, porque o profit é igual em toda a corretora. Home broker é para você ouvir o código que eu tô
+40:39	falando e digitar lá. Digita lá, tá?
+40:46	Como é o acesso da Master Business? O tio ele vai falar um pouco disso com vocês à noite aí.
+40:51	Tá, é isso aí. Vi que tem aula de Excel
+40:59	também. Muito bom. Galera, assista esse treinamento de Excel aí. Se eu se o o treinamento de Excel ainda é com Tiul?
+41:09	Vocês sabem porque o Tiul, como que o Tiuli ficou expert em Excel, né? Vocês sabem? Eu não, eu não vou falar aqui sem
+41:16	ele tá presente não, porque vai parecer que eu tô mentindo, mas depois eu falo. Em outra oportunidade eu falo. Poderia dar um zoom nessa planilha?
+41:25	Posso. Tá aqui, ó. Ó, todos os ativos estão indo.
+41:37	Seja bem-vinda, Josiane. Não se assuste, tá? A aula é dinâmica mesmo. Em uma semana você tá craque, já tá entendendo tudo. Se preocupe nesse início em
+41:46	aprender. Assista o Marco Zero. Assista o disclaimer que eu dou aqui no início da aula. Entenda a dinâmica, assiste, assiste a gravação. Depois o link da
+41:54	aula fica com vocês, a live fica gravada, tá?
+42:00	Aí, ó, no primeiro dia tudo é estranho, depois você entra no automático. Ó, calma e o coração. Exatamente. Vai tranquilo, vai tranquilo.
+42:11	Minha ordem está em aberto. O preço subiu para 1,70. Como cancelo a minha ordem? A sua ordem, ela vai ser cancelada já foi, né, no fechamento do dia aqui hoje, tá?
+42:22	Estatus da ordem continua em aberto que eu faço amanhã você pode executar essa operação na abertura do mercado, tá?
+42:33	Caio, você falou que para todo mundo comprar Veg S44. Sou nova, iniciei sábado e não operei, não sei por onde começar. Você começa, Juliana, tendo a
+42:43	conta na corretora, digitando o código dessa opção lá na sua corretora, tentando pagar aqui o preço que eu recomendei, que foi a 1,54, ou a melhor
+42:52	oferta de venda que estiver aparecendo lá para você e clica em comprar. Toda opção a gente inicia comprando a opção, tá?
+43:02	Boa tarde. Acabei não vendo a CSNA por não saber qual comprar, o resultado acabou caindo. Só esperar, tá? Não precisa ajustar nada. Não queima largada aí.
+43:12	Tá bom? Todo o profit é pago, mas a gente ensina a ter isso de graça, tá?
+43:20	Olha aí, ó. Recomendo a Clear, zero corretagem. Profit fica disponível operando cinco mini contratos por mês. Tranquilaço também, né?
+43:31	Passei o dia todo aprendendo para estar nessa sala agora. Boa, Gabi. Braba, muito braba.
+43:38	Já respondi isso aqui algumas vezes. Nós utilizamos o high low activator, tá pessoal? O mercado já já encerrou, tá? Não adianta tentar pegar agora não.
+43:50	Cai no ajute delta você combina o preço de compra, metade do valor da venda anterior com o delta na casa de 50 ou somente o valor? Você, o ideal é você pegar o delta mais próximo do 50, mas o
+43:59	obrigatório é que tenha no máximo metade do valor. Não pode ser mais a metade, tá?
+44:06	Beleza? Eu sou novo, entrei essa semana aqui.
+44:15	Sei que vocês não recomendam operar agora somente as novas entradas. Bom, teve uma entrada nova hoje, tá? Mas queria tratar os meus os meus conhecimentos. Vi que existe uma
+44:22	operação da Cirela a 1,29. Pela minha análise, vi que está de alta.
+44:29	Fiz algo muito errado. Cara, não fez errado, né? Você seguiu a sua estratégia, tá? Não, eu não não tenho condição de
+44:37	opinar aí no seu viés, entendeu? Mas não é a metodologia que a gente tá seguindo aqui, tá bom? Eu entendo você querer testar, acho bacana, tá?
+44:45	Mas não precisa ter pressa, relaxa. Vem comigo aqui. Vem comigo. Eu tô olhando pra minha outra câmera, que é a câmera que eu costumo dar aula, né? Só que ela
+44:55	pifou agora, não sei por. Então eu tenho que olhar para essa aqui. Então vou olhar no seu olho. Fica calmo. Calma.
+45:00	Vem comigo aqui, cara. Tá me entendendo?
+45:09	Quando fazemos a rolagem, nós fazemos a rolagem quando o vencimento se aproxima ali de 10 dias, tá?
+45:16	Por que de você fazer o ajuste com 50% do valor? Eu não, eu fiz o ajuste quando a a opção atingiu mais de 100% de lucro.
+45:24	Então, se atingiu mais de 100% de lucro, eu encerro essa, embolso parte do lucro e devolvo metade do valor paraa tendência.
+45:34	Porque eu tenho já um lucro garantido.
+45:36	Eu não estou mais com risco de perder dinheiro. No máximo eu saio no zer a zero. Mas na US Minas a gente já ajustou
+45:43	isso cinco vezes. Então é lucro atrás de lucro, né?
+45:48	Pode cancelar a ordem sim. Tá, e fazer isso amanhã sem problemas. Agora o mercado já fechou. Só aparecem com final W1 no meu home broker. Consegue indicar
+45:56	uma ação, por favor? O código que você precisa digitar é Veg S44, sem mais nem
+46:04	menos, não tem W, tá? Você precisa pesquisar esse código no S Broker.
+46:14	O que seria o lançamento coberto? Está aparecendo aqui na minha boleta de compra. Lançamento coberto é quando você vende uma call. Não é para vender call,
+46:23	é para comprar call. Na tendência de alta nós compramos calls. Nas tendências de baixa nós compramos puts, tá?
+46:39	Quando você refere que todas as operações têm que ter o mesmo peso, o que você quer dizer, valor financeiro ou quantidade de opções? Valor financeiro, pessoal. Tá?
+47:01	Deixa eu ver aqui, cara. Eu comprei a push de localiza no dia 13/05 no valor de 2,49. Chegou a 501, porém na hora de
+47:08	vender, o valor mais alto no livro era 405. O que recomenda fazer? Você precisa pendurar uma ordem, tá? Isso aí é um problema de liquidez. Pendura a ordem no
+47:15	preço que você quer vender, vai ajustando de centavo a centavo ali, porque uma hora vai executar. Tá bom.
+47:23	Essa compra pode sim ser feita, Flávia, na abertura do mercado amanhã, tá? Isso aí. Não precisa usar o profit.
+47:30	Beleza, pessoal? Eu ia fazer uma aula com vocês aqui do Profit, eh, mas Túlio apareceu
+47:38	aqui, a gente conversou um pouquinho, né? Então, eu vou fazer o seguinte, eu vou fazer essa aula de configuração do Profit amanhã na aula das 3 horas. Pode
+47:47	ser? Lá a gente vai ter mais tempo, mais tranquilo. Tranquilo.
+47:55	Amanhã na aula das 3 da tarde eu faço essa aula de configuração do profit aí para todo mundo.
+48:06	Caio, tem como você explicar sobre compra no ESC e Bid? Olha só, Bid e ESC
+48:14	é essa terminologia que fica aqui na grade de opções, né?
+48:19	Que que isso significa? Para você comprar um call, você tem aqui o ESC e o Bit. O ESC vai
+48:26	trazer a referência da melhor oferta que você tem para comprar essa opção, ou seja, é o melhor preço que você vai
+48:34	conseguir comprar essa opção naquele momento. O BID é a melhor oferta para quem tá querendo vender essa opção. Isso vale tanto para as calls quanto para as
+48:42	[ __ ]
+48:44	Perfeito. Você perceber que existe uma diferença entre o Bidwesk, porque os compradores estão sempre querendo comprar mais barato e os vendedores estão sempre
+48:53	querendo vender mais caro. Então, a melhor oferta de compra é sempre mais cara do que a melhor oferta de venda.
+49:01	Entendi.
+49:05	Que horas fecha o mercado de opções? 5 horas. Tá aí o leilão depois. Beleza.
+49:17	Aí, ó, eu aconselho os os iniciantes operarem pelo home broker, depois se familiarizar. Eu acho que é melhor também, né?
+49:28	Fala, Marco. Beleza? Tem como você explicar sobre Ah, beleza. Aqui já foi. Show de bola.
+49:38	Ô Márcio, eu não conheço a corretora do Santander, tá? Para para opinar, de fato, não conheço.
+49:47	Tranquilo. Muita dúvida aqui já respondida, né? Recomendo todo mundo que tá chegando na live aqui agora, pessoal, a assistir a aula inteira, tá? A aula inteira.
+50:00	Sou novo, fiz só a operação que você mandou. É isso? É isso aí. Fica só com essa hoje. Sem pessoal, sem ânsia aí de
+50:08	montar um monte de operação, tá? Menos é mais. A gente vai entrar nas operações objetivas, tá bom?
+50:15	Deixa eu ver aqui como você escolhe os strikes. Eu escolho
+50:26	os strikes na linha do dinheiro, as opções ATM com delta ali próximo de 0,5, 045, fica sempre em torno disso, tá?
+50:35	Ó, comprei a Veg S44 na genial. Sem plataforma profit, bolsa fácil. Pode ir por esse caminho. Pode e deve. Exatamente.
+50:44	Valeu, Leandrão. Tamo junto.
+50:49	Tudo aqui fica gravado. Tudo fica gravado. É só você acessar o link do YouTube novamente.
+50:56	Nessa sua metodologia pode chegar a acontecer de opção vencer na carteira? Não, nós não levamos pro exercício, tá?
+51:01	Não levamos. Nós vamos sempre encerrar antes.
+51:08	Ó, cheguei agora. Posso assistir e executar amanhã? Sim, pode e deve.
+51:11	Assista todas as aulas desde o início. É fundamental isso para você aprender, tá?
+51:21	Ô, Macau, eu já respondi a sua dúvida aí, cara. Já respondi algumas vezes essa dúvida. Relaxa.
+51:29	Deixa eu ver aqui.
+51:36	Pô, galera aí repetindo a mesma pergunta toda hora, pessoal. A mesma pessoa repetindo a mesma pergunta e não dá, né?
+51:40	Já foi respondido, pô. Tem que perguntar e esperar. Eu tô respondendo aqui, pô.
+51:47	Cara, as posições que estão no negativo, como da veg, a saída vai ser tudo manual. Outra coisa, os minas compensa ir acompanhando ela pelo profit, fazendo
+51:54	cobertura de saída a 100%. Eu não faria essa cobertura de saída a 100%. Por quê?
+51:59	Porque o preço da opção pode explodir, tá muito mais de 100% e você vai travar o seu lucro. Não é essa a ideia. Aqui a gente quer perder pequeno e ganhar
+52:07	grande. Então não limite os seus ganhos, tá? Não limite os seus ganhos.
+52:14	Você pode entrar pagando até mais caro, Alejandro, quem for executar a Veg amanhã na abertura, tem que comprar ela
+52:23	no preço que tiver, tá?
+52:31	O Diogens, todos os dias às 15 da tarde eu estou ao vivo fazendo análise de mercado, tá? Além da sala nitro. Então
+52:39	eu saio da minha aula às 15 da tarde e venho para cá 16:30 na sala nitro.
+52:44	Pessoal fica comigo aí quase que o dia todo, né?
+52:54	Caio, pode manter a aula do profit pós sala. Eu vou fazer nas duas, então, tá, pessoal? Vou fazer às 3 da tarde e vou fazer às 16:30, tá? É porque às vezes
+53:03	aqui às 16:30, pessoal, às vezes não acaba não dando tempo, entendeu?
+53:09	Às vezes o que entra, quer trocar uma ideia com vocês, não é? Porque não é conteúdo dessa aula aqui, entendeu? É algo extra que eu tô tentando trazer para ajudar vocês.
+53:21	Todos os links são enviados lá no Telegram. É isso aí.
+53:25	Toda a aula fica gravada, pessoal. Toda a aula fica gravada.
+53:38	Se tudo der certo daqui 19 dias, estarei com a carteira completa? Não necessariamente, tá? As tendências precisam virar. É só ter paciência, cara. Toda hora tem uma tendência virando aí.
+53:47	Tá bom, pessoal? Como as dúvidas aqui estão se repetindo, tá?
+53:55	Como as dúvidas aqui estão se repetindo, eh, eu recomendo o seguinte: assista essa aula desde o início, as dúvidas foram
+54:04	todas respondidas, tá? Amanhã estaremos ao vivo aqui novamente na sala nitro. Se tudo der certo, faremos conteúdo do
+54:12	profit aí para quem quer aprender a mexer no profit. Mas lembre-se, não precisa de profit para seguir a recomendação. Só precisa se familiarizar
+54:20	com a sua conta lá na corretora. Acha o lugar que você compra uma ação, que é o mesmo lugar que você vai comprar uma opção. Depois você vai vir para cá, vai
+54:29	ouvir o código que eu tô falando, preço que eu tô falando e vai clicar em comprar. É só isso. É fácil. O início assusta, mas vai dar bom. Beleza? Pode
+54:37	confiar na gente que esse projeto tá voando. Beleza?
+54:56	Caio, você não entendeu. Eu digo de ir acompanhando ela no prof por trás, entende? Dando 150 eu ir acompanhando e subindo a saída. Cara, eu
+55:05	entendi a sua, eu entendi o que você quer, o que você quer fazer. Só que se você deixar uma ordem de encerramento, você não vai conseguir nem acompanhar.
+55:13	As opções são muito voláteis. Dá para fazer no profit, dá para fazer. Eu não acho que faça sentido.
+55:20	Tipo, ó, deu 150%, você vai subir, às vezes não vai dar tempo. Às vezes você vai ser executado, tá?
+55:28	Beleza, pessoal. Galera, tamos junto.
+55:30	Então, melhor melhor tá por vir. Até amanhã. Valeu, fi.

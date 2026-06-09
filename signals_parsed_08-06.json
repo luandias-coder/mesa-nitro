@@ -1,0 +1,368 @@
+{
+  "data": "2026-06-08",
+  "analista": "Merato Coelho",
+  "vencimento_padrao": "2026-07-17",
+  "resumo_analista": "1 virada de tendência (WEG/Veg) + 4 rolagens de vencimento (BRAV, COGN, RENT, MBRF)",
+  "sinais": [
+    {
+      "underlying": "WEGE3",
+      "acao": "saida",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Veg S44",
+      "timestamp": "11:03",
+      "trecho": "para quem estava em vag, você precisa vender hoje a sua [__] S44. ela tá saindo a 74 centavos. nós vamos vender ela por esse valor de 74",
+      "preco_sugerido": 0.74,
+      "strike": 44,
+      "vencimento": "2026-07-17",
+      "motivo": "Virada de tendência de baixa para alta em WEG; encerramento da PUT antes de abrir CALL",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "WEGE3",
+      "acao": "entrada",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Veg G447",
+      "timestamp": "11:58",
+      "trecho": "vou pegar aqui a vag 447, tá? Vag G. Todos vocês precisam entrar nela. Compra de call. O valor dela tá saindo aqui a 1,72.",
+      "preco_sugerido": 1.72,
+      "strike": 447,
+      "vencimento": "2026-07-17",
+      "motivo": "Virada de tendência de baixa para alta no indicador Nitro; nova operação aberta para todos",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": {
+        "codigo_falado": "Veg S44",
+        "acao": "saida",
+        "preco": 0.74
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "BRAV3",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Brav F (vencimento F)",
+      "timestamp": "3:42",
+      "trecho": "nós vamos pegar essa brave, nós vamos vender ela, ela agora tá saindo aqui a 94",
+      "preco_sugerido": 0.94,
+      "strike": null,
+      "vencimento": "2026-06-19",
+      "motivo": "Rolagem: vencimento F com ~10 dias úteis restantes; trocar por vencimento G para ganhar tempo",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "BRAV3",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Brav G215",
+      "timestamp": "5:00",
+      "trecho": "Vou pegar essa G215, tá? G215, saindo a 70 centavos. Brav G 215. compra de call hoje, dia 8, tá indo aí a 70 centavos",
+      "preco_sugerido": 0.7,
+      "strike": 215,
+      "vencimento": "2026-07-17",
+      "motivo": "Rolagem de vencimento F para G — apenas para quem já estava posicionado em BRAV",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": {
+        "codigo_falado": "Brav F (vencimento F)",
+        "acao": "saida",
+        "preco": 0.94
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "COGN3",
+      "acao": "saida",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Cogna R303",
+      "timestamp": "14:35",
+      "trecho": "Eu vou vender aqui a cogna R303, saindo a 26 centavos",
+      "preco_sugerido": 0.26,
+      "strike": 303,
+      "vencimento": "2026-06-19",
+      "motivo": "Rolagem: vencimento R com ~10 dias úteis; encerrar antes de comprar vencimento S",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "COGN3",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Cogna S273",
+      "timestamp": "15:26",
+      "trecho": "Ó, eu vou pegar aqui a cogna S 273, tá? Cógna S 273, compra de [__] data de hoje, saindo aqui a 13 centavos",
+      "preco_sugerido": 0.13,
+      "strike": 273,
+      "vencimento": "2026-07-17",
+      "motivo": "Rolagem de vencimento R para S em COGN — somente para quem já estava posicionado",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": {
+        "codigo_falado": "Cogna R303",
+        "acao": "saida",
+        "preco": 0.26
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "RENT3",
+      "acao": "saida",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Rent R433",
+      "timestamp": "16:05",
+      "trecho": "Rente TR, galera. Localiza também. Eu já vou jogar pro próximo vencimento. Estamos na R433. Deixa eu ver aqui qual que foi o valor dela agora, né? 2,68.",
+      "preco_sugerido": 2.68,
+      "strike": 433,
+      "vencimento": "2026-06-19",
+      "motivo": "Rolagem: vencimento R com ~10 dias úteis; encerrar com lucro (entrada a 2,10, saída a 2,68)",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "RENT3",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Rent S403",
+      "timestamp": "17:14",
+      "trecho": "Eu vou pegar a rent 403. Rente S. 403 compra de [__] Então, galera, mais uma rolagem.",
+      "preco_sugerido": 2.1,
+      "strike": 403,
+      "vencimento": "2026-07-17",
+      "motivo": "Rolagem de vencimento R para S em RENT — somente para quem já estava posicionado; pagar no máximo 2,10",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": {
+        "codigo_falado": "Rent R433",
+        "acao": "saida",
+        "preco": 2.68
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "MBRF3",
+      "acao": "saida",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "MBRF R167",
+      "timestamp": "18:06",
+      "trecho": "MBRF, ó, essa nossa [__] que é a R167, ela tá saindo a 1,54.",
+      "preco_sugerido": 1.54,
+      "strike": 167,
+      "vencimento": "2026-06-19",
+      "motivo": "Rolagem: vencimento R com ~10 dias úteis; 71% de lucro na posição",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "MBRF3",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "MBRF S151",
+      "timestamp": "19:00",
+      "trecho": "A MBRF eu vou comprar essa S151, tá? MBRF S151.",
+      "preco_sugerido": null,
+      "strike": 151,
+      "vencimento": "2026-07-17",
+      "motivo": "Rolagem de vencimento R para S em MBRF — somente para quem já estava posicionado",
+      "confianca": "alta",
+      "delta": null,
+      "relacionada": {
+        "codigo_falado": "MBRF R167",
+        "acao": "saida",
+        "preco": 1.54
+      },
+      "codigo_resolvido": null
+    }
+  ],
+  "posicoes_em_aberto": [
+    {
+      "codigo_falado": "Cogna R303 (rolada para S273)",
+      "underlying": "COGN3",
+      "tipo": "PUT",
+      "preco": 0.26,
+      "timestamp": "14:02",
+      "nota": "Tendência de baixa; vencimento R rolado para S273 a 13 centavos"
+    },
+    {
+      "codigo_falado": "Rent R433 (rolada para S403)",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": 2.68,
+      "timestamp": "16:05",
+      "nota": "Tendência de baixa; vencimento R rolado para S403"
+    },
+    {
+      "codigo_falado": "Brav F (rolada para G215)",
+      "underlying": "BRAV3",
+      "tipo": "CALL",
+      "preco": 0.94,
+      "timestamp": "3:42",
+      "nota": "Tendência de alta; vencimento F rolado para G215 a 70 centavos"
+    },
+    {
+      "codigo_falado": "MBRF R167 (rolada para S151)",
+      "underlying": "MBRF3",
+      "tipo": "PUT",
+      "preco": 1.54,
+      "timestamp": "18:06",
+      "nota": "Tendência de baixa; vencimento R rolado para S151"
+    },
+    {
+      "codigo_falado": "Pri S650",
+      "underlying": "PRIO3",
+      "tipo": "PUT",
+      "preco": 3.69,
+      "timestamp": "20:16",
+      "nota": "Tendência de baixa; preço atualizado 3,69"
+    },
+    {
+      "codigo_falado": "Pets S437",
+      "underlying": "PETR4",
+      "tipo": "PUT",
+      "preco": 2.8,
+      "timestamp": "20:32",
+      "nota": "Tendência de baixa; preço atualizado 2,80"
+    },
+    {
+      "codigo_falado": "MRV S580",
+      "underlying": "MRVE3",
+      "tipo": "PUT",
+      "preco": 0.59,
+      "timestamp": "7:01",
+      "nota": "Tendência de baixa; 59 centavos — quase cabe ajuste de delta mas ainda não"
+    },
+    {
+      "codigo_falado": "Magalu PUT (vencimento não especificado)",
+      "underlying": "MGLU3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "21:09",
+      "nota": "Tendência de baixa; compra de put em aberto"
+    },
+    {
+      "codigo_falado": "Bif PUT",
+      "underlying": "BEEF3",
+      "tipo": "PUT",
+      "preco": 0.14,
+      "timestamp": "21:14",
+      "nota": "Tendência de baixa; preço atualizado 14 centavos"
+    },
+    {
+      "codigo_falado": "Usiminas CALL",
+      "underlying": "USIM5",
+      "tipo": "CALL",
+      "preco": 0.28,
+      "timestamp": "21:27",
+      "nota": "Tendência de alta; preço atualizado 28 centavos"
+    },
+    {
+      "codigo_falado": "Cirela PUT",
+      "underlying": "CYRE3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "8:25",
+      "nota": "Tendência de baixa; compra de put em aberto"
+    },
+    {
+      "codigo_falado": "Embraer (não especificado)",
+      "underlying": "EMBJ3",
+      "tipo": "PUT",
+      "preco": 1.45,
+      "timestamp": "22:08",
+      "nota": "Quase virou tendência hoje mas não confirmou; preço atualizado 1,45"
+    },
+    {
+      "codigo_falado": "CSAN S360",
+      "underlying": "CSAN3",
+      "tipo": "PUT",
+      "preco": 0.31,
+      "timestamp": "9:17",
+      "nota": "Tendência de baixa; papel caindo ~4%; 31 centavos — ainda não cabe ajuste de delta"
+    },
+    {
+      "codigo_falado": "BRAP S224",
+      "underlying": "BRAP4",
+      "tipo": "PUT",
+      "preco": 1.14,
+      "timestamp": "9:46",
+      "nota": "Tendência de baixa; 1,14 — ainda não cabe ajuste de delta"
+    },
+    {
+      "codigo_falado": "BOVA CALL (operação do tio Wi)",
+      "underlying": "BOVA11",
+      "tipo": "CALL",
+      "preco": null,
+      "timestamp": "2:03",
+      "nota": "Operação separada indicada pelo tio Wi; manter"
+    },
+    {
+      "codigo_falado": "CSNA PUT",
+      "underlying": "CSNA3",
+      "tipo": "PUT",
+      "preco": 0.79,
+      "timestamp": "22:57",
+      "nota": "Tendência de baixa; preço atualizado 79 centavos"
+    },
+    {
+      "codigo_falado": "Brasken PUT (BRKM S900)",
+      "underlying": "BRKM5",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "10:19",
+      "nota": "Tendência de baixa; posição na S900 conforme planilha"
+    },
+    {
+      "codigo_falado": "Semin PUT (CMIN)",
+      "underlying": "CMIN3",
+      "tipo": "PUT",
+      "preco": 0.24,
+      "timestamp": "23:08",
+      "nota": "Tendência de baixa; preço atualizado 24 centavos"
+    },
+    {
+      "codigo_falado": "Lojas Renner PUT",
+      "underlying": "LREN3",
+      "tipo": "PUT",
+      "preco": 0.75,
+      "timestamp": "23:18",
+      "nota": "Tendência de baixa; preço atualizado 75 centavos"
+    },
+    {
+      "codigo_falado": "Veg G447 (nova entrada hoje)",
+      "underlying": "WEGE3",
+      "tipo": "CALL",
+      "preco": 1.72,
+      "timestamp": "11:58",
+      "nota": "Virada de tendência hoje; nova entrada para todos"
+    }
+  ],
+  "avisos": [
+    "Legenda transcreve 'Veg' / 'vag' / 'vag47' / 'vegante' para WEG (WEGE3) — casado com confiança alta pelo contexto.",
+    "Legenda transcreve 'Bif' para Minerva Foods (BEEF3) — alias reconhecido.",
+    "Legenda transcreve 'Semin' / 'semim' para CSN Mineração (CMIN3) — alias reconhecido.",
+    "Legenda transcreve 'Cirela' / 'Siri' para Cyrela (CYRE3) — alias reconhecido.",
+    "Legenda transcreve 'Imbraer' / 'Ibra' / 'Imraer' para Embraer (EMBJ3) — alias reconhecido.",
+    "Legenda transcreve 'Pri' / 'PRI' para PRIO3 (PetroRio) — alias reconhecido.",
+    "Legenda transcreve 'Pets' para Petrobras PN (PETR4) — inferido por contexto ('Pets S437').",
+    "Legenda transcreve 'Brasken' / 'Brasquen' para Braskem (BRKM5); posição citada como S900.",
+    "Legenda transcreve 'CZAN' / 'Can' para Cosan (CSAN3) — alias reconhecido.",
+    "Legenda transcreve 'Us em Minas' / 'Aos em Minas' para Usiminas (USIM5) — alias reconhecido.",
+    "Tipo da opção (CALL ou PUT) frequentemente censurado como '[__]' na legenda automática. Tipo inferido pelo contexto: ativos em tendência de baixa → PUT; ativos em tendência de alta → CALL.",
+    "Cogna: analista diz 'vou comprar uma cogna R' aos 15:06, mas pelo contexto (rolagem para vencimento S) trata-se de PUT S273 — provável erro de fala corrigido na sequência.",
+    "Preço de entrada da MBRF S151 não foi informado pelo analista — campo preco_sugerido deixado null.",
+    "Embraer quase virou tendência mas NÃO confirmou — nenhum sinal de entrada emitido para EMBJ3.",
+    "BOVA: operação citada como recomendação do 'tio Wi', não do analista Merato; registrada apenas em posições_em_aberto."
+  ],
+  "fonte": "live_youtube"
+}

@@ -1,0 +1,14 @@
+{
+  "_comment": "Carteira REAL do Luan (o que ele de fato executou). O dashboard mostra lado a lado com a carteira do analista. Preencher quando o Luan registrar as ordens dele. Enquanto vazio, o dash mostra estado-vazio orientando.",
+  "_schema": {
+    "codigo": "ticker real B3 da opcao (ex: WEGEG447)",
+    "underlying": "acao base (ex: WEGE3)",
+    "tipo": "CALL | PUT",
+    "qtd": "quantidade de contratos",
+    "preco_entrada": "premio pago por opcao (R$)",
+    "data_entrada": "AAAA-MM-DD",
+    "strike": "preco de exercicio (R$)",
+    "vencimento": "AAAA-MM-DD"
+  },
+  "posicoes": []
+}

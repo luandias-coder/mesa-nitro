@@ -1,0 +1,160 @@
+# Registro canônico dos ativos da "Sala Nitro" (universo fechado)
+# v1 — 2026-06-07: lista oficial de 21 ativos fornecida pelo Luan. Substitui a v0 (extraída dos resumos).
+#
+# Campos:
+#   underlying    : ticker da ação na B3 (objeto da opção)
+#   nome          : nome da empresa
+#   option_root   : mnemônico que a OPÇÃO usa na B3 (confirmar na grade real; às vezes != raiz da ação)
+#   aliases       : como a legenda automática do YT costuma transcrever (fuzzy match)
+#   confianca     : high | medium | low
+#
+# Código de opção B3 = <option_root><LETRA><strike>
+#   LETRA codifica MÊS + tipo:
+#     CALL: A=jan B=fev C=mar D=abr E=mai F=jun G=jul H=ago I=set J=out K=nov L=dez
+#     PUT : M=jan N=fev O=mar P=abr Q=mai R=jun S=jul T=ago U=set V=out W=nov X=dez
+#   <strike> NÃO é decodificável só pelo preço -> resolver consultando a grade real (MT5/Rico).
+
+ativos:
+  - underlying: BRKM5
+    nome: Braskem
+    option_root: BRKM
+    aliases: ["braskem", "brasquen", "brasc", "brkm"]
+    confianca: high
+
+  - underlying: CYRE3
+    nome: Cyrela
+    option_root: CYRE        # CONFIRMADO na grade real: opção é CYRE*. "SIRI" é só como o analista fala.
+    aliases: ["cyrela", "cirela", "siri", "cre"]
+    confianca: high
+
+  - underlying: BPAC11
+    nome: BTG Pactual
+    option_root: BPAC
+    aliases: ["btg", "btg pactual", "bpac", "pactual"]
+    confianca: high
+
+  - underlying: BBDC4
+    nome: Bradesco PN
+    option_root: BBDC
+    aliases: ["bradesco", "bbdc", "bradesco pn"]
+    confianca: high
+
+  - underlying: CSNA3
+    nome: CSN (Siderúrgica)
+    option_root: CSNA        # legenda canta "CSN"; grade usa CSNA -> confirmar
+    aliases: ["csn", "cisene", "csna"]
+    confianca: high
+
+  - underlying: MRVE3
+    nome: MRV Engenharia
+    option_root: MRVE
+    aliases: ["mrv", "mrve"]
+    confianca: high
+
+  - underlying: BBAS3
+    nome: Banco do Brasil
+    option_root: BBAS
+    aliases: ["banco do brasil", "bb", "bbas", "brasil"]
+    confianca: high
+
+  - underlying: MGLU3
+    nome: Magazine Luiza
+    option_root: MGLU
+    aliases: ["magalu", "magazine", "magazine luiza", "mglu"]
+    confianca: high
+
+  - underlying: CSAN3
+    nome: Cosan
+    option_root: CSAN
+    aliases: ["cosan", "csan"]
+    confianca: high
+
+  - underlying: LREN3
+    nome: Lojas Renner
+    option_root: LREN
+    aliases: ["lojas renner", "renner", "lin", "lren"]
+    confianca: high
+
+  - underlying: BEEF3
+    nome: Minerva Foods
+    option_root: BEEF
+    aliases: ["minerva", "bif", "beef"]   # "Bif" cantado = BEEF3 (corrigido: NÃO é BBSE3)
+    confianca: high
+
+  - underlying: MBRF3
+    nome: MBRF (Marfrig + BRF)
+    option_root: MBRF
+    aliases: ["mbrf", "mbrf3", "marfrig", "brf"]   # antes MRFG3/BRFS3
+    confianca: medium    # confirmar mnemônico da opção na grade
+
+  - underlying: EMBJ3
+    nome: Embraer
+    option_root: EMBJ        # ticker mudou EMBR3 -> EMBJ3 no fim de 2025; transcripts antigos cantam "EMBR" -> confirmar option_root na grade
+    aliases: ["embraer", "braer", "embra", "embr", "embj"]
+    confianca: high
+
+  - underlying: PETR4
+    nome: Petrobras PN
+    option_root: PETR
+    aliases: ["petrobras", "petro", "petr"]
+    confianca: high
+
+  - underlying: BRAV3
+    nome: Brava Energia
+    option_root: BRAV
+    aliases: ["brava", "brave", "brave 3", "brav"]
+    confianca: high
+
+  - underlying: PRIO3
+    nome: PRIO (PetroRio)
+    option_root: PRIO
+    aliases: ["prio", "pri", "petrorio"]
+    confianca: high
+
+  - underlying: WEGE3
+    nome: WEG
+    option_root: WEGE        # legenda canta "Vega/Velga"; opção vista "VEG S44" -> confirmar root na grade
+    aliases: ["weg", "vega", "velga", "wege"]
+    confianca: medium    # resolvido o mistério: "Vega/Velga" = WEG. Confirmar option_root.
+
+  - underlying: BRAP4
+    nome: Bradespar
+    option_root: BRAP
+    aliases: ["bradespar", "brap"]
+    confianca: high
+
+  - underlying: RENT3
+    nome: Localiza
+    option_root: RENT
+    aliases: ["localiza", "rent", "loca"]   # "Localiza" = RENT3 (corrigido: NÃO é LWSA3)
+    confianca: high
+
+  - underlying: USIM5
+    nome: Usiminas
+    option_root: USIM
+    aliases: ["usiminas", "us minas", "zin", "usim"]
+    confianca: high
+
+  - underlying: COGN3
+    nome: Cogna
+    option_root: COGN
+    aliases: ["cogna", "cgna", "cogná", "cogn"]
+    confianca: high
+
+# Instrumentos auxiliares (fora dos 21; aparecem como hedge):
+auxiliares:
+  - underlying: BOVA11
+    nome: ETF Ibovespa (iShares)
+    option_root: BOVA
+    aliases: ["bova", "bova11"]
+    nota: hedge de carteira (call ATM). Negocia em qtd unitária.
+
+# GRUPO CSN — CSNA3 (siderúrgica) e CMIN3 (mineração) são coligadas.
+# Decisão Luan 2026-06-07: tratar as duas como o MESMO ativo por ora; bater o martelo depois.
+grupo_csn:
+  - underlying: CMIN3
+    nome: CSN Mineração
+    option_root: CMIN
+    aliases: ["semin", "sem", "cemin", "cmin"]
+    grupo: CSN
+    nota: teve op real na live 05/06 (SEMIN S50). Agrupada com CSNA3 até confirmação final.

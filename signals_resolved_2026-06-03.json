@@ -1,0 +1,585 @@
+{
+  "data": "2026-06-03",
+  "analista": "Meramato Coelho (substituindo Caio)",
+  "vencimento_padrao": "2026-07-17",
+  "resumo_analista": "Viradas em Cyrela (SIRI), Embraer (EMBJ) e Bradespar (BRAP) + ajuste de delta em Cosan (CSAN) + compra de CALL BOVA como hedge de carteira + sinalização de virada em Lojas Renner para sexta-feira",
+  "sinais": [
+    {
+      "underlying": "CYRE3",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "SIRI G234",
+      "strike": 234,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 0.38,
+      "motivo": "Virada de tendência: indicador passou de alta para baixa em Cyrela. Encerramento da call existente antes de montar PUT.",
+      "confianca": "alta",
+      "timestamp": "10:38",
+      "trecho": "Essa call nesse momento, pessoal, para quem já estava comprado, tá? Se você não estava, não precisa fazer nada. Você vai vender essa call por 38 centavos.",
+      "codigo_resolvido": "CYREG234",
+      "resolucao": {
+        "codigo_resolvido": "CYREG234",
+        "strike_real": 23.45,
+        "ultimo_hoje": 0.25,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "CYRE3",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "SIRI S204",
+      "strike": 204,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 0.94,
+      "motivo": "Virada de tendência para baixa em Cyrela. Compra de PUT ATM para iniciantes e quem encerrou a call.",
+      "confianca": "alta",
+      "timestamp": "11:21",
+      "trecho": "Vou comprar aqui uma opção na linha do dinheiro, aire S 204. [...] Siri S 200 204, saindo aqui a 94, 92 centavos o último negócio dela.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "SIRI G234",
+        "preco": 0.38,
+        "resolucao": {
+          "codigo_resolvido": "CYREG234",
+          "strike_real": 23.45,
+          "ultimo_hoje": 0.25,
+          "delta_hoje": null,
+          "vencimento": "2026-07-17",
+          "metodo": "exato",
+          "confianca": "alta"
+        }
+      },
+      "codigo_resolvido": "CYRES204",
+      "resolucao": {
+        "codigo_resolvido": "CYRES204",
+        "strike_real": 20.45,
+        "ultimo_hoje": 1.27,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "EMBJ3",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "EMBJ G753",
+      "strike": 753,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 1.6,
+      "motivo": "Virada de tendência: indicador passou de alta para baixa em Embraer. Encerramento da call antes de montar PUT.",
+      "confianca": "alta",
+      "timestamp": "13:25",
+      "trecho": "Por quanto está saindo essa call de BRAER? MBJ JG753. [...] 1,60. Vou vender essa opção por 1,60 nesse momento.",
+      "codigo_resolvido": "EMBJG753",
+      "resolucao": {
+        "codigo_resolvido": "EMBJG753",
+        "strike_real": 75.3,
+        "ultimo_hoje": 2.9,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "EMBJ3",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "EMBJ S693",
+      "strike": 693,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 2.74,
+      "motivo": "Virada de tendência para baixa em Embraer. Compra de PUT ATM com 32 dias úteis.",
+      "confianca": "alta",
+      "timestamp": "14:14",
+      "trecho": "Eu vou pegar com vocês a MJS 693. MJS 693 é o nome da emoção. [...] 2,74. Então, nós vamos comprar a MBJS693.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "EMBJ G753",
+        "preco": 1.6,
+        "resolucao": {
+          "codigo_resolvido": "EMBJG753",
+          "strike_real": 75.3,
+          "ultimo_hoje": 2.9,
+          "delta_hoje": null,
+          "vencimento": "2026-07-17",
+          "metodo": "exato",
+          "confianca": "alta"
+        }
+      },
+      "codigo_resolvido": "EMBJS693",
+      "resolucao": {
+        "codigo_resolvido": "EMBJS693",
+        "strike_real": 69.3,
+        "ultimo_hoje": 1.46,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "CSAN3",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "CSAN S360",
+      "strike": 360,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 0.24,
+      "motivo": "Ajuste de delta após 128% de lucro na CSAN S400. Vende posição antiga e reinicia exposição com PUT mais próxima ao dinheiro por metade do preço.",
+      "confianca": "alta",
+      "timestamp": "16:51",
+      "trecho": "Vou comprar uma opção aqui, pessoal, pela metade do preço, tá? Eu vou pegar aqui a CZ S360, beleza? Coan S 360, saindo aqui a 24 centavos praticamente.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "CSAN S400",
+        "preco": 0.48,
+        "resolucao": {
+          "codigo_resolvido": "CSANS400",
+          "strike_real": 4.0,
+          "ultimo_hoje": 0.48,
+          "delta_hoje": null,
+          "vencimento": "2026-07-17",
+          "metodo": "exato",
+          "confianca": "alta"
+        }
+      },
+      "codigo_resolvido": "CSANS360",
+      "resolucao": {
+        "codigo_resolvido": "CSANS360",
+        "strike_real": 3.6,
+        "ultimo_hoje": 0.23,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "BRAP4",
+      "acao": "saida",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "BRAP G234",
+      "strike": 234,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 0.71,
+      "motivo": "Virada de tendência: indicador passou de alta para baixa em Bradespar. Encerramento da call antes de montar PUT.",
+      "confianca": "alta",
+      "timestamp": "18:25",
+      "trecho": "BRAP G 234. Bra G 264, cara, tá querendo virar. [...] saindo a 71 centavos. Agora você vai vender a sua opção.",
+      "codigo_resolvido": "BRAPG234",
+      "resolucao": {
+        "codigo_resolvido": "BRAPG234",
+        "strike_real": 23.45,
+        "ultimo_hoje": 0.37,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "BRAP4",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "BRAP S224",
+      "strike": 224,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 0.63,
+      "motivo": "Virada de tendência para baixa em Bradespar. Compra de PUT para todos.",
+      "confianca": "alta",
+      "timestamp": "19:02",
+      "trecho": "Vamos pegar aqui, galera, a BRAP S224, tá? [...] Essa opção tá saindo agora a 63 centavos. [...] É uma operação que todos devem entrar.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "BRAP G234",
+        "preco": 0.71,
+        "resolucao": {
+          "codigo_resolvido": "BRAPG234",
+          "strike_real": 23.45,
+          "ultimo_hoje": 0.37,
+          "delta_hoje": null,
+          "vencimento": "2026-07-17",
+          "metodo": "exato",
+          "confianca": "alta"
+        }
+      },
+      "codigo_resolvido": "BRAPS224",
+      "resolucao": {
+        "codigo_resolvido": "BRAPS224",
+        "strike_real": 22.45,
+        "ultimo_hoje": 1.09,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "BOVA11",
+      "acao": "entrada",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "BOVA G52",
+      "strike": 52,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 5.89,
+      "motivo": "Compra de CALL ATM de BOVA como hedge de carteira (contraponto às puts abertas). Pedido do analista responsável pela sala para proteção caso haja repique no mercado.",
+      "confianca": "alta",
+      "timestamp": "23:48",
+      "trecho": "É BVA G52, tá, pessoal? Ela tá saindo agora [...] Bova G52 saindo a 5,89. [...] Estamos comprando aqui uma call at the money de Bova.",
+      "codigo_resolvido": "BOVAG52",
+      "resolucao": {
+        "codigo_resolvido": "BOVAG52",
+        "strike_real": 167.0,
+        "ultimo_hoje": 5.06,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    }
+  ],
+  "posicoes_em_aberto": [
+    {
+      "codigo_falado": "COGN R303",
+      "underlying": "COGN3",
+      "tipo": "PUT",
+      "preco": 0.24,
+      "nota": "50% de lucro. Manter.",
+      "timestamp": "3:15",
+      "resolucao": {
+        "codigo_resolvido": "COGNR303",
+        "strike_real": 2.64,
+        "ultimo_hoje": 0.21,
+        "delta_hoje": null,
+        "vencimento": "2026-06-19",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "COGNR303"
+    },
+    {
+      "codigo_falado": "RENT R43",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": 2.74,
+      "nota": "30% de lucro. Manter.",
+      "timestamp": "4:06",
+      "resolucao": {
+        "codigo_resolvido": "RENTR433",
+        "strike_real": 42.87,
+        "ultimo_hoje": 2.81,
+        "delta_hoje": null,
+        "vencimento": "2026-06-19",
+        "metodo": "aprox_premio",
+        "confianca": "media",
+        "nota": "sem match exato p/ RENTR43; casado pelo prêmio ~R$2.74 (CONFIRMAR)"
+      },
+      "codigo_resolvido": "RENTR433"
+    },
+    {
+      "codigo_falado": "BRAV F205",
+      "underlying": "BRAV3",
+      "tipo": "CALL",
+      "preco": 0.74,
+      "nota": "Tendência de alta. Manter.",
+      "timestamp": "5:06",
+      "resolucao": {
+        "codigo_resolvido": "BRAVF205",
+        "strike_real": 20.38,
+        "ultimo_hoje": 0.9,
+        "delta_hoje": null,
+        "vencimento": "2026-06-19",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "BRAVF205"
+    },
+    {
+      "codigo_falado": "CSNA F682",
+      "underlying": "CSNA3",
+      "tipo": "CALL",
+      "preco": 0.28,
+      "nota": "Tendência de alta. Manter.",
+      "timestamp": "6:33",
+      "resolucao": {
+        "codigo_resolvido": "CSNAF682",
+        "strike_real": 6.82,
+        "ultimo_hoje": 0.07,
+        "delta_hoje": null,
+        "vencimento": "2026-06-19",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "CSNAF682"
+    },
+    {
+      "codigo_falado": "MBRF PUT (código não cantado claramente)",
+      "underlying": "MBRF3",
+      "tipo": "PUT",
+      "preco": 1.4,
+      "nota": "55% de lucro. Tendência de baixa. Manter.",
+      "timestamp": "9:13",
+      "resolucao": {
+        "codigo_resolvido": "MBRFR167",
+        "metodo": "gabarito_analista",
+        "confianca": "alta",
+        "nota": "preenchido pelo gabarito (era sem_codigo)"
+      },
+      "codigo_resolvido": "MBRFR167"
+    },
+    {
+      "codigo_falado": "PRIO R650",
+      "underlying": "PRIO3",
+      "tipo": "PUT",
+      "preco": 4.3,
+      "nota": "Tendência de baixa. Manter.",
+      "timestamp": "9:38",
+      "resolucao": {
+        "codigo_resolvido": "PRIOS650",
+        "strike_real": 65.0,
+        "ultimo_hoje": 3.92,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "gabarito_analista",
+        "confianca": "alta",
+        "nota": "Luan confirmou PRIOS650 (put julho), era PRIOR650 (junho)"
+      },
+      "codigo_resolvido": "PRIOS650"
+    },
+    {
+      "codigo_falado": "SIRI G234",
+      "underlying": "CYRE3",
+      "tipo": "CALL",
+      "preco": 0.38,
+      "nota": "ENCERRADA — virada de tendência. Substituída por SIRI S204.",
+      "timestamp": "10:38",
+      "resolucao": {
+        "codigo_resolvido": "CYREG234",
+        "strike_real": 23.45,
+        "ultimo_hoje": 0.25,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "CYREG234"
+    },
+    {
+      "codigo_falado": "PETR S437",
+      "underlying": "PETR4",
+      "tipo": "PUT",
+      "preco": 2.0,
+      "nota": "Tendência de baixa. Praticamente não variou. Manter.",
+      "timestamp": "12:40",
+      "resolucao": {
+        "codigo_resolvido": "PETRS437",
+        "strike_real": 42.61,
+        "ultimo_hoje": 2.38,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "PETRS437"
+    },
+    {
+      "codigo_falado": "EMBJ G753",
+      "underlying": "EMBJ3",
+      "tipo": "CALL",
+      "preco": 1.6,
+      "nota": "ENCERRADA — virada de tendência. Substituída por EMBJ S693.",
+      "timestamp": "13:35",
+      "resolucao": {
+        "codigo_resolvido": "EMBJG753",
+        "strike_real": 75.3,
+        "ultimo_hoje": 2.9,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "EMBJG753"
+    },
+    {
+      "codigo_falado": "MRVE S580",
+      "underlying": "MRVE3",
+      "tipo": "PUT",
+      "preco": 0.4,
+      "nota": "Tendência de baixa. Manter.",
+      "timestamp": "15:11",
+      "resolucao": {
+        "codigo_resolvido": "MRVES580",
+        "strike_real": 5.8,
+        "ultimo_hoje": 0.42,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "MRVES580"
+    },
+    {
+      "codigo_falado": "BRKM PUT (código não cantado claramente)",
+      "underlying": "BRKM5",
+      "tipo": "PUT",
+      "preco": 1.95,
+      "nota": "Tendência de queda. Sem ajuste por enquanto.",
+      "timestamp": "15:34",
+      "resolucao": {
+        "codigo_resolvido": "BRKMS110",
+        "metodo": "gabarito_analista",
+        "confianca": "alta",
+        "nota": "preenchido pelo gabarito (era sem_codigo)"
+      },
+      "codigo_resolvido": "BRKMS110"
+    },
+    {
+      "codigo_falado": "CSAN S400",
+      "underlying": "CSAN3",
+      "tipo": "PUT",
+      "preco": 0.48,
+      "nota": "ENCERRADA — ajuste de delta após 128% de lucro. Substituída por CSAN S360.",
+      "timestamp": "16:04",
+      "resolucao": {
+        "codigo_resolvido": "CSANS400",
+        "strike_real": 4.0,
+        "ultimo_hoje": 0.48,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "CSANS400"
+    },
+    {
+      "codigo_falado": "USIM G485",
+      "underlying": "USIM5",
+      "tipo": "CALL",
+      "preco": 0.15,
+      "nota": "Tendência de alta. Manter.",
+      "timestamp": "17:48",
+      "resolucao": {
+        "codigo_resolvido": "USIMG130",
+        "strike_real": 14.04,
+        "ultimo_hoje": 0.16,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "gabarito_analista",
+        "confianca": "alta",
+        "nota": "corrigido p/ gabarito (era USIMG140)"
+      },
+      "codigo_resolvido": "USIMG130"
+    },
+    {
+      "codigo_falado": "BRAP G234",
+      "underlying": "BRAP4",
+      "tipo": "CALL",
+      "preco": 0.71,
+      "nota": "ENCERRADA — virada de tendência. Substituída por BRAP S224.",
+      "timestamp": "18:25",
+      "resolucao": {
+        "codigo_resolvido": "BRAPG234",
+        "strike_real": 23.45,
+        "ultimo_hoje": 0.37,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "BRAPG234"
+    },
+    {
+      "codigo_falado": "MGLU S593",
+      "underlying": "MGLU3",
+      "tipo": "PUT",
+      "preco": 0.76,
+      "nota": "Tendência de baixa. Sem ajuste.",
+      "timestamp": "19:54",
+      "resolucao": {
+        "codigo_resolvido": "MGLUS593",
+        "strike_real": 5.93,
+        "ultimo_hoje": 0.69,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "MGLUS593"
+    },
+    {
+      "codigo_falado": "BEEF PUT (código não cantado claramente)",
+      "underlying": "BEEF3",
+      "tipo": "PUT",
+      "preco": 0.18,
+      "nota": "Tendência de baixa. Manter.",
+      "timestamp": "22:03",
+      "resolucao": {
+        "codigo_resolvido": "BEEFS346",
+        "metodo": "gabarito_analista",
+        "confianca": "alta",
+        "nota": "preenchido pelo gabarito (era sem_codigo)"
+      },
+      "codigo_resolvido": "BEEFS346"
+    },
+    {
+      "codigo_falado": "WEGE PUT (código não cantado claramente)",
+      "underlying": "WEGE3",
+      "tipo": "PUT",
+      "preco": 1.62,
+      "nota": "Tendência favorável. Manter.",
+      "timestamp": "22:17",
+      "resolucao": {
+        "codigo_resolvido": "WEGES444",
+        "metodo": "gabarito_analista",
+        "confianca": "alta",
+        "nota": "preenchido pelo gabarito (era sem_codigo)"
+      },
+      "codigo_resolvido": "WEGES444"
+    },
+    {
+      "codigo_falado": "USIM (código não cantado — mencionado como '034')",
+      "underlying": "USIM5",
+      "tipo": "CALL",
+      "preco": null,
+      "nota": "Referência ambígua '034' ao atualizar US Minas. Pode ser strike ou código parcial.",
+      "timestamp": "22:25",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "LREN PUT (virada pendente — confirmação para sexta)",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": null,
+      "nota": "Lojas Renner virou tendência no leilão do fechamento. Sinal de entrada em PUT adiado para sexta-feira.",
+      "timestamp": "53:32",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    }
+  ],
+  "avisos": [
+    "23:04 — Analista cantou 'BOVA S52' (PUT de julho) por engano ao recomendar compra de CALL de BOVA para julho. Corrigido ao vivo para 'BOVA G52' (CALL de julho) em 23:36. Registrado como BOVA G52.",
+    "13:25 — Código de Embraer cantado como 'MBJ JG753' e 'MBJS693' com variações diversas na transcrição. Interpretado como EMBJ G753 (saída CALL) e EMBJ S693 (entrada PUT) pela lógica CALL=G/julho e PUT=S/julho.",
+    "18:28 — Strike de BRAP G234 cantado como 'G 234' e depois como 'G 2 3 4' e 'G 264' em leituras diferentes. Adotado strike 234 por maioria das ocorrências.",
+    "22:25 — Referência 'U Minas 034' ao atualizar US Minas é ambígua: pode ser código parcial ou strike. Não foi possível determinar código completo com confiança.",
+    "6:33 — Código CSN cantado como 'Cestaf 682' — interpretado como CSNA F682 (CALL junho). Verificar se vencimento é junho (F) ou outro.",
+    "15:11 — Código MRV cantado como 'S580' — interpretado como MRVE S580 (PUT julho).",
+    "MBRF, BRKM5, BEEF3 e WEGE3 tiveram posições citadas sem código completo cantado — apenas preço de atualização registrado.",
+    "Posição de USIM5 aparece duplicada na transcrição (G485 como CALL em aberto em 17:48 e referência '034' em 22:25). Pode ser mesma posição com atualização de preço inconclusiva.",
+    "LREN R43 (PUT) aparece como posição em aberto com 30% de lucro E como candidata a nova virada (PUT adicional) — sinal de nova entrada em LREN adiado para sexta-feira conforme analista."
+  ],
+  "fonte": "live_youtube"
+}
