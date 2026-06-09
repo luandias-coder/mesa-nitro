@@ -2,6 +2,7 @@
   "pool": 12000,
   "caixa_pct": 0.25,
   "peso_pct": 0.05,
+  "n_alvo": 19,
   "lote": 100,
-  "_nota": "pool=capital total; caixa_pct=reserva p/ rolagens; peso_pct=alvo por posição; teto aplicado = pool*(1-caixa_pct). Editável."
+  "_nota": "n_alvo = nº de ativos da Sala (estado estável). alvo/posição = min(pool*peso_pct, pool*(1-caixa_pct)/n_alvo). Com 19 posições o caixa de 25% manda → ~R$474/pos (~3,95%). Editável."
 }

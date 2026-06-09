@@ -259,9 +259,9 @@ async function save(){
     for(const r of all){if(!keep.includes(r.op_id)) await fetch(SB_URL+"/rest/v1/execucoes_usuario?op_id=eq."+encodeURIComponent(r.op_id),{method:"DELETE",headers:sbh});}
   }catch(e){console.warn("save falhou",e);}
 }
-const CFG = {"pool": 12000, "caixa_pct": 0.25, "peso_pct": 0.05, "lote": 100, "_nota": "pool=capital total; caixa_pct=reserva p/ rolagens; peso_pct=alvo por posi\u00e7\u00e3o; teto aplicado = pool*(1-caixa_pct). Edit\u00e1vel."};
+const CFG = {"pool": 12000, "caixa_pct": 0.25, "peso_pct": 0.05, "n_alvo": 19, "lote": 100, "_nota": "n_alvo = n\u00ba de ativos da Sala (estado est\u00e1vel). alvo/posi\u00e7\u00e3o = min(pool*peso_pct, pool*(1-caixa_pct)/n_alvo). Com 19 posi\u00e7\u00f5es o caixa de 25% manda \u2192 ~R$474/pos (~3,95%). Edit\u00e1vel."};
 const LOTE=(CFG&&CFG.lote)||100, LS='mesa_nitro_exec_v1';
-function sizeContracts(premium){ if(!premium||!CFG)return null; const N=(DATA.portfolio&&DATA.portfolio.length)||16; const alvo=Math.min(CFG.pool*CFG.peso_pct, CFG.pool*(1-CFG.caixa_pct)/N); return Math.max(1, Math.round(alvo/(premium*LOTE))); }
+function sizeContracts(premium){ if(!premium||!CFG)return null; const N=(CFG&&CFG.n_alvo)||19; const alvo=Math.min(CFG.pool*CFG.peso_pct, CFG.pool*(1-CFG.caixa_pct)/N); return Math.max(1, Math.round(alvo/(premium*LOTE))); }
 const nf=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const brl=v=>(v==null||v==='')?'—':'R$ '+nf.format(+v);
 const pct=v=>(v==null)?'—':(v>=0?'+':'')+v.toFixed(1)+'%';

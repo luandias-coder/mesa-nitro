@@ -394,7 +394,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 const DATA = /*__DATA__*/;
 const CFG = /*__CFG__*/;
 const LOTE=(CFG&&CFG.lote)||100, LS='mesa_nitro_exec_v1';
-function sizeContracts(premium){ if(!premium||!CFG)return null; const N=(DATA.portfolio&&DATA.portfolio.length)||16; const alvo=Math.min(CFG.pool*CFG.peso_pct, CFG.pool*(1-CFG.caixa_pct)/N); return Math.max(1, Math.round(alvo/(premium*LOTE))); }
+function sizeContracts(premium){ if(!premium||!CFG)return null; const N=(CFG&&CFG.n_alvo)||19; const alvo=Math.min(CFG.pool*CFG.peso_pct, CFG.pool*(1-CFG.caixa_pct)/N); return Math.max(1, Math.round(alvo/(premium*LOTE))); }
 const store=JSON.parse(localStorage.getItem(LS)||'{}');
 const save=()=>localStorage.setItem(LS,JSON.stringify(store));
 const nf=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
