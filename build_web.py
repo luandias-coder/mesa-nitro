@@ -47,7 +47,7 @@ t = t.replace("const store=JSON.parse(localStorage.getItem(LS)||'{}');\n", "")
 t = t.replace("const save=()=>localStorage.setItem(LS,JSON.stringify(store));\n", "")
 # init tail: carregar do Supabase antes de renderizar
 old_init = "marketStatus();setInterval(marketStatus,60000);simOptions();setTipo('CALL');rerender();renderHist();"
-new_init = "marketStatus();setInterval(marketStatus,60000);loadAll().then(()=>{document.getElementById('dlatest').textContent=brdate(DATA.meta.data_latest);document.getElementById('danalista').textContent=DATA.meta.analista;simOptions();setTipo('CALL');rerender();renderHist();});"
+new_init = "marketStatus();setInterval(marketStatus,60000);loadAll().then(()=>{document.getElementById('dlatest').textContent=brdate(DATA.meta.data_latest);simOptions();setTipo('CALL');rerender();renderHist();});"
 t = t.replace(old_init, new_init)
 
 t = t.replace("sua carteira salva neste navegador (localStorage)", "sua carteira no Supabase (nuvem)")
