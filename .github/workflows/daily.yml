@@ -61,7 +61,7 @@ jobs:
           ISO=${{ steps.vid.outputs.iso }}; VID=${{ steps.vid.outputs.vid }}
           [ -s cookies.txt ] && CK="--cookies cookies.txt" || CK=""
           mkdir -p subs
-          yt-dlp $CK --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID"
+          yt-dlp $CK --ignore-no-formats-error --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID"
           python vtt_to_transcript.py "subs/$VID.pt-orig.vtt" "transcript_${ISO}.txt"
           python - "$ISO" "$VID" <<'PY'
           import json,sys,os
