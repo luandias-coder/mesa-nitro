@@ -17,6 +17,8 @@ jobs:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SECRET: ${{ secrets.SUPABASE_SECRET }}
+      TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
       PLAYLIST: 'https://www.youtube.com/playlist?list=PLBXPCoq0WOd7zEXdiGj_I61SmJ-Ces94p'
     steps:
       - uses: actions/checkout@v4
@@ -42,6 +44,16 @@ jobs:
           echo "iso=$ISO" >> $GITHUB_OUTPUT
           echo "vid=$VID" >> $GITHUB_OUTPUT
           echo "Vídeo de $DDMM: ${VID:-nenhum}"
+      - name: Notifica início (Telegram)
+        if: env.TG_TOKEN != ''
+        run: |
+          ISO='${{ steps.vid.outputs.iso }}'; VID='${{ steps.vid.outputs.vid }}'
+          if [ -n "$VID" ]; then
+            MSG="🎬 <b>Mesa Nitro</b> — cron disparou. Processando a live de <b>$ISO</b> (vídeo $VID)…"
+          else
+            MSG="🔕 <b>Mesa Nitro</b> — cron rodou em $ISO mas <b>não achou live</b> na playlist (feriado/sem live, ou cookie do YouTube expirado)."
+          fi
+          curl -s "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" -d chat_id="${TG_CHAT}" --data-urlencode "text=$MSG" -d parse_mode=HTML >/dev/null || true
       - name: Captura + pipeline
         if: steps.vid.outputs.vid != ''
         run: |
@@ -68,3 +80,16 @@ jobs:
           git add signals_*_*.json transcript_*.txt videos.json 2>/dev/null || true
           git commit -m "dados ${{ steps.vid.outputs.iso }} [skip vercel]" || echo "nada a commitar"
           git push || echo "push falhou (segue)"
+      - name: Notifica sucesso (Telegram)
+        if: success() && steps.vid.outputs.vid != '' && env.TG_TOKEN != ''
+        run: |
+          ISO='${{ steps.vid.outputs.iso }}'
+          MSG="✅ <b>Mesa Nitro</b> — live de <b>$ISO</b> processada e no dashboard. Confira a fila de ação."
+          curl -s "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" -d chat_id="${TG_CHAT}" --data-urlencode "text=$MSG" -d parse_mode=HTML >/dev/null || true
+      - name: Notifica falha (Telegram) — provável cookie expirado
+        if: failure() && env.TG_TOKEN != ''
+        run: |
+          ISO=$(TZ=America/Sao_Paulo date +%F)
+          MSG="⚠️ <b>Mesa Nitro</b> — a captura de <b>$ISO</b> FALHOU. Causa provável: <b>cookie do YouTube expirou</b> (renova o cookies.txt e me manda) ou bloqueio do YT. Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          curl -s "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" -d chat_id="${TG_CHAT}" --data-urlencode "text=$MSG" -d parse_mode=HTML >/dev/null || true
+
