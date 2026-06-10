@@ -180,12 +180,17 @@ def executar(mt5, o):
         "type": tipo, "price": float(o["preco_limite"]), "type_time": mt5.ORDER_TIME_DAY,
         "type_filling": mt5.ORDER_FILLING_RETURN, "comment": "mesa-nitro",
     }
+    MARKET_CLOSED = 10018  # TRADE_RETCODE_MARKET_CLOSED — mercado fechado, enfileira p/ abertura
     chk = mt5.order_check(req)
+    if chk is not None and chk.retcode == MARKET_CLOSED:
+        return "fila_abertura", None, None, "mercado fechado - na fila p/ executar na abertura"
     if chk is None or chk.retcode != 0:
         return "erro", None, None, f"order_check reprovou: {getattr(chk,'comment','?')} ({getattr(chk,'retcode','?')})"
     if not AUTO_SEND:
         return "validada_dry_run", None, None, "order_check OK (margem ok) - AUTO_SEND desligado, nada enviado"
     res = mt5.order_send(req)
+    if res is not None and res.retcode == MARKET_CLOSED:
+        return "fila_abertura", None, None, "mercado fechado - na fila p/ executar na abertura"
     if res is None or res.retcode != mt5.TRADE_RETCODE_DONE:
         return "erro", None, None, f"order_send retcode={getattr(res,'retcode','?')} {getattr(res,'comment','')}"
     return "executada", res.order, res.price, "ok"
@@ -228,16 +233,20 @@ def loop_once(mt5):
         except Exception as e:
             print(f"preco err: {e}")
         _next_price[0] = time.time() + PRICE_SEG
-    ordens = sb("GET", f"/rest/v1/ordens?status=eq.aprovada&conta=eq.{CONTA}&select=*")
-    for o in ordens:               # 3) executa aprovadas
+    # 3) executa aprovadas E re-tenta as que estão na fila de abertura (mercado fechado)
+    ordens = sb("GET", f"/rest/v1/ordens?status=in.(aprovada,fila_abertura)&conta=eq.{CONTA}&select=*")
+    for o in ordens:
         status, ticket, preco, msg = executar(mt5, o)
+        if status == o["status"]:
+            continue               # ainda na fila (mercado fechado) — não re-notifica/spama
         sb("PATCH", f"/rest/v1/ordens?id=eq.{o['id']}", {
             "status": status, "ticket": ticket, "preco_exec": preco,
             "resultado": msg, "atualizado_em": "now()"})
         print(f"ordem {o['id']} {o['codigo']} -> {status}: {msg}")
-        emoji = {"executada": "✅", "erro": "❌", "validada_dry_run": "🔎"}.get(status, "")
+        emoji = {"executada": "✅", "erro": "❌", "validada_dry_run": "🔎", "fila_abertura": "📅"}.get(status, "")
+        extra = " — executa na abertura do pregão" if status == "fila_abertura" else ""
         tg("sendMessage", {"chat_id": TG_CHAT, "parse_mode": "HTML",
-                           "text": f"{emoji} Ordem <b>{o['codigo']}</b>: <b>{status}</b>\n{msg}"})
+                           "text": f"{emoji} Ordem <b>{o['codigo']}</b>: <b>{status}</b>{extra}\n{msg}"})
     return len(ordens)
 
 
