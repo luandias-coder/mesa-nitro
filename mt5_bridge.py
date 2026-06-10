@@ -67,12 +67,23 @@ def _fmt_ordem(o):
             f"Conta: {o.get('conta')}")
 
 
-def notificar_pendentes():
-    """Manda no Telegram cada ordem 'pendente' com botoes e marca 'notificada'."""
+def notificar_pendentes(mt5):
+    """Valida o ticker no broker e, se existir, manda no Telegram com botoes ('notificada').
+    Ticker que NAO existe no MT5 -> 'ticker_invalido' (nao aprovavel, flag p/ validacao manual)."""
     if not TG_TOKEN:
         return
     ords = sb("GET", f"/rest/v1/ordens?status=eq.pendente&conta=eq.{CONTA}&select=*")
     for o in ords:
+        cod = o.get("codigo")
+        # VALIDACAO: o ticker (legenda automatica erra) tem que existir de verdade no broker
+        if not cod or not mt5.symbol_select(cod, True) or mt5.symbol_info(cod) is None:
+            sb("PATCH", f"/rest/v1/ordens?id=eq.{o['id']}",
+               {"status": "ticker_invalido", "resultado": f"ticker {cod} nao existe no broker - validar manualmente",
+                "atualizado_em": "now()"})
+            tg("sendMessage", {"chat_id": TG_CHAT, "parse_mode": "HTML",
+                               "text": f"⚠️ Ordem <b>{cod}</b>: ticker NÃO existe no broker — pulada p/ validação manual (não aprovável)."})
+            print(f"ticker_invalido ordem {o['id']} {cod}")
+            continue
         kb = {"inline_keyboard": [[
             {"text": "✅ Executar", "callback_data": f"ap:{o['id']}"},
             {"text": "⏭️ Pular", "callback_data": f"pl:{o['id']}"},
@@ -226,7 +237,7 @@ def atualizar_precos(mt5):
 
 def loop_once(mt5):
     processar_callbacks()          # 1) toques nos botoes (notificada -> aprovada/cancelada)
-    notificar_pendentes()          # 2) avisa novas pendentes
+    notificar_pendentes(mt5)       # 2) valida ticker + avisa novas pendentes
     if time.time() >= _next_price[0]:   # 2.5) bomba de preço live (a cada PRICE_SEG)
         try:
             atualizar_precos(mt5)
