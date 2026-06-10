@@ -325,8 +325,9 @@ document.getElementById('sim-pick').onchange=simPick;['sim-entry','sim-qty','sim
 document.querySelectorAll('#sim-tipo button').forEach(b=>b.onclick=()=>setTipo(b.dataset.t));
 // init
 document.getElementById('dlatest').textContent=brdate(DATA.meta.data_latest);
-document.getElementById('foot').textContent=`Mesa Nitro · ${DATA.meta.lives} lives, ${DATA.meta.n_pos} posições · sua carteira no Supabase (nuvem) · próximo: API de preço ao vivo, MT5/Rico, nuvem (Supabase+Vercel)`;
+document.getElementById('foot').textContent=`Mesa Nitro · ${DATA.meta.lives} lives, ${DATA.meta.n_pos} posições · preço ao vivo via MT5 (atualiza a cada ~1min) · nuvem (Supabase+Vercel)`;
 marketStatus();setInterval(marketStatus,60000);loadAll().then(()=>{document.getElementById('dlatest').textContent=brdate(DATA.meta.data_latest);simOptions();setTipo('CALL');rerender();renderHist();});
+setInterval(()=>{if(document.getElementById('modal').classList.contains('open'))return;loadAll().then(()=>{rerender();});},45000);
 if('serviceWorker' in navigator && location.protocol==='https:'){navigator.serviceWorker.register('/sw.js').catch(()=>{});}
 </script>
 </body></html>

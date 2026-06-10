@@ -191,9 +191,43 @@ def executar(mt5, o):
     return "executada", res.order, res.price, "ok"
 
 
+PRICE_SEG = int(os.environ.get("PRICE_SEG", "60"))
+_next_price = [0.0]
+
+
+def atualizar_precos(mt5):
+    """Bomba de preço LIVE: pega tick da MT5 dos tickers da fila atual e escreve
+    sinais.preco_atual no Supabase (dash faz poll e recalcula 'Ainda dá')."""
+    sinais = sb("GET", "/rest/v1/sinais?select=data,codigo&order=data.desc&limit=300")
+    if not sinais:
+        return
+    fila = sinais[0]["data"]
+    cods = sorted({s["codigo"] for s in sinais if s.get("data") == fila and s.get("codigo")})
+    n = 0
+    for c in cods:
+        if not mt5.symbol_select(c, True):
+            continue
+        t = mt5.symbol_info_tick(c)
+        if not t:
+            continue
+        px = t.last if t.last else (round((t.bid + t.ask) / 2, 2) if (t.bid and t.ask) else None)
+        if px:
+            sb("PATCH", f"/rest/v1/sinais?data=eq.{fila}&codigo=eq.{c}",
+               {"preco_atual": round(float(px), 2)})
+            n += 1
+    if n:
+        print(f"precos live atualizados: {n}/{len(cods)} (fila {fila})")
+
+
 def loop_once(mt5):
     processar_callbacks()          # 1) toques nos botoes (notificada -> aprovada/cancelada)
     notificar_pendentes()          # 2) avisa novas pendentes
+    if time.time() >= _next_price[0]:   # 2.5) bomba de preço live (a cada PRICE_SEG)
+        try:
+            atualizar_precos(mt5)
+        except Exception as e:
+            print(f"preco err: {e}")
+        _next_price[0] = time.time() + PRICE_SEG
     ordens = sb("GET", f"/rest/v1/ordens?status=eq.aprovada&conta=eq.{CONTA}&select=*")
     for o in ordens:               # 3) executa aprovadas
         status, ticket, preco, msg = executar(mt5, o)
