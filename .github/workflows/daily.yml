@@ -28,7 +28,7 @@ jobs:
         uses: denoland/setup-deno@v2
         with: { deno-version: v2.x }
       - name: Instalar deps
-        run: pip install -q -U yt-dlp bgutil-ytdlp-pot-provider anthropic pyyaml
+        run: pip install -q -U bgutil-ytdlp-pot-provider anthropic pyyaml && pip install -q "yt-dlp==2025.10.14"
       - name: Provider PO token (espera subir)
         run: for i in $(seq 1 15); do curl -sf http://127.0.0.1:4416/ping && break || sleep 2; done
       - name: Cookies do YouTube (opcional, se o secret existir)
@@ -61,7 +61,7 @@ jobs:
           ISO=${{ steps.vid.outputs.iso }}; VID=${{ steps.vid.outputs.vid }}
           [ -s cookies.txt ] && CK="--cookies cookies.txt" || CK=""
           mkdir -p subs
-          yt-dlp $CK --extractor-args "youtube:player_client=web" --remote-components ejs:github --ignore-no-formats-error --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID"
+          yt-dlp $CK --extractor-args "youtube:player_client=web" --ignore-no-formats-error --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID"
           python vtt_to_transcript.py "subs/$VID.pt-orig.vtt" "transcript_${ISO}.txt"
           python - "$ISO" "$VID" <<'PY'
           import json,sys,os
