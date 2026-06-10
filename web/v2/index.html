@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesa de Replicação · Nitro</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<meta name="theme-color" content="#5469D4">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mesa Nitro v2">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+ :root{
+  --bg:#F6F8FB;--surface:#FFFFFF;--surface2:#F2F5F9;--line:#E3E8EF;
+  --text:#1A1F36;--dim:#5A6577;--faint:#8A94A6;
+  --brand:#5469D4;--brand-bg:#EEF1FD;
+  --alta:#1A9D5B;--alta-bg:#E6F6ED;--baixa:#D6324B;--baixa-bg:#FCEBEE;
+  --gold:#B0780A;--gold-bg:#FBF1DC;--radius:12px;
+  --sh:0 1px 1px rgba(0,0,0,.03),0 3px 6px rgba(0,0,0,.05);
+  --sh-lg:0 10px 30px rgba(20,30,60,.16);
+  --sans:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+ }
+ *{box-sizing:border-box}
+ body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:40px}
+ .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+ .pos{color:var(--alta)} .neg{color:var(--baixa)} .dim{color:var(--dim)}
+ header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+ .top-row{display:flex;align-items:center;gap:14px;padding:13px 22px;flex-wrap:wrap;max-width:1080px;margin:0 auto}
+ .brand{font-weight:700;font-size:16px;letter-spacing:-.2px;display:flex;align-items:center;gap:7px}
+ .brand .nitro{color:var(--brand)}
+ .mkt{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--dim);font-weight:500}
+ .dot{width:8px;height:8px;border-radius:50%;background:var(--faint)} .dot.on{background:var(--alta);box-shadow:0 0 0 3px var(--alta-bg)} .dot.off{background:var(--baixa);box-shadow:0 0 0 3px var(--baixa-bg)}
+ .top-right{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+ .pill{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12px;color:var(--dim);box-shadow:var(--sh)}
+ .pill b{color:var(--text)}
+ .pill.safe{background:var(--gold-bg);border-color:#EAD9AE;color:var(--gold);font-weight:600}
+ main{max-width:1080px;margin:0 auto;padding:20px 22px 60px}
+ /* PLACAR */
+ .scoreboard{background:linear-gradient(135deg,#5469D4,#6C7FE0);color:#fff;border-radius:var(--radius);padding:20px 22px;box-shadow:var(--sh-lg);margin-bottom:8px}
+ .scoreboard .big{font-size:26px;font-weight:700;letter-spacing:-.5px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+ .scoreboard .big .frac{font-family:var(--mono)}
+ .scoreboard .prog{height:8px;background:rgba(255,255,255,.25);border-radius:99px;overflow:hidden;margin:12px 0 10px}
+ .scoreboard .prog > i{display:block;height:100%;background:#fff;transition:width .4s ease-out}
+ .scoreboard .miss{font-size:13px;opacity:.95} .scoreboard .miss b{font-family:var(--mono)}
+ .scoreboard .miss .none{opacity:.85}
+ /* GROUP */
+ .grp{margin-top:26px}
+ .grp-h{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+ .grp-h h2{font-size:15px;font-weight:700;letter-spacing:-.2px;margin:0}
+ .grp-h .cnt{font-family:var(--mono);font-size:12px;background:var(--brand-bg);color:var(--brand);border-radius:7px;padding:2px 8px;font-weight:700}
+ .grp-h .hint{font-size:12px;color:var(--faint);margin-left:auto}
+ /* LINHA DE AÇÃO */
+ .row{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--sh);padding:14px 16px;margin-bottom:10px;display:grid;grid-template-columns:minmax(160px,1.3fr) 1fr 1.1fr auto;gap:14px;align-items:center;border-left:4px solid var(--line);transition:opacity .2s,box-shadow .2s}
+ .row:hover{box-shadow:var(--sh-lg)}
+ .row.call{border-left-color:var(--alta)} .row.put{border-left-color:var(--baixa)}
+ .row.done{opacity:.62} .row.skip{opacity:.45}
+ .cell{display:flex;flex-direction:column;gap:3px;min-width:0}
+ .cell .k{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--faint);font-weight:600}
+ .what{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+ .acao{font-weight:700;font-size:10.5px;letter-spacing:.4px;padding:3px 8px;border-radius:6px;white-space:nowrap}
+ .acao.call{background:var(--alta-bg);color:var(--alta)} .acao.put{background:var(--baixa-bg);color:var(--baixa)} .acao.sell{background:var(--baixa-bg);color:var(--baixa)} .acao.adj{background:var(--brand-bg);color:var(--brand)}
+ .under{font-weight:700;font-size:16px;letter-spacing:-.3px}
+ .tk{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--gold);background:var(--gold-bg);border:1px solid #EAD9AE;border-radius:7px;padding:3px 9px;cursor:pointer}
+ .tk.copied{background:var(--alta-bg);color:var(--alta);border-color:var(--alta)}
+ .tk.bad{color:var(--baixa);background:var(--baixa-bg);border-color:var(--baixa);cursor:default}
+ .sz{font-family:var(--mono);font-weight:700;font-size:15px}
+ .sz small{font-family:var(--sans);font-weight:500;color:var(--faint);font-size:11px}
+ .price{font-family:var(--mono);font-weight:700;font-size:15px}
+ .price .live{font-size:11px;color:var(--dim);font-weight:500}
+ .rec{font-size:11.5px;font-weight:600;padding:3px 8px;border-radius:7px;display:inline-block;white-space:nowrap;margin-top:3px}
+ .rec.go{background:var(--alta-bg);color:var(--alta)} .rec.maybe{background:var(--gold-bg);color:var(--gold)} .rec.stop{background:var(--baixa-bg);color:var(--baixa)} .rec.wait{background:var(--surface2);color:var(--dim)}
+ .actcell{display:flex;flex-direction:column;gap:6px;align-items:stretch;min-width:120px}
+ .btn{font-family:var(--sans);font-weight:600;font-size:13px;padding:9px 14px;border-radius:9px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--text);transition:all .14s;white-space:nowrap;text-align:center}
+ .btn:hover{background:var(--surface2)} .btn:disabled{opacity:.5;cursor:default}
+ .btn.exec{background:var(--brand);color:#fff;border-color:var(--brand)} .btn.exec:hover{filter:brightness(1.06)}
+ .btn.skip{background:transparent;color:var(--dim);padding:5px} .btn.skip:hover{color:var(--baixa)}
+ .stp{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:8px;text-align:center}
+ .stp.done{background:var(--alta-bg);color:var(--alta)} .stp.pend{background:var(--gold-bg);color:var(--gold)} .stp.skip{background:var(--surface2);color:var(--dim)} .stp.bad{background:var(--baixa-bg);color:var(--baixa)}
+ .manualval{grid-column:1/-1;font-size:12px;color:var(--baixa);background:var(--baixa-bg);border:1px solid var(--baixa);border-radius:8px;padding:6px 10px;font-weight:600}
+ .empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:28px;text-align:center;color:var(--dim)}
+ .foot{max-width:1080px;margin:0 auto;padding:14px 22px;color:var(--faint);font-size:11.5px;text-align:center}
+ .foot a{color:var(--brand)}
+ @media (max-width:720px){
+   .row{grid-template-columns:1fr 1fr;gap:10px}
+   .actcell{grid-column:1/-1;flex-direction:row}
+   .actcell .btn.exec{flex:1}
+ }
+ @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <div class="brand">📈 Mesa de <span class="nitro">Replicação</span></div>
+    <div class="mkt"><span class="dot" id="mktdot"></span><span id="mktlbl">—</span></div>
+    <div class="top-right">
+      <span class="pill">Live: <b id="dlatest">—</b></span>
+      <span class="pill safe" id="modepill">dry-run</span>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="scoreboard">
+    <div class="big">Replicando <span class="frac" id="sc-frac">—</span> da Sala</div>
+    <div class="prog"><i id="sc-bar" style="width:0%"></i></div>
+    <div class="miss" id="sc-miss">—</div>
+  </div>
+
+  <section class="grp" id="grp-hoje">
+    <div class="grp-h"><h2>⚡ Ações de hoje (da live)</h2><span class="cnt" id="cnt-hoje">0</span><span class="hint" id="hint-hoje"></span></div>
+    <div id="list-hoje"></div>
+  </section>
+
+  <section class="grp" id="grp-catch">
+    <div class="grp-h"><h2>🔁 Catch-up com a Sala</h2><span class="cnt" id="cnt-catch">0</span><span class="hint">posições da Sala que você ainda não replicou</span></div>
+    <div id="list-catch"></div>
+  </section>
+</main>
+<div class="foot" id="foot">Mesa Nitro v2 · <a href="/">← dashboard clássico</a></div>
+
+<script>
+const SB_URL="https://mqcryomwdwnosoqfmyak.supabase.co", SB_KEY="sb_publishable_GozaOIA6rPwYFpgiOh60lg_OAmWvMCP";
+const sbh={apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"};
+// Guardrail visível: 1-tap cria ordem 'aprovada'; AUTO_SEND=0 na ponte trava o order_send real.
+const ORDEM_CONTA="real";  // B: conta real, dry-run via AUTO_SEND=0
+const CFG={pool:12000,caixa_pct:0,peso_pct:0.05,n_alvo:19,lote:100};
+const LOTE=CFG.lote;
+let DATA={meta:{},today:[],portfolio:[],ordens:{}};
+
+async function sbGet(p){try{const r=await fetch(SB_URL+"/rest/v1/"+p,{headers:sbh});return r.ok?await r.json():[];}catch(e){return [];}}
+function sizeContracts(premium){if(!premium||!CFG)return null;const N=CFG.n_alvo;const alvo=Math.min(CFG.pool*CFG.peso_pct,CFG.pool*(1-CFG.caixa_pct)/N);return Math.max(1,Math.round(alvo/(premium*LOTE)));}
+const nf=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const brl=v=>(v==null||v==='')?'—':'R$ '+nf.format(+v);
+const brdate=iso=>{if(!iso)return'—';const m=String(iso).slice(0,10).split('-');return m.length===3?`${m[2]}/${m[1]}/${m[0].slice(2)}`:iso;};
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ACTIVE=new Set(['aprovada','fila_abertura','executada','validada_dry_run']);
+
+async function loadAll(){
+  const [lives,sin,pos,ord]=await Promise.all([
+    sbGet("lives?select=*&order=data.asc"),
+    sbGet("sinais?select=*&order=data.asc,ts.asc"),
+    sbGet("posicoes_analista?select=*"),
+    sbGet("ordens?select=op_id,id,status,codigo,volume,preco_limite,preco_exec,acao")]);
+  const latest=lives.length?lives[lives.length-1]:{};
+  const datasComOps=[...new Set(sin.map(s=>s.data))].sort();
+  const filaData=datasComOps.length?datasComOps[datasComOps.length-1]:latest.data;
+  DATA.meta={data_latest:latest.data,fila_data:filaData,analista:latest.analista,lives:lives.length};
+  DATA.portfolio=pos.map(p=>({underlying:p.underlying,tipo:p.tipo,codigo:p.codigo,strike:p.strike,venc:p.vencimento,entry:p.entry,atual:p.atual,conf:p.conf}));
+  DATA.today=sin.filter(s=>s.data===filaData).map(s=>({id:s.data+"__"+s.codigo+"__"+s.acao+"__"+s.ts,data:s.data,ts:s.ts,acao:s.acao,underlying:s.underlying,tipo:s.tipo,codigo:s.codigo,strike:s.strike,venc:s.vencimento,limite:s.preco_limite,atual:s.preco_atual,conf:s.conf,motivo:s.motivo,link:s.link}));
+  DATA.ordens={};ord.forEach(o=>{DATA.ordens[o.op_id]=o;});
+}
+async function reloadOrdens(){const ord=await sbGet("ordens?select=op_id,id,status,codigo,volume,preco_limite,preco_exec,acao");DATA.ordens={};ord.forEach(o=>DATA.ordens[o.op_id]=o);}
+
+// ---- entrada opid p/ posição da Sala (mesma convenção do v1) ----
+function entradaOpId(p){return 'entrada__'+p.codigo+'__'+(DATA.meta.fila_data||DATA.meta.data_latest||'x');}
+
+// ---- recomendação de entrada (preço live vs limite) ----
+function recBadge(lim,at){if(lim==null)return '<span class="rec wait">sem limite</span>';if(at==null)return '<span class="rec wait">sem preço live</span>';lim=+lim;at=+at;if(!lim)return '<span class="rec wait">—</span>';const d=(at-lim)/lim*100;if(at<=lim)return `<span class="rec go">✅ dá entrar · ${d>=0?'+':''}${d.toFixed(0)}%</span>`;if(d<=10)return `<span class="rec maybe">⚠️ +${d.toFixed(0)}% vs limite</span>`;return `<span class="rec stop">⛔ passou · +${d.toFixed(0)}%</span>`;}
+
+function acaoBadge(acao,tipo){
+  if(acao==='saida')return '<span class="acao sell">VENDER (saída)</span>';
+  if(acao==='ajuste_delta')return '<span class="acao adj">AJUSTE Δ</span>';
+  const t=(tipo||'').toUpperCase();const cls=t==='PUT'?'put':'call';
+  return `<span class="acao ${cls}">COMPRAR ${esc(t||'—')}</span>`;
+}
+function rowClass(tipo){const t=(tipo||'').toUpperCase();return t==='PUT'?'put':(t==='CALL'?'call':'');}
+function tkChip(cod,bad){if(!cod)return '<span class="tk bad">sem ticker</span>';if(bad)return `<span class="tk bad" title="ticker inválido no broker">${esc(cod)} ⚠</span>`;return `<span class="tk" data-copy="${esc(cod)}" title="copiar">${esc(cod)}</span>`;}
+
+// status efetivo de uma ordem (ou null)
+function ordOf(opid){return DATA.ordens[opid]||null;}
+function statusPill(ord){
+  if(!ord)return null;
+  const s=ord.status;
+  if(ACTIVE.has(s)){const lbl={aprovada:'✅ aprovada',fila_abertura:'📅 na fila → abertura',executada:'✓ executada',validada_dry_run:'✓ dry-run'}[s]||s;return `<div class="stp done">${lbl}</div>`;}
+  if(s==='cancelada')return '<div class="stp skip">pulada</div>';
+  if(s==='ticker_invalido')return '<div class="stp bad">⚠️ ticker inválido</div>';
+  if(s==='erro')return '<div class="stp bad">erro</div>';
+  if(s==='pendente'||s==='notificada')return null; // ainda acionável
+  return `<div class="stp pend">${esc(s)}</div>`;
+}
+
+// ---- montar a linha (item: {opid,acao,tipo,underlying,codigo,strike,venc,limite,atual,vol,manual,bad,ord}) ----
+function rowHTML(it){
+  const ord=it.ord;
+  const sp=statusPill(ord);
+  const acionavel=!sp; // sem status final/ativo => mostra botões
+  const sz=it.vol?`${it.vol} <small>contrato(s)</small>`:'—';
+  const custo=(it.vol&&it.limite)?`<div class="cell"><span class="k">~Custo</span><span class="price">${brl(it.vol*it.limite*LOTE)}</span></div>`:'';
+  const manual=it.manual?`<div class="manualval">⚠️ Validação manual: ${esc(it.manual)} — confira antes de operar</div>`:'';
+  let act;
+  if(sp){act=sp;}
+  else{
+    act=`<button class="btn exec" data-exec="${esc(it.opid)}">▶ Executar</button><button class="btn skip" data-skip="${esc(it.opid)}">pular</button>`;
+  }
+  return `<div class="row ${rowClass(it.tipo)} ${sp&&/done/.test(sp)?'done':''} ${sp&&/skip/.test(sp)?'skip':''}">
+    <div class="cell"><span class="k">O quê</span><div class="what">${acaoBadge(it.acao,it.tipo)} <span class="under">${esc(it.underlying)}</span></div><div style="margin-top:4px">${tkChip(it.codigo,it.bad)}</div></div>
+    <div class="cell"><span class="k">Quanto</span><span class="sz">${sz}</span>${custo?'':`<span class="dim" style="font-size:11px">strike ${brl(it.strike)} · ${brdate(it.venc)}</span>`}</div>
+    <div class="cell"><span class="k">Preço (limite · live)</span><span class="price">${brl(it.limite)} <span class="live">live ${brl(it.atual)}</span></span>${recBadge(it.limite,it.atual)}</div>
+    <div class="actcell">${act}</div>
+    ${manual}
+  </div>`;
+}
+
+// ---- construir os dois grupos ----
+function buildToday(){
+  // entradas e ajustes da live de hoje (vender/saída aparece mas sinalizado)
+  return DATA.today.map(op=>{
+    const ord=ordOf(op.id);
+    const vol=(op.limite?sizeContracts(op.limite):null);
+    let manual=null;
+    if(!op.codigo)manual='ticker não reconhecido no parsing';
+    else if(op.limite==null)manual='sem preço da live';
+    const bad=ord&&ord.status==='ticker_invalido';
+    return {opid:op.id,acao:op.acao,tipo:op.tipo,underlying:op.underlying,codigo:op.codigo,strike:op.strike,venc:op.venc,limite:op.limite,atual:op.atual,vol,manual,bad,ord,
+            _create:{op_id:op.id,conta:ORDEM_CONTA,codigo:op.codigo,acao:(op.acao==='saida'?'vender':'comprar'),volume:vol||1,preco_limite:op.limite,status:'aprovada'}};
+  });
+}
+function buildCatchup(){
+  // posições da Sala (carteira do analista) que ainda não tenho ordem ativa
+  const out=[];
+  DATA.portfolio.forEach(p=>{
+    if(!p.codigo)return;
+    const opid=entradaOpId(p);
+    const ord=ordOf(opid);
+    // se já há ordem ativa, não é catch-up (entra no placar como replicado)
+    if(ord&&ACTIVE.has(ord.status))return;
+    const vol=p.entry?sizeContracts(p.entry):null;
+    out.push({opid,acao:'entrada',tipo:p.tipo,underlying:p.underlying,codigo:p.codigo,strike:p.strike,venc:p.venc,limite:p.entry,atual:p.atual,vol,manual:null,bad:ord&&ord.status==='ticker_invalido',ord:(ord&&ord.status!=='cancelada')?ord:null,
+      _create:{op_id:opid,conta:ORDEM_CONTA,codigo:p.codigo,acao:'comprar',volume:vol||1,preco_limite:p.entry,status:'aprovada'}});
+  });
+  return out;
+}
+
+// ---- placar de replicação ----
+function scoreboard(){
+  const universo=DATA.portfolio.filter(p=>p.codigo);
+  const N=universo.length;
+  let rep=0;const faltam=[];
+  universo.forEach(p=>{
+    const ord=ordOf(entradaOpId(p));
+    const replicado=ord&&ACTIVE.has(ord.status);
+    // também conta se há ordem ativa via sinal de hoje pro mesmo ticker
+    const hojeAtivo=DATA.today.some(op=>op.codigo===p.codigo&&( d=>d&&ACTIVE.has(d.status))(ordOf(op.id)));
+    if(replicado||hojeAtivo)rep++;else faltam.push(p.underlying);
+  });
+  document.getElementById('sc-frac').textContent=`${rep}/${N}`;
+  document.getElementById('sc-bar').style.width=(N?rep/N*100:0)+'%';
+  const miss=document.getElementById('sc-miss');
+  if(!N)miss.innerHTML='<span class="none">Sem carteira da Sala carregada ainda.</span>';
+  else if(!faltam.length)miss.innerHTML='🎉 <b>Replicação completa</b> — você está em todas as posições da Sala.';
+  else miss.innerHTML=`Faltam <b>${faltam.length}</b>: ${faltam.map(esc).join(', ')}`;
+}
+
+// ---- ações 1-tap ----
+let _itemsIndex={};  // opid -> _create payload (e ord atual)
+async function execItem(opid){
+  const it=_itemsIndex[opid];if(!it)return;
+  if(it.bad){alert('Ticker inválido no broker — corrija antes de executar.');return;}
+  if(it.manual){if(!confirm('⚠️ Esta ação precisa de validação manual ('+it.manual+'). Executar mesmo assim?'))return;}
+  const c=it._create;
+  const msg='Executar (1-tap):\n\n'+(c.acao==='vender'?'VENDER':'COMPRAR')+' '+(it.codigo||'?')+' · '+(c.volume)+' contrato(s) @ limite '+brl(c.preco_limite)+'\nConta: '+ORDEM_CONTA.toUpperCase()+' · cria ordem JÁ APROVADA.\n\n(AUTO_SEND=0 na ponte = dry-run, não dispara ordem real ainda.)';
+  if(!confirm(msg))return;
+  try{
+    const existing=ordOf(opid);
+    if(existing&&(existing.status==='pendente'||existing.status==='notificada')){
+      // já existe ordem pendente (auto-criada) -> só aprova
+      await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:sbh,body:JSON.stringify({status:'aprovada',atualizado_em:new Date().toISOString()})});
+    }else{
+      await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([c])});
+    }
+    await reloadOrdens();render();
+  }catch(e){console.warn('exec falhou',e);alert('Falhou criar/aprovar a ordem. Tenta de novo.');}
+}
+async function skipItem(opid){
+  const it=_itemsIndex[opid];if(!it)return;
+  if(!confirm('Pular '+(it.codigo||it.underlying)+'? Marca como não-replicado.'))return;
+  try{
+    const existing=ordOf(opid);
+    if(existing){await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:sbh,body:JSON.stringify({status:'cancelada',atualizado_em:new Date().toISOString()})});}
+    else{await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([{...it._create,status:'cancelada'}])});}
+    await reloadOrdens();render();
+  }catch(e){console.warn('skip falhou',e);}
+}
+
+// ---- render ----
+function render(){
+  const hoje=buildToday();
+  const catch_=buildCatchup();
+  _itemsIndex={};
+  [...hoje,...catch_].forEach(it=>{_itemsIndex[it.opid]=it;});
+  scoreboard();
+  document.getElementById('cnt-hoje').textContent=hoje.length;
+  document.getElementById('cnt-catch').textContent=catch_.length;
+  const mnt=DATA.meta.fila_data&&DATA.meta.data_latest&&DATA.meta.fila_data!==DATA.meta.data_latest;
+  document.getElementById('hint-hoje').textContent=hoje.length?(mnt?('última live com ações: '+brdate(DATA.meta.fila_data)):('live de '+brdate(DATA.meta.fila_data))):'';
+  document.getElementById('list-hoje').innerHTML=hoje.length?hoje.map(rowHTML).join(''):'<div class="empty">Sem ações novas na última live.</div>';
+  document.getElementById('list-catch').innerHTML=catch_.length?catch_.map(rowHTML).join(''):'<div class="empty">🎉 Você já replicou tudo que a Sala tem em aberto.</div>';
+  document.getElementById('dlatest').textContent=brdate(DATA.meta.fila_data||DATA.meta.data_latest);
+}
+
+function marketStatus(){const n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,o=d>=1&&d<=5&&h>=10&&h<17;document.getElementById('mktdot').className='dot '+(o?'on':'off');document.getElementById('mktlbl').textContent=o?'B3 aberta · pregão':'B3 fechada';}
+
+// ---- eventos ----
+document.addEventListener('click',e=>{
+  const cp=e.target.closest('.tk[data-copy]');if(cp){const v=cp.dataset.copy;navigator.clipboard&&navigator.clipboard.writeText(v);const o=cp.textContent;cp.classList.add('copied');cp.textContent='✓ copiado';setTimeout(()=>{cp.textContent=o;cp.classList.remove('copied');},900);return;}
+  const ex=e.target.closest('[data-exec]');if(ex){execItem(ex.dataset.exec);return;}
+  const sk=e.target.closest('[data-skip]');if(sk){skipItem(sk.dataset.skip);return;}
+});
+// init
+marketStatus();setInterval(marketStatus,60000);
+loadAll().then(render);
+setInterval(()=>{loadAll().then(render);},45000);
+</script>
+</body></html>
