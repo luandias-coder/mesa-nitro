@@ -226,7 +226,10 @@ def atualizar_precos(mt5):
         t = mt5.symbol_info_tick(c)
         if not t:
             continue
-        px = t.last if t.last else (round((t.bid + t.ask) / 2, 2) if (t.bid and t.ask) else None)
+        # PREÇO LIVE: prioriza o MID do bid/ask ao vivo (cotação real do book);
+        # 'last' (último negócio) só como fallback — em opção ilíquida o last pode ser velho.
+        mid = round((t.bid + t.ask) / 2, 2) if (t.bid and t.ask) else None
+        px = mid if mid else (t.last if t.last else None)
         if px:
             sb("PATCH", f"/rest/v1/sinais?data=eq.{fila}&codigo=eq.{c}",
                {"preco_atual": round(float(px), 2)})
