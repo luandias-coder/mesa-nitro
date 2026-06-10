@@ -165,9 +165,18 @@ def executar(mt5, o):
         return "erro", None, None, f"simbolo {sym} indisponivel"
     if o.get("preco_limite") in (None, ""):
         return "erro", None, None, "sem preco limite (nao enviamos a mercado)"
+    si = mt5.symbol_info(sym)
+    if si is None:
+        return "erro", None, None, f"sem symbol_info de {sym}"
+    # 'volume' guardado = nº de CONTRATOS (lotes). MT5 quer em unidades do símbolo:
+    # 1 lote = volume_min (100 p/ opções B3). Normaliza ao step e clampa a min/max.
+    step = si.volume_step or 1.0
+    lote = si.volume_min or step
+    vol = round(float(o["volume"]) * lote / step) * step
+    vol = max(si.volume_min, min(vol, si.volume_max))
     tipo = mt5.ORDER_TYPE_BUY_LIMIT if o["acao"] == "comprar" else mt5.ORDER_TYPE_SELL_LIMIT
     req = {
-        "action": mt5.TRADE_ACTION_PENDING, "symbol": sym, "volume": float(o["volume"]),
+        "action": mt5.TRADE_ACTION_PENDING, "symbol": sym, "volume": float(vol),
         "type": tipo, "price": float(o["preco_limite"]), "type_time": mt5.ORDER_TIME_DAY,
         "type_filling": mt5.ORDER_FILLING_RETURN, "comment": "mesa-nitro",
     }
