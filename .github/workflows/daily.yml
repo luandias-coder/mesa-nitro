@@ -19,6 +19,7 @@ jobs:
       SUPABASE_SECRET: ${{ secrets.SUPABASE_SECRET }}
       TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+      ORDENS_CONTA: real
       PLAYLIST: 'https://www.youtube.com/playlist?list=PLBXPCoq0WOd7zEXdiGj_I61SmJ-Ces94p'
     steps:
       - uses: actions/checkout@v4
