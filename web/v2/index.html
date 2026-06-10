@@ -214,14 +214,14 @@ function buildToday(){
   });
 }
 function buildCatchup(){
-  // posições da Sala (carteira do analista) que ainda não tenho ordem ativa
+  // posições da Sala (carteira do analista) que ainda não tenho ordem ATIVA (match por código)
+  const ac=activeCodigos();
   const out=[];
   DATA.portfolio.forEach(p=>{
     if(!p.codigo)return;
+    if(ac.has(p.codigo))return; // já replicado (ordem ativa p/ esse código) -> conta no placar, fora do catch-up
     const opid=entradaOpId(p);
     const ord=ordOf(opid);
-    // se já há ordem ativa, não é catch-up (entra no placar como replicado)
-    if(ord&&ACTIVE.has(ord.status))return;
     const vol=p.entry?sizeContracts(p.entry):null;
     out.push({opid,acao:'entrada',tipo:p.tipo,underlying:p.underlying,codigo:p.codigo,strike:p.strike,venc:p.venc,limite:p.entry,atual:p.atual,vol,manual:null,bad:ord&&ord.status==='ticker_invalido',ord:(ord&&ord.status!=='cancelada')?ord:null,
       _create:{op_id:opid,conta:ORDEM_CONTA,codigo:p.codigo,acao:'comprar',volume:vol||1,preco_limite:p.entry,status:'aprovada'}});
@@ -229,18 +229,15 @@ function buildCatchup(){
   return out;
 }
 
+// conjunto de CÓDIGOS com ordem ATIVA = replicados (match por código, não por data do op_id)
+function activeCodigos(){const s=new Set();Object.values(DATA.ordens).forEach(o=>{if(o&&ACTIVE.has(o.status)&&o.codigo)s.add(o.codigo);});return s;}
 // ---- placar de replicação ----
 function scoreboard(){
+  const ac=activeCodigos();
   const universo=DATA.portfolio.filter(p=>p.codigo);
   const N=universo.length;
   let rep=0;const faltam=[];
-  universo.forEach(p=>{
-    const ord=ordOf(entradaOpId(p));
-    const replicado=ord&&ACTIVE.has(ord.status);
-    // também conta se há ordem ativa via sinal de hoje pro mesmo ticker
-    const hojeAtivo=DATA.today.some(op=>op.codigo===p.codigo&&( d=>d&&ACTIVE.has(d.status))(ordOf(op.id)));
-    if(replicado||hojeAtivo)rep++;else faltam.push(p.underlying);
-  });
+  universo.forEach(p=>{ if(ac.has(p.codigo))rep++; else faltam.push(p.underlying); });
   document.getElementById('sc-frac').textContent=`${rep}/${N}`;
   document.getElementById('sc-bar').style.width=(N?rep/N*100:0)+'%';
   const miss=document.getElementById('sc-miss');
