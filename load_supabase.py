@@ -41,20 +41,28 @@ def criar_ordens_pendentes(data):
     conta = ORDENS_CONTA (default 'demo'). NÃO mexe em ordens já existentes (preserva gate humano)."""
     conta = os.environ.get("ORDENS_CONTA", "demo")
     cfg = json.load(open("config.json")) if os.path.exists("config.json") else {}
-    _, txt = req("GET", "/rest/v1/ordens?select=op_id")
-    existentes = {o.get("op_id") for o in (json.loads(txt) if txt else [])}
-    novas = []
+    _, txt = req("GET", "/rest/v1/ordens?select=op_id,codigo,acao,status&conta=eq." + conta)
+    todas = json.loads(txt) if txt else []
+    existentes = {o.get("op_id") for o in todas}
+    # posições ABERTAS do usuário: compras valendo (executada/aprovada/fila) menos as já vendidas
+    abertos = {o["codigo"] for o in todas if o.get("acao") == "comprar" and o.get("status") in ("executada", "aprovada", "fila_abertura")}
+    abertos -= {o["codigo"] for o in todas if o.get("acao") == "vender" and o.get("status") == "executada"}
+    novas = []; pulados = 0
     for op in data["today"]:
-        oid = op.get("id")
+        oid = op.get("id"); acao_live = op.get("acao")
         if not oid or oid in existentes or not op.get("codigo") or op.get("limite") in (None, ""):
             continue
-        acao = "vender" if op.get("acao") == "saida" else "comprar"
+        # saída/ajuste só fazem sentido se JÁ temos a posição (carteira limpa não fecha o que não tem)
+        if acao_live in ("saida", "ajuste_delta") and op["codigo"] not in abertos:
+            pulados += 1
+            continue
+        acao = "vender" if acao_live == "saida" else "comprar"
         novas.append({"op_id": oid, "conta": conta, "codigo": op["codigo"], "acao": acao,
                       "volume": size_contracts(op["limite"], cfg), "preco_limite": op["limite"],
                       "status": "pendente"})
     if novas:
         req("POST", "/rest/v1/ordens", novas)
-    print(f"ordens pendentes criadas: {len(novas)} (conta={conta})")
+    print(f"ordens pendentes criadas: {len(novas)} (conta={conta}); saídas/ajustes sem posição pulados: {pulados}")
 
 
 def main():
