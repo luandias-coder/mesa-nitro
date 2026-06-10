@@ -1,6 +1,6 @@
 {
   "pool": 12000,
-  "caixa_pct": 0.25,
+  "caixa_pct": 0,
   "peso_pct": 0.05,
   "n_alvo": 19,
   "lote": 100,
