@@ -45,6 +45,7 @@
  .nav-btn{font-weight:600;font-size:13.5px;color:var(--dim);background:transparent;border:none;padding:13px 16px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s ease-out;display:flex;align-items:center;gap:7px;margin-bottom:-1px}
  .nav-btn:hover{color:var(--text)} .nav-btn.active{color:var(--brand);border-bottom-color:var(--brand)}
  .nav-btn .cnt{font-family:var(--mono);font-size:11px;background:var(--brand-bg);color:var(--brand);border-radius:6px;padding:1px 6px;font-weight:700}
+.nav-btn{position:relative} .nav-btn .ico{font-size:15px;line-height:1}
  main{padding:26px 28px 72px;max-width:1180px}
  .view{display:none} .view.active{display:block;animation:fade .18s ease-out}
  @keyframes fade{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
@@ -140,7 +141,15 @@
  .modal input:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-bg)}
  .modal-actions{display:flex;gap:8px;margin-top:20px;justify-content:flex-end}
  @media (max-width:820px){.sim-grid{grid-template-columns:1fr}}
- @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)} .matrix{grid-template-columns:1fr} .top-row,.kpis,nav.views,main,.foot{padding-left:16px;padding-right:16px}}
+ @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)} .matrix{grid-template-columns:1fr} .top-row,.kpis,main,.foot{padding-left:16px;padding-right:16px}}
+@media (max-width:720px){
+  nav.views{position:fixed;bottom:0;left:0;right:0;top:auto;z-index:40;border-top:1px solid var(--line);border-bottom:none;padding:0;padding-bottom:env(safe-area-inset-bottom);gap:0;justify-content:space-around;background:var(--surface);box-shadow:0 -1px 10px rgba(0,0,0,.07)}
+  nav.views .nav-btn{flex:1;flex-direction:column;gap:3px;padding:9px 2px 8px;font-size:10px;border-bottom:none;margin-bottom:0}
+  nav.views .nav-btn .ico{font-size:21px}
+  nav.views .nav-btn.active{color:var(--brand);border-bottom:none;box-shadow:inset 0 2px 0 var(--brand)}
+  nav.views .nav-btn .cnt{position:absolute;top:4px;left:calc(50% + 8px);font-size:9px;padding:0 4px}
+  main{padding-bottom:88px} .foot{display:none}
+}
  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head>
 <body>
@@ -155,11 +164,11 @@
 </header>
 <div class="kpis" id="kpis"></div>
 <nav class="views">
-  <button class="nav-btn active" data-view="hoje">Hoje <span class="cnt" id="cnt-hoje">0</span></button>
-  <button class="nav-btn" data-view="carteira">Carteira</button>
-  <button class="nav-btn" data-view="simular">Simular</button>
-  <button class="nav-btn" data-view="historico">Histórico</button>
-  <button class="nav-btn" data-view="instrucoes">Instruções</button>
+  <button class="nav-btn active" data-view="hoje"><span class="ico">⚡</span><span class="lbl">Hoje</span><span class="cnt" id="cnt-hoje">0</span></button>
+  <button class="nav-btn" data-view="carteira"><span class="ico">📊</span><span class="lbl">Carteira</span></button>
+  <button class="nav-btn" data-view="simular"><span class="ico">🧮</span><span class="lbl">Simular</span></button>
+  <button class="nav-btn" data-view="historico"><span class="ico">🕘</span><span class="lbl">Histórico</span></button>
+  <button class="nav-btn" data-view="instrucoes"><span class="ico">📖</span><span class="lbl">Instruções</span></button>
 </nav>
 <main>
   <section class="view active" data-view="hoje">
