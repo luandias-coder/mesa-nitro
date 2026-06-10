@@ -3,8 +3,6 @@ on:
   schedule:
     - cron: '0 21 * * 1-5'       # 18:00 BRT (UTC-3) = 21:00 UTC, dias úteis
   workflow_dispatch: {}           # botão de teste manual
-  push:
-    paths: ['.github/workflows/daily.yml']   # TEMP trigger manual (remover após rodar hoje)
 concurrency:
   group: captura
   cancel-in-progress: false

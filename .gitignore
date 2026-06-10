@@ -26,3 +26,6 @@ ops/.watchdog_state
 
 # ops logs/runtime
 ops/watchdog.log
+ops/fallback.log
+ops/launchd.out.log
+ops/launchd.err.log
