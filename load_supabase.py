@@ -22,6 +22,41 @@ def req(method, path, body=None, prefer=None):
         return resp.status, resp.read().decode()
 
 
+def size_contracts(premium, cfg):
+    """Replica o sizing do dashboard: min(pool*peso, caixa) / (premio*lote)."""
+    try:
+        premium = float(premium)
+    except (TypeError, ValueError):
+        return 1
+    if not premium:
+        return 1
+    pool = cfg.get("pool", 12000); N = cfg.get("n_alvo", 19); lote = cfg.get("lote", 100)
+    alvo = min(pool * cfg.get("peso_pct", 0.05), pool * (1 - cfg.get("caixa_pct", 0.25)) / N)
+    return max(1, round(alvo / (premium * lote)))
+
+
+def criar_ordens_pendentes(data):
+    """Decisão A: auto-cria 1 ordem 'pendente' p/ cada operação da live (idempotente por op_id).
+    entrada/ajuste_delta -> comprar; saida -> vender. Só ops com codigo + limite (preço).
+    conta = ORDENS_CONTA (default 'demo'). NÃO mexe em ordens já existentes (preserva gate humano)."""
+    conta = os.environ.get("ORDENS_CONTA", "demo")
+    cfg = json.load(open("config.json")) if os.path.exists("config.json") else {}
+    _, txt = req("GET", "/rest/v1/ordens?select=op_id")
+    existentes = {o.get("op_id") for o in (json.loads(txt) if txt else [])}
+    novas = []
+    for op in data["today"]:
+        oid = op.get("id")
+        if not oid or oid in existentes or not op.get("codigo") or op.get("limite") in (None, ""):
+            continue
+        acao = "vender" if op.get("acao") == "saida" else "comprar"
+        novas.append({"op_id": oid, "conta": conta, "codigo": op["codigo"], "acao": acao,
+                      "volume": size_contracts(op["limite"], cfg), "preco_limite": op["limite"],
+                      "status": "pendente"})
+    if novas:
+        req("POST", "/rest/v1/ordens", novas)
+    print(f"ordens pendentes criadas: {len(novas)} (conta={conta})")
+
+
 def main():
     docs = [json.load(open(f)) for f in sorted(glob.glob("signals_resolved_*.json"))]
     videos = json.load(open("videos.json")) if os.path.exists("videos.json") else {}
@@ -61,6 +96,9 @@ def main():
             "pnl_real": p.get("pnl_real")} for p in data["portfolio"]]
     req("POST", "/rest/v1/posicoes_analista", pos)
     print("posicoes:", len(pos))
+
+    # ordens pendentes (gate humano) — decisão A: auto-sugere toda operação da live
+    criar_ordens_pendentes(data)
     print("OK -> Supabase carregado")
 
 
