@@ -3,6 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sala Nitro · Mesa</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<meta name="theme-color" content="#5469D4">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mesa Nitro"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="/manifest.json"><link rel="apple-touch-icon" href="/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -315,5 +319,6 @@ document.querySelectorAll('#sim-tipo button').forEach(b=>b.onclick=()=>setTipo(b
 document.getElementById('dlatest').textContent=brdate(DATA.meta.data_latest);
 document.getElementById('foot').textContent=`Mesa Nitro · ${DATA.meta.lives} lives, ${DATA.meta.n_pos} posições · sua carteira no Supabase (nuvem) · próximo: API de preço ao vivo, MT5/Rico, nuvem (Supabase+Vercel)`;
 marketStatus();setInterval(marketStatus,60000);loadAll().then(()=>{document.getElementById('dlatest').textContent=brdate(DATA.meta.data_latest);simOptions();setTipo('CALL');rerender();renderHist();});
+if('serviceWorker' in navigator && location.protocol==='https:'){navigator.serviceWorker.register('/sw.js').catch(()=>{});}
 </script>
 </body></html>
