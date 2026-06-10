@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+# Recebe VPS_USER/VPS_HOST/VPS_PASS/SSH_CMD por env (à prova de interpolação Tcl).
+set timeout [expr {[info exists env(SSH_TIMEOUT)] ? $env(SSH_TIMEOUT) : 35}]
+set pass $env(VPS_PASS)
+set user $env(VPS_USER)
+set host $env(VPS_HOST)
+set cmd  $env(SSH_CMD)
+spawn ssh -4 -o StrictHostKeyChecking=no -o ConnectTimeout=20 $user@$host $cmd
+expect {
+  -re "assword:" { send -- "$pass\r"; exp_continue }
+  -re "yes/no"   { send "yes\r"; exp_continue }
+  timeout        { }
+  eof            { }
+}

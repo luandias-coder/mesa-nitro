@@ -21,3 +21,8 @@ subs*/
 
 # vercel
 web/.vercel/
+ops/vps.env
+ops/.watchdog_state
+
+# ops logs/runtime
+ops/watchdog.log
