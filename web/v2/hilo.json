@@ -1,0 +1,155 @@
+{
+  "gerado_em": "2026-06-10T22:48-03:00",
+  "period": 3,
+  "resumo": {
+    "concordam": 14,
+    "total": 18,
+    "pct": 78
+  },
+  "itens": [
+    {
+      "ativo": "BOVA11",
+      "tipo": "CALL",
+      "analista": "alta",
+      "hilo": "baixa",
+      "flip": "2026-05-28",
+      "agree": false
+    },
+    {
+      "ativo": "BRAP4",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-06-05",
+      "agree": true
+    },
+    {
+      "ativo": "BRAV3",
+      "tipo": "CALL",
+      "analista": "alta",
+      "hilo": "alta",
+      "flip": "2026-05-13",
+      "agree": true
+    },
+    {
+      "ativo": "BRKM5",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-05-26",
+      "agree": true
+    },
+    {
+      "ativo": "CMIN3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-06-03",
+      "agree": true
+    },
+    {
+      "ativo": "COGN3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-05-11",
+      "agree": true
+    },
+    {
+      "ativo": "CSAN3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-05-11",
+      "agree": true
+    },
+    {
+      "ativo": "CSNA3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-06-05",
+      "agree": true
+    },
+    {
+      "ativo": "CYRE3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-06-03",
+      "agree": true
+    },
+    {
+      "ativo": "EMBJ3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-06-10",
+      "agree": true
+    },
+    {
+      "ativo": "LREN3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-06-03",
+      "agree": true
+    },
+    {
+      "ativo": "MBRF3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "alta",
+      "flip": "2026-06-10",
+      "agree": false
+    },
+    {
+      "ativo": "MGLU3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-04-22",
+      "agree": true
+    },
+    {
+      "ativo": "MRVE3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-05-22",
+      "agree": true
+    },
+    {
+      "ativo": "PETR4",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "alta",
+      "flip": "2026-06-10",
+      "agree": false
+    },
+    {
+      "ativo": "RENT3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "baixa",
+      "flip": "2026-05-27",
+      "agree": true
+    },
+    {
+      "ativo": "USIM5",
+      "tipo": "CALL",
+      "analista": "alta",
+      "hilo": "alta",
+      "flip": "2026-05-28",
+      "agree": true
+    },
+    {
+      "ativo": "WEGE3",
+      "tipo": "PUT",
+      "analista": "baixa",
+      "hilo": "alta",
+      "flip": "2026-06-08",
+      "agree": false
+    }
+  ]
+}

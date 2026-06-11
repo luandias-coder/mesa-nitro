@@ -93,6 +93,15 @@
  .estrut{font-weight:700;font-size:10px;padding:2px 7px;border-radius:5px;letter-spacing:.2px}
  .estrut.call{background:var(--alta-bg);color:var(--alta)} .estrut.put{background:var(--baixa-bg);color:var(--baixa)}
  .mine{font-size:9.5px;font-weight:700;color:var(--brand);background:var(--brand-bg);padding:1px 5px;border-radius:4px;margin-left:5px}
+ /* HI-LO (módulo de tendência) */
+ .hilo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px}
+ .hcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--sh);border-left:4px solid var(--line)}
+ .hcard.alta{border-left-color:var(--alta)} .hcard.baixa{border-left-color:var(--baixa)}
+ .hcard.diverge{background:var(--gold-bg);border-color:#EAD9AE}
+ .hcard .ha{font-weight:700;font-size:14px;display:flex;justify-content:space-between}
+ .hcard .hr{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+ .trend{font-weight:700;font-size:11px;padding:2px 8px;border-radius:5px}
+ .trend.alta{background:var(--alta-bg);color:var(--alta)} .trend.baixa{background:var(--baixa-bg);color:var(--baixa)} .trend.na{background:var(--surface2);color:var(--dim)}
  @media (max-width:820px){.metrics{grid-template-columns:repeat(2,1fr)}}
  @media (max-width:720px){
    .row{grid-template-columns:1fr 1fr;gap:10px}
@@ -128,6 +137,11 @@
   <section class="grp" id="grp-livro">
     <div class="grp-h"><h2>📖 Livro da Sala</h2><span class="cnt" id="cnt-livro">0</span><span class="hint">a planilha da Sala espelhada — carteira do analista + preço live (🔵 = você tem)</span></div>
     <div class="lsala-wrap"><table class="lsala" id="livro"></table></div>
+  </section>
+
+  <section class="grp" id="grp-hilo">
+    <div class="grp-h"><h2>🎯 Hi-Lo · motor de tendência</h2><span class="cnt" id="cnt-hilo">—</span><span class="hint" id="hilo-sub">tendência calculada (Hi-Lo Activator) × chamada do analista</span></div>
+    <div class="hilo-grid" id="hilo-grid"></div>
   </section>
 </main>
 <div class="foot" id="foot">Mesa Nitro v2 · <a href="/">← dashboard clássico</a></div>
@@ -326,8 +340,22 @@ document.addEventListener('click',e=>{
   const sk=e.target.closest('[data-skip]');if(sk){skipItem(sk.dataset.skip);return;}
   const cl=e.target.closest('[data-close]');if(cl){closePos(cl.dataset.close);return;}
 });
+async function renderHilo(){
+  try{
+    const r=await fetch('/v2/hilo.json?_='+Date.now());if(!r.ok)return;
+    const d=await r.json();
+    document.getElementById('cnt-hilo').textContent=(d.resumo&&d.resumo.pct!=null?d.resumo.pct+'%':'—');
+    const div=d.itens.filter(i=>i.agree===false).length;
+    document.getElementById('hilo-sub').innerHTML=`${d.resumo.concordam}/${d.resumo.total} concordam com o analista · <b>${div} divergência(s)</b> · period ${d.period} · ${brdate((d.gerado_em||'').slice(0,10))}`;
+    document.getElementById('hilo-grid').innerHTML=d.itens.map(i=>{
+      const tr=i.hilo||'na',diverge=i.agree===false;
+      const tl=tr==='alta'?'▲ alta':(tr==='baixa'?'▼ baixa':'—');
+      return `<div class="hcard ${tr} ${diverge?'diverge':''}"><div class="ha"><span>${esc(i.ativo)}</span>${diverge?'<span title="diverge do analista">⚠️</span>':''}</div><div class="hr"><span class="trend ${tr}">${tl}</span><span class="dim" style="font-size:11.5px">${esc(i.tipo)} ${i.agree===true?'✅':(i.agree===false?'❌':'')}</span></div></div>`;
+    }).join('');
+  }catch(e){console.warn('hilo',e);}
+}
 marketStatus();setInterval(marketStatus,60000);
-loadAll().then(render);
+loadAll().then(render);renderHilo();
 setInterval(()=>{loadAll().then(render);},45000);
 </script>
 </body></html>
