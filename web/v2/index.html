@@ -199,7 +199,9 @@ function statusPill(o){if(!o)return null;const s=o.status;if(s==='cancelada')ret
 // ===== AÇÕES DE HOJE (só sinais que ainda não viraram posição minha) =====
 function buildToday(){
   const ac=activeCodigos();
-  return DATA.today.filter(op=>!ac.has(op.codigo)).map(op=>{
+  // só ENTRADAS novas (não tidas). Saídas/ajustes de algo que você não tem = não-aplicável
+  // (evita VENDER a descoberto). Encerrar/ajustar o que você TEM é pela carteira.
+  return DATA.today.filter(op=>op.acao==='entrada' && !ac.has(op.codigo)).map(op=>{
     const ord=ordOf(op.id);
     const vol=op.limite?sizeContracts(op.limite):null;
     let manual=null; if(!op.codigo)manual='ticker não reconhecido'; else if(op.limite==null)manual='sem preço da live';

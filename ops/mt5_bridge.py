@@ -212,8 +212,11 @@ _next_price = [0.0]
 
 
 def atualizar_precos(mt5):
-    """Bomba de preço LIVE: pega tick da MT5 dos tickers da fila atual e escreve
-    sinais.preco_atual no Supabase (dash faz poll e recalcula 'Ainda dá')."""
+    """DESATIVADO 2026-06-11: o MT5 estoura o preço de opção ilíquida (ex WEG 0,90 vs
+    1,22 real; LREN 0,90 vs 0,48). A fonte de preço agora é precos.py (opcoes.net.br,
+    último negociado real), que cobre TODAS as posições, não só a fila. Mantido como
+    no-op pra não brigar com o Supabase."""
+    return
     sinais = sb("GET", "/rest/v1/sinais?select=data,codigo&order=data.desc&limit=300")
     if not sinais:
         return

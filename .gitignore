@@ -29,3 +29,5 @@ ops/watchdog.log
 ops/fallback.log
 ops/launchd.out.log
 ops/launchd.err.log
+ops/precos.log
+ops/precos.launchd.log
