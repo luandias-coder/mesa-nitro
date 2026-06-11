@@ -117,7 +117,7 @@
     <div class="mkt"><span class="dot" id="mktdot"></span><span id="mktlbl">—</span></div>
     <div class="top-right">
       <span class="pill">Live: <b id="dlatest">—</b></span>
-      <span class="pill safe">conta real · dry-run</span>
+      <span class="pill" style="background:var(--baixa-bg);border-color:#f3c6cf;color:var(--baixa);font-weight:700">⚡ EXECUÇÃO REAL ligada</span>
     </div>
   </div>
 </header>
@@ -275,7 +275,7 @@ async function execItem(opid){
   if(it.bad){alert('Ticker inválido no broker.');return;}
   if(it.manual){if(!confirm('⚠️ Precisa validação manual ('+it.manual+'). Executar mesmo assim?'))return;}
   const c=it._create;
-  if(!confirm('Executar (1-tap):\n\n'+(c.acao==='vender'?'VENDER':'COMPRAR')+' '+(it.codigo||'?')+' · '+c.volume+' contrato(s) @ limite '+brl(c.preco_limite)+'\nConta REAL · cria ordem JÁ APROVADA.\n(AUTO_SEND=0 = dry-run, não dispara real ainda.)'))return;
+  if(!confirm('⚡ EXECUTAR DE VERDADE (dinheiro real):\n\n'+(c.acao==='vender'?'VENDER':'COMPRAR')+' '+(it.codigo||'?')+' · '+c.volume+' contrato(s) @ limite '+brl(c.preco_limite)+'\nConta REAL · AUTO_SEND=1 → a ponte ENVIA a ordem ao broker.\n\nConfirmar?'))return;
   try{
     const ex=ordOf(opid);
     if(ex&&(ex.status==='pendente'||ex.status==='notificada'))
@@ -297,7 +297,7 @@ async function skipItem(opid){
 }
 async function closePos(cod){
   const h=buildCarteira().find(x=>x.cod===cod);if(!h)return;
-  if(!confirm('ENCERRAR posição '+cod+'?\n\nVENDER '+(h.qtd||1)+' contrato(s) @ '+brl(h.live)+'\nCria ordem de venda JÁ APROVADA (conta real, dry-run via AUTO_SEND=0).'))return;
+  if(!confirm('⚡ ENCERRAR DE VERDADE '+cod+' (dinheiro real):\n\nVENDER '+(h.qtd||1)+' contrato(s) @ '+brl(h.live)+'\nConta REAL · AUTO_SEND=1 → a ponte ENVIA a venda ao broker.\n\nConfirmar?'))return;
   try{
     await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},
       body:JSON.stringify([{op_id:'encerra__'+cod+'__'+(DATA.meta.fila_data||'x'),conta:ORDEM_CONTA,codigo:cod,acao:'vender',volume:h.qtd||1,preco_limite:h.live,status:'aprovada'}])});
