@@ -226,10 +226,15 @@ def atualizar_precos(mt5):
         t = mt5.symbol_info_tick(c)
         if not t:
             continue
-        # PREÇO LIVE: prioriza o MID do bid/ask ao vivo (cotação real do book);
-        # 'last' (último negócio) só como fallback — em opção ilíquida o last pode ser velho.
-        mid = round((t.bid + t.ask) / 2, 2) if (t.bid and t.ask) else None
-        px = mid if mid else (t.last if t.last else None)
+        # PREÇO LIVE robusto p/ opção ilíquida:
+        #  - book APERTADO (ask <= bid*1.30) -> mid do bid/ask é confiável (líquido);
+        #  - book LARGO (ilíquido) -> o mid ESTOURA (ex bid 1,00/ask 2,20 -> mid 1,60 irreal),
+        #    então usa o ÚLTIMO NEGOCIADO (preço real do broker);
+        #  - sem nenhum -> não sobrescreve (mantém valor anterior).
+        bid = t.bid or 0; ask = t.ask or 0; last = t.last or 0
+        mid = round((bid + ask) / 2, 2) if (bid and ask) else 0
+        tight = bool(bid and ask and ask <= bid * 1.30)   # spread <= 30% => book confiável
+        px = mid if (tight and mid) else (last if last else None)
         if px:
             sb("PATCH", f"/rest/v1/sinais?data=eq.{fila}&codigo=eq.{c}",
                {"preco_atual": round(float(px), 2)})
