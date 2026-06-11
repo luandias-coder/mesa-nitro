@@ -34,14 +34,14 @@
  .pill b{color:var(--text)}
  .pill.safe{background:var(--gold-bg);border-color:#EAD9AE;color:var(--gold);font-weight:600}
  main{max-width:1080px;margin:0 auto;padding:20px 22px 60px}
- /* PLACAR */
- .scoreboard{background:linear-gradient(135deg,#5469D4,#6C7FE0);color:#fff;border-radius:var(--radius);padding:20px 22px;box-shadow:var(--sh-lg);margin-bottom:8px}
- .scoreboard .big{font-size:26px;font-weight:700;letter-spacing:-.5px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
- .scoreboard .big .frac{font-family:var(--mono)}
- .scoreboard .prog{height:8px;background:rgba(255,255,255,.25);border-radius:99px;overflow:hidden;margin:12px 0 10px}
- .scoreboard .prog > i{display:block;height:100%;background:#fff;transition:width .4s ease-out}
- .scoreboard .miss{font-size:13px;opacity:.95} .scoreboard .miss b{font-family:var(--mono)}
- .scoreboard .miss .none{opacity:.85}
+ /* PAINEL DE MÉTRICAS (placar) */
+ .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:8px}
+ .metric{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--sh);padding:13px 16px;display:flex;flex-direction:column;gap:3px}
+ .metric .lab{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--dim);font-weight:600}
+ .metric .val{font-family:var(--mono);font-size:21px;font-weight:700;letter-spacing:-.5px}
+ .metric .sub{font-size:11px;color:var(--faint)}
+ .metric.hero{grid-column:span 1;background:linear-gradient(135deg,#5469D4,#6C7FE0);border:none;color:#fff}
+ .metric.hero .lab{color:rgba(255,255,255,.85)} .metric.hero .sub{color:rgba(255,255,255,.8)}
  /* GROUP */
  .grp{margin-top:26px}
  .grp-h{display:flex;align-items:center;gap:10px;margin-bottom:12px}
@@ -66,23 +66,27 @@
  .sz small{font-family:var(--sans);font-weight:500;color:var(--faint);font-size:11px}
  .price{font-family:var(--mono);font-weight:700;font-size:15px}
  .price .live{font-size:11px;color:var(--dim);font-weight:500}
+ .pnl{font-family:var(--mono);font-weight:700;font-size:17px}
+ .pnl small{font-family:var(--sans);font-weight:600;font-size:11px;display:block}
  .rec{font-size:11.5px;font-weight:600;padding:3px 8px;border-radius:7px;display:inline-block;white-space:nowrap;margin-top:3px}
  .rec.go{background:var(--alta-bg);color:var(--alta)} .rec.maybe{background:var(--gold-bg);color:var(--gold)} .rec.stop{background:var(--baixa-bg);color:var(--baixa)} .rec.wait{background:var(--surface2);color:var(--dim)}
  .actcell{display:flex;flex-direction:column;gap:6px;align-items:stretch;min-width:120px}
  .btn{font-family:var(--sans);font-weight:600;font-size:13px;padding:9px 14px;border-radius:9px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--text);transition:all .14s;white-space:nowrap;text-align:center}
  .btn:hover{background:var(--surface2)} .btn:disabled{opacity:.5;cursor:default}
  .btn.exec{background:var(--brand);color:#fff;border-color:var(--brand)} .btn.exec:hover{filter:brightness(1.06)}
- .btn.skip{background:transparent;color:var(--dim);padding:5px} .btn.skip:hover{color:var(--baixa)}
+ .btn.close{background:var(--baixa-bg);color:var(--baixa);border-color:#f3c6cf} .btn.close:hover{background:var(--baixa);color:#fff}
+ .btn.skip,.btn.ghost{background:transparent;color:var(--dim);padding:5px} .btn.skip:hover{color:var(--baixa)}
  .stp{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:8px;text-align:center}
  .stp.done{background:var(--alta-bg);color:var(--alta)} .stp.pend{background:var(--gold-bg);color:var(--gold)} .stp.skip{background:var(--surface2);color:var(--dim)} .stp.bad{background:var(--baixa-bg);color:var(--baixa)}
  .manualval{grid-column:1/-1;font-size:12px;color:var(--baixa);background:var(--baixa-bg);border:1px solid var(--baixa);border-radius:8px;padding:6px 10px;font-weight:600}
  .empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:28px;text-align:center;color:var(--dim)}
  .foot{max-width:1080px;margin:0 auto;padding:14px 22px;color:var(--faint);font-size:11.5px;text-align:center}
  .foot a{color:var(--brand)}
+ @media (max-width:820px){.metrics{grid-template-columns:repeat(2,1fr)}}
  @media (max-width:720px){
    .row{grid-template-columns:1fr 1fr;gap:10px}
    .actcell{grid-column:1/-1;flex-direction:row}
-   .actcell .btn.exec{flex:1}
+   .actcell .btn{flex:1}
  }
  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head>
@@ -93,25 +97,21 @@
     <div class="mkt"><span class="dot" id="mktdot"></span><span id="mktlbl">—</span></div>
     <div class="top-right">
       <span class="pill">Live: <b id="dlatest">—</b></span>
-      <span class="pill safe" id="modepill">dry-run</span>
+      <span class="pill safe">conta real · dry-run</span>
     </div>
   </div>
 </header>
 <main>
-  <div class="scoreboard">
-    <div class="big">Replicando <span class="frac" id="sc-frac">—</span> da Sala</div>
-    <div class="prog"><i id="sc-bar" style="width:0%"></i></div>
-    <div class="miss" id="sc-miss">—</div>
-  </div>
+  <div class="metrics" id="metrics"></div>
 
   <section class="grp" id="grp-hoje">
     <div class="grp-h"><h2>⚡ Ações de hoje (da live)</h2><span class="cnt" id="cnt-hoje">0</span><span class="hint" id="hint-hoje"></span></div>
     <div id="list-hoje"></div>
   </section>
 
-  <section class="grp" id="grp-catch">
-    <div class="grp-h"><h2>🔁 Catch-up com a Sala</h2><span class="cnt" id="cnt-catch">0</span><span class="hint">posições da Sala que você ainda não replicou</span></div>
-    <div id="list-catch"></div>
+  <section class="grp" id="grp-cart">
+    <div class="grp-h"><h2>📊 Minha carteira</h2><span class="cnt" id="cnt-cart">0</span><span class="hint">posições que você executou · P&L ao vivo</span></div>
+    <div id="list-cart"></div>
   </section>
 </main>
 <div class="foot" id="foot">Mesa Nitro v2 · <a href="/">← dashboard clássico</a></div>
@@ -119,189 +119,183 @@
 <script>
 const SB_URL="https://mqcryomwdwnosoqfmyak.supabase.co", SB_KEY="sb_publishable_GozaOIA6rPwYFpgiOh60lg_OAmWvMCP";
 const sbh={apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"};
-// Guardrail visível: 1-tap cria ordem 'aprovada'; AUTO_SEND=0 na ponte trava o order_send real.
-const ORDEM_CONTA="real";  // B: conta real, dry-run via AUTO_SEND=0
+const ORDEM_CONTA="real";  // B: conta real, dry-run via AUTO_SEND=0 na ponte
 const CFG={pool:12000,caixa_pct:0,peso_pct:0.05,n_alvo:19,lote:100};
 const LOTE=CFG.lote;
+const ACTIVE=new Set(['aprovada','fila_abertura','executada','validada_dry_run']); // ordem "viva" = posição minha
 let DATA={meta:{},today:[],portfolio:[],ordens:{}};
 
 async function sbGet(p){try{const r=await fetch(SB_URL+"/rest/v1/"+p,{headers:sbh});return r.ok?await r.json():[];}catch(e){return [];}}
-function sizeContracts(premium){if(!premium||!CFG)return null;const N=CFG.n_alvo;const alvo=Math.min(CFG.pool*CFG.peso_pct,CFG.pool*(1-CFG.caixa_pct)/N);return Math.max(1,Math.round(alvo/(premium*LOTE)));}
+function sizeContracts(p){if(!p||!CFG)return null;const N=CFG.n_alvo;const alvo=Math.min(CFG.pool*CFG.peso_pct,CFG.pool*(1-CFG.caixa_pct)/N);return Math.max(1,Math.round(alvo/(p*LOTE)));}
 const nf=new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
 const brl=v=>(v==null||v==='')?'—':'R$ '+nf.format(+v);
+const pct=v=>(v==null)?'—':(v>=0?'+':'')+(+v).toFixed(1)+'%';
 const brdate=iso=>{if(!iso)return'—';const m=String(iso).slice(0,10).split('-');return m.length===3?`${m[2]}/${m[1]}/${m[0].slice(2)}`:iso;};
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ACTIVE=new Set(['aprovada','fila_abertura','executada','validada_dry_run']);
+const pnlPct=(e,c)=>{e=+e;c=+c;if(!e||isNaN(e)||isNaN(c))return null;return(c/e-1)*100;};
 
 async function loadAll(){
   const [lives,sin,pos,ord]=await Promise.all([
     sbGet("lives?select=*&order=data.asc"),
     sbGet("sinais?select=*&order=data.asc,ts.asc"),
     sbGet("posicoes_analista?select=*"),
-    sbGet("ordens?select=op_id,id,status,codigo,volume,preco_limite,preco_exec,acao")]);
+    sbGet("ordens?select=op_id,id,status,codigo,volume,preco_limite,preco_exec,acao,conta")]);
   const latest=lives.length?lives[lives.length-1]:{};
-  const datasComOps=[...new Set(sin.map(s=>s.data))].sort();
-  const filaData=datasComOps.length?datasComOps[datasComOps.length-1]:latest.data;
-  DATA.meta={data_latest:latest.data,fila_data:filaData,analista:latest.analista,lives:lives.length};
+  const datas=[...new Set(sin.map(s=>s.data))].sort();
+  const fila=datas.length?datas[datas.length-1]:latest.data;
+  DATA.meta={data_latest:latest.data,fila_data:fila,analista:latest.analista,lives:lives.length};
   DATA.portfolio=pos.map(p=>({underlying:p.underlying,tipo:p.tipo,codigo:p.codigo,strike:p.strike,venc:p.vencimento,entry:p.entry,atual:p.atual,conf:p.conf}));
-  DATA.today=sin.filter(s=>s.data===filaData).map(s=>({id:s.data+"__"+s.codigo+"__"+s.acao+"__"+s.ts,data:s.data,ts:s.ts,acao:s.acao,underlying:s.underlying,tipo:s.tipo,codigo:s.codigo,strike:s.strike,venc:s.vencimento,limite:s.preco_limite,atual:s.preco_atual,conf:s.conf,motivo:s.motivo,link:s.link}));
+  DATA.today=sin.filter(s=>s.data===fila).map(s=>({id:s.data+"__"+s.codigo+"__"+s.acao+"__"+s.ts,acao:s.acao,underlying:s.underlying,tipo:s.tipo,codigo:s.codigo,strike:s.strike,venc:s.vencimento,limite:s.preco_limite,atual:s.preco_atual,motivo:s.motivo}));
   DATA.ordens={};ord.forEach(o=>{DATA.ordens[o.op_id]=o;});
+  // mapas auxiliares por código
+  DATA._meta={}; DATA._live={};
+  [...DATA.portfolio, ...DATA.today].forEach(x=>{ if(x.codigo){ if(!DATA._meta[x.codigo])DATA._meta[x.codigo]={underlying:x.underlying,tipo:x.tipo,strike:x.strike,venc:x.venc}; const lv=(x.atual!=null?x.atual:null); if(lv!=null)DATA._live[x.codigo]=lv; } });
 }
-async function reloadOrdens(){const ord=await sbGet("ordens?select=op_id,id,status,codigo,volume,preco_limite,preco_exec,acao");DATA.ordens={};ord.forEach(o=>DATA.ordens[o.op_id]=o);}
+async function reloadOrdens(){const ord=await sbGet("ordens?select=op_id,id,status,codigo,volume,preco_limite,preco_exec,acao,conta");DATA.ordens={};ord.forEach(o=>DATA.ordens[o.op_id]=o);}
 
-// ---- entrada opid p/ posição da Sala (mesma convenção do v1) ----
-function entradaOpId(p){return 'entrada__'+p.codigo+'__'+(DATA.meta.fila_data||DATA.meta.data_latest||'x');}
-
-// ---- recomendação de entrada (preço live vs limite) ----
-function recBadge(lim,at){if(lim==null)return '<span class="rec wait">sem limite</span>';if(at==null)return '<span class="rec wait">sem preço live</span>';lim=+lim;at=+at;if(!lim)return '<span class="rec wait">—</span>';const d=(at-lim)/lim*100;if(at<=lim)return `<span class="rec go">✅ dá entrar · ${d>=0?'+':''}${d.toFixed(0)}%</span>`;if(d<=10)return `<span class="rec maybe">⚠️ +${d.toFixed(0)}% vs limite</span>`;return `<span class="rec stop">⛔ passou · +${d.toFixed(0)}%</span>`;}
-
-function acaoBadge(acao,tipo){
-  if(acao==='saida')return '<span class="acao sell">VENDER (saída)</span>';
-  if(acao==='ajuste_delta')return '<span class="acao adj">AJUSTE Δ</span>';
-  const t=(tipo||'').toUpperCase();const cls=t==='PUT'?'put':'call';
-  return `<span class="acao ${cls}">COMPRAR ${esc(t||'—')}</span>`;
-}
-function rowClass(tipo){const t=(tipo||'').toUpperCase();return t==='PUT'?'put':(t==='CALL'?'call':'');}
-function tkChip(cod,bad){if(!cod)return '<span class="tk bad">sem ticker</span>';if(bad)return `<span class="tk bad" title="ticker inválido no broker">${esc(cod)} ⚠</span>`;return `<span class="tk" data-copy="${esc(cod)}" title="copiar">${esc(cod)}</span>`;}
-
-// status efetivo de uma ordem (ou null)
+// ----- ordens ativas por código (posições que eu tenho) -----
+function activeByCodigo(){const m={};Object.values(DATA.ordens).forEach(o=>{if(o&&ACTIVE.has(o.status)&&o.codigo){if(!m[o.codigo]||o.status==='executada')m[o.codigo]=o;}});return m;}
+function activeCodigos(){return new Set(Object.keys(activeByCodigo()));}
 function ordOf(opid){return DATA.ordens[opid]||null;}
-function statusPill(ord){
-  if(!ord)return null;
-  const s=ord.status;
-  if(ACTIVE.has(s)){const lbl={aprovada:'✅ aprovada',fila_abertura:'📅 na fila → abertura',executada:'✓ executada',validada_dry_run:'✓ dry-run'}[s]||s;return `<div class="stp done">${lbl}</div>`;}
-  if(s==='cancelada')return '<div class="stp skip">pulada</div>';
-  if(s==='ticker_invalido')return '<div class="stp bad">⚠️ ticker inválido</div>';
-  if(s==='erro')return '<div class="stp bad">erro</div>';
-  if(s==='pendente'||s==='notificada')return null; // ainda acionável
-  return `<div class="stp pend">${esc(s)}</div>`;
-}
+function entradaOpId(cod){return 'entrada__'+cod+'__'+(DATA.meta.fila_data||DATA.meta.data_latest||'x');}
 
-// ---- montar a linha (item: {opid,acao,tipo,underlying,codigo,strike,venc,limite,atual,vol,manual,bad,ord}) ----
-function rowHTML(it){
-  const ord=it.ord;
-  const sp=statusPill(ord);
-  const acionavel=!sp; // sem status final/ativo => mostra botões
+// ----- badges -----
+function recBadge(lim,at){if(lim==null)return '<span class="rec wait">sem limite</span>';if(at==null)return '<span class="rec wait">sem preço live</span>';lim=+lim;at=+at;if(!lim)return '<span class="rec wait">—</span>';const d=(at-lim)/lim*100;if(at<=lim)return `<span class="rec go">✅ dá entrar · ${d>=0?'+':''}${d.toFixed(0)}%</span>`;if(d<=10)return `<span class="rec maybe">⚠️ +${d.toFixed(0)}% vs limite</span>`;return `<span class="rec stop">⛔ acima · +${d.toFixed(0)}%</span>`;}
+function acaoBadge(acao,tipo){if(acao==='saida')return '<span class="acao sell">VENDER (saída)</span>';if(acao==='ajuste_delta')return '<span class="acao adj">AJUSTE Δ</span>';const t=(tipo||'').toUpperCase();return `<span class="acao ${t==='PUT'?'put':'call'}">COMPRAR ${esc(t||'—')}</span>`;}
+function rowClass(tipo){const t=(tipo||'').toUpperCase();return t==='PUT'?'put':(t==='CALL'?'call':'');}
+function tkChip(cod,bad){if(!cod)return '<span class="tk bad">sem ticker</span>';if(bad)return `<span class="tk bad" title="ticker inválido">${esc(cod)} ⚠</span>`;return `<span class="tk" data-copy="${esc(cod)}" title="copiar">${esc(cod)}</span>`;}
+function statusPill(o){if(!o)return null;const s=o.status;if(s==='cancelada')return '<div class="stp skip">pulada</div>';if(s==='ticker_invalido')return '<div class="stp bad">⚠️ ticker inválido</div>';if(s==='erro')return '<div class="stp bad">erro</div>';if(s==='pendente'||s==='notificada')return null;return null;}
+
+// ===== AÇÕES DE HOJE (só sinais que ainda não viraram posição minha) =====
+function buildToday(){
+  const ac=activeCodigos();
+  return DATA.today.filter(op=>!ac.has(op.codigo)).map(op=>{
+    const ord=ordOf(op.id);
+    const vol=op.limite?sizeContracts(op.limite):null;
+    let manual=null; if(!op.codigo)manual='ticker não reconhecido'; else if(op.limite==null)manual='sem preço da live';
+    const bad=ord&&ord.status==='ticker_invalido';
+    return {opid:op.id,acao:op.acao,tipo:op.tipo,underlying:op.underlying,codigo:op.codigo,strike:op.strike,venc:op.venc,limite:op.limite,atual:op.atual,vol,manual,bad,ord,
+      _create:{op_id:op.id,conta:ORDEM_CONTA,codigo:op.codigo,acao:(op.acao==='saida'?'vender':'comprar'),volume:vol||1,preco_limite:op.limite,status:'aprovada'}};
+  });
+}
+function todayRowHTML(it){
+  const sp=statusPill(it.ord);
   const sz=it.vol?`${it.vol} <small>contrato(s)</small>`:'—';
-  const custo=(it.vol&&it.limite)?`<div class="cell"><span class="k">~Custo</span><span class="price">${brl(it.vol*it.limite*LOTE)}</span></div>`:'';
-  const manual=it.manual?`<div class="manualval">⚠️ Validação manual: ${esc(it.manual)} — confira antes de operar</div>`:'';
+  const manual=it.manual?`<div class="manualval">⚠️ Validação manual: ${esc(it.manual)} — confira antes</div>`:'';
   let act;
-  if(sp){act=sp;}
-  else{
-    act=`<button class="btn exec" data-exec="${esc(it.opid)}">▶ Executar</button><button class="btn skip" data-skip="${esc(it.opid)}">pular</button>`;
-  }
-  return `<div class="row ${rowClass(it.tipo)} ${sp&&/done/.test(sp)?'done':''} ${sp&&/skip/.test(sp)?'skip':''}">
+  if(it.ord&&(it.ord.status==='cancelada'))act='<div class="stp skip">pulada</div>';
+  else if(it.bad)act='<div class="stp bad">⚠️ ticker inválido</div>';
+  else act=`<button class="btn exec" data-exec="${esc(it.opid)}">▶ Executar</button><button class="btn skip" data-skip="${esc(it.opid)}">pular</button>`;
+  return `<div class="row ${rowClass(it.tipo)} ${it.ord&&it.ord.status==='cancelada'?'skip':''}">
     <div class="cell"><span class="k">O quê</span><div class="what">${acaoBadge(it.acao,it.tipo)} <span class="under">${esc(it.underlying)}</span></div><div style="margin-top:4px">${tkChip(it.codigo,it.bad)}</div></div>
-    <div class="cell"><span class="k">Quanto</span><span class="sz">${sz}</span>${custo?'':`<span class="dim" style="font-size:11px">strike ${brl(it.strike)} · ${brdate(it.venc)}</span>`}</div>
+    <div class="cell"><span class="k">Quanto</span><span class="sz">${sz}</span><span class="dim" style="font-size:11px">strike ${brl(it.strike)} · ${brdate(it.venc)}</span></div>
     <div class="cell"><span class="k">Preço (limite · live)</span><span class="price">${brl(it.limite)} <span class="live">live ${brl(it.atual)}</span></span>${recBadge(it.limite,it.atual)}</div>
-    <div class="actcell">${act}</div>
-    ${manual}
+    <div class="actcell">${act}</div>${manual}
   </div>`;
 }
 
-// ---- construir os dois grupos ----
-function buildToday(){
-  // entradas e ajustes da live de hoje (vender/saída aparece mas sinalizado)
-  return DATA.today.map(op=>{
-    const ord=ordOf(op.id);
-    const vol=(op.limite?sizeContracts(op.limite):null);
-    let manual=null;
-    if(!op.codigo)manual='ticker não reconhecido no parsing';
-    else if(op.limite==null)manual='sem preço da live';
-    const bad=ord&&ord.status==='ticker_invalido';
-    return {opid:op.id,acao:op.acao,tipo:op.tipo,underlying:op.underlying,codigo:op.codigo,strike:op.strike,venc:op.venc,limite:op.limite,atual:op.atual,vol,manual,bad,ord,
-            _create:{op_id:op.id,conta:ORDEM_CONTA,codigo:op.codigo,acao:(op.acao==='saida'?'vender':'comprar'),volume:vol||1,preco_limite:op.limite,status:'aprovada'}};
-  });
+// ===== MINHA CARTEIRA (posições com ordem ativa) + P&L ao vivo =====
+function buildCarteira(){
+  const m=activeByCodigo();
+  return Object.values(m).map(o=>{
+    const cod=o.codigo, meta=DATA._meta[cod]||{};
+    const entry=(o.preco_exec!=null?o.preco_exec:o.preco_limite);
+    const live=(DATA._live[cod]!=null?DATA._live[cod]:null);
+    const qtd=o.volume||null;
+    const p=pnlPct(entry,live);
+    const pnlR=(entry!=null&&live!=null&&qtd)?((+live)-(+entry))*qtd*LOTE:null;
+    return {cod,underlying:meta.underlying||cod,tipo:meta.tipo,strike:meta.strike,venc:meta.venc,entry,live,qtd,p,pnlR,status:o.status};
+  }).sort((a,b)=>(b.p??-999)-(a.p??-999));
 }
-function buildCatchup(){
-  // posições da Sala (carteira do analista) que ainda não tenho ordem ATIVA (match por código)
-  const ac=activeCodigos();
-  const out=[];
-  DATA.portfolio.forEach(p=>{
-    if(!p.codigo)return;
-    if(ac.has(p.codigo))return; // já replicado (ordem ativa p/ esse código) -> conta no placar, fora do catch-up
-    const opid=entradaOpId(p);
-    const ord=ordOf(opid);
-    const vol=p.entry?sizeContracts(p.entry):null;
-    out.push({opid,acao:'entrada',tipo:p.tipo,underlying:p.underlying,codigo:p.codigo,strike:p.strike,venc:p.venc,limite:p.entry,atual:p.atual,vol,manual:null,bad:ord&&ord.status==='ticker_invalido',ord:(ord&&ord.status!=='cancelada')?ord:null,
-      _create:{op_id:opid,conta:ORDEM_CONTA,codigo:p.codigo,acao:'comprar',volume:vol||1,preco_limite:p.entry,status:'aprovada'}});
-  });
-  return out;
+function cartRowHTML(h){
+  const cls=h.p==null?'':(h.p>=0?'pos':'neg');
+  const stp=h.status==='executada'?'':`<span class="dim" style="font-size:10.5px">(${esc(h.status)})</span>`;
+  return `<div class="row ${rowClass(h.tipo)}">
+    <div class="cell"><span class="k">Posição ${stp}</span><div class="what">${h.tipo?acaoBadge('entrada',h.tipo).replace('COMPRAR ','').replace(/^<span class="acao/,'<span class="acao'):''} <span class="under">${esc(h.underlying)}</span></div><div style="margin-top:4px">${tkChip(h.cod)}</div></div>
+    <div class="cell"><span class="k">Entrada · Atual</span><span class="price">${brl(h.entry)} <span class="live">→ ${brl(h.live)}</span></span><span class="dim" style="font-size:11px">${h.qtd?h.qtd+' contr':''}${h.strike?' · strike '+nf.format(h.strike):''}</span></div>
+    <div class="cell"><span class="k">P&L</span><span class="pnl ${cls}">${pct(h.p)}<small class="${cls}">${h.pnlR!=null?(h.pnlR>=0?'+':'')+brl(h.pnlR):''}</small></span></div>
+    <div class="actcell"><button class="btn close" data-close="${esc(h.cod)}">Encerrar</button></div>
+  </div>`;
 }
 
-// conjunto de CÓDIGOS com ordem ATIVA = replicados (match por código, não por data do op_id)
-function activeCodigos(){const s=new Set();Object.values(DATA.ordens).forEach(o=>{if(o&&ACTIVE.has(o.status)&&o.codigo)s.add(o.codigo);});return s;}
-// ---- placar de replicação ----
-function scoreboard(){
-  const ac=activeCodigos();
-  const universo=DATA.portfolio.filter(p=>p.codigo);
-  const N=universo.length;
-  let rep=0;const faltam=[];
-  universo.forEach(p=>{ if(ac.has(p.codigo))rep++; else faltam.push(p.underlying); });
-  document.getElementById('sc-frac').textContent=`${rep}/${N}`;
-  document.getElementById('sc-bar').style.width=(N?rep/N*100:0)+'%';
-  const miss=document.getElementById('sc-miss');
-  if(!N)miss.innerHTML='<span class="none">Sem carteira da Sala carregada ainda.</span>';
-  else if(!faltam.length)miss.innerHTML='🎉 <b>Replicação completa</b> — você está em todas as posições da Sala.';
-  else miss.innerHTML=`Faltam <b>${faltam.length}</b>: ${faltam.map(esc).join(', ')}`;
+// ===== PAINEL DE MÉTRICAS =====
+function metrics(){
+  const cart=buildCarteira();
+  const n=cart.length;
+  const calls=cart.filter(h=>(h.tipo||'').toUpperCase()==='CALL').length;
+  const puts=cart.filter(h=>(h.tipo||'').toUpperCase()==='PUT').length;
+  let inv=0,pl=0,havePL=false;
+  cart.forEach(h=>{const q=h.qtd||0;if(h.entry!=null){inv+=(+h.entry)*q*LOTE;}if(h.pnlR!=null){pl+=h.pnlR;havePL=true;}});
+  const plPct=inv?pl/inv*100:null;
+  const sala=DATA.portfolio.filter(p=>p.codigo).length;
+  const cards=[
+    {hero:true,lab:'P&L da carteira',val:havePL?pct(plPct):'—',sub:havePL?(pl>=0?'+':'')+brl(pl):'sem dados',cls:''},
+    {lab:'Posições',val:n,sub:`replicando ${n}/${sala} da Sala`},
+    {lab:'Investido',val:inv?brl(inv):'—',sub:'capital alocado'},
+    {lab:'PUT · CALL',val:`${puts} · ${calls}`,sub:'exposição'},
+    {lab:'Aderência',val:'100%',sub:'meta a partir de hoje'},
+  ];
+  document.getElementById('metrics').innerHTML=cards.map(c=>`<div class="metric ${c.hero?'hero':''}"><span class="lab">${c.lab}</span><span class="val ${c.hero?'':(c.cls||'')}">${c.val}</span><span class="sub">${c.sub}</span></div>`).join('');
 }
 
-// ---- ações 1-tap ----
-let _itemsIndex={};  // opid -> _create payload (e ord atual)
+// ===== AÇÕES 1-tap =====
+let _idx={};
 async function execItem(opid){
-  const it=_itemsIndex[opid];if(!it)return;
-  if(it.bad){alert('Ticker inválido no broker — corrija antes de executar.');return;}
-  if(it.manual){if(!confirm('⚠️ Esta ação precisa de validação manual ('+it.manual+'). Executar mesmo assim?'))return;}
+  const it=_idx[opid];if(!it)return;
+  if(it.bad){alert('Ticker inválido no broker.');return;}
+  if(it.manual){if(!confirm('⚠️ Precisa validação manual ('+it.manual+'). Executar mesmo assim?'))return;}
   const c=it._create;
-  const msg='Executar (1-tap):\n\n'+(c.acao==='vender'?'VENDER':'COMPRAR')+' '+(it.codigo||'?')+' · '+(c.volume)+' contrato(s) @ limite '+brl(c.preco_limite)+'\nConta: '+ORDEM_CONTA.toUpperCase()+' · cria ordem JÁ APROVADA.\n\n(AUTO_SEND=0 na ponte = dry-run, não dispara ordem real ainda.)';
-  if(!confirm(msg))return;
+  if(!confirm('Executar (1-tap):\n\n'+(c.acao==='vender'?'VENDER':'COMPRAR')+' '+(it.codigo||'?')+' · '+c.volume+' contrato(s) @ limite '+brl(c.preco_limite)+'\nConta REAL · cria ordem JÁ APROVADA.\n(AUTO_SEND=0 = dry-run, não dispara real ainda.)'))return;
   try{
-    const existing=ordOf(opid);
-    if(existing&&(existing.status==='pendente'||existing.status==='notificada')){
-      // já existe ordem pendente (auto-criada) -> só aprova
+    const ex=ordOf(opid);
+    if(ex&&(ex.status==='pendente'||ex.status==='notificada'))
       await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:sbh,body:JSON.stringify({status:'aprovada',atualizado_em:new Date().toISOString()})});
-    }else{
+    else
       await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([c])});
-    }
     await reloadOrdens();render();
-  }catch(e){console.warn('exec falhou',e);alert('Falhou criar/aprovar a ordem. Tenta de novo.');}
+  }catch(e){console.warn(e);alert('Falhou — tenta de novo.');}
 }
 async function skipItem(opid){
-  const it=_itemsIndex[opid];if(!it)return;
-  if(!confirm('Pular '+(it.codigo||it.underlying)+'? Marca como não-replicado.'))return;
+  const it=_idx[opid];if(!it)return;
+  if(!confirm('Pular '+(it.codigo||it.underlying)+'?'))return;
   try{
-    const existing=ordOf(opid);
-    if(existing){await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:sbh,body:JSON.stringify({status:'cancelada',atualizado_em:new Date().toISOString()})});}
-    else{await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([{...it._create,status:'cancelada'}])});}
+    const ex=ordOf(opid);
+    if(ex)await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:sbh,body:JSON.stringify({status:'cancelada',atualizado_em:new Date().toISOString()})});
+    else await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([{...it._create,status:'cancelada'}])});
     await reloadOrdens();render();
-  }catch(e){console.warn('skip falhou',e);}
+  }catch(e){console.warn(e);}
+}
+async function closePos(cod){
+  const h=buildCarteira().find(x=>x.cod===cod);if(!h)return;
+  if(!confirm('ENCERRAR posição '+cod+'?\n\nVENDER '+(h.qtd||1)+' contrato(s) @ '+brl(h.live)+'\nCria ordem de venda JÁ APROVADA (conta real, dry-run via AUTO_SEND=0).'))return;
+  try{
+    await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},
+      body:JSON.stringify([{op_id:'encerra__'+cod+'__'+(DATA.meta.fila_data||'x'),conta:ORDEM_CONTA,codigo:cod,acao:'vender',volume:h.qtd||1,preco_limite:h.live,status:'aprovada'}])});
+    await reloadOrdens();render();alert('Ordem de encerramento criada (venda). Acompanhe no Telegram/carteira.');
+  }catch(e){console.warn(e);alert('Falhou encerrar.');}
 }
 
-// ---- render ----
+// ===== RENDER =====
 function render(){
-  const hoje=buildToday();
-  const catch_=buildCatchup();
-  _itemsIndex={};
-  [...hoje,...catch_].forEach(it=>{_itemsIndex[it.opid]=it;});
-  scoreboard();
+  const hoje=buildToday(), cart=buildCarteira();
+  _idx={}; hoje.forEach(it=>_idx[it.opid]=it);
+  metrics();
   document.getElementById('cnt-hoje').textContent=hoje.length;
-  document.getElementById('cnt-catch').textContent=catch_.length;
+  document.getElementById('cnt-cart').textContent=cart.length;
   const mnt=DATA.meta.fila_data&&DATA.meta.data_latest&&DATA.meta.fila_data!==DATA.meta.data_latest;
   document.getElementById('hint-hoje').textContent=hoje.length?(mnt?('última live com ações: '+brdate(DATA.meta.fila_data)):('live de '+brdate(DATA.meta.fila_data))):'';
-  document.getElementById('list-hoje').innerHTML=hoje.length?hoje.map(rowHTML).join(''):'<div class="empty">Sem ações novas na última live.</div>';
-  document.getElementById('list-catch').innerHTML=catch_.length?catch_.map(rowHTML).join(''):'<div class="empty">🎉 Você já replicou tudo que a Sala tem em aberto.</div>';
+  document.getElementById('list-hoje').innerHTML=hoje.length?hoje.map(todayRowHTML).join(''):'<div class="empty">✅ Nada pendente da última live — tudo executado ou pulado.</div>';
+  document.getElementById('list-cart').innerHTML=cart.length?cart.map(cartRowHTML).join(''):'<div class="empty">Nenhuma posição ainda. Execute uma ação de hoje que ela entra aqui com P&L.</div>';
   document.getElementById('dlatest').textContent=brdate(DATA.meta.fila_data||DATA.meta.data_latest);
 }
-
 function marketStatus(){const n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,o=d>=1&&d<=5&&h>=10&&h<17;document.getElementById('mktdot').className='dot '+(o?'on':'off');document.getElementById('mktlbl').textContent=o?'B3 aberta · pregão':'B3 fechada';}
 
-// ---- eventos ----
 document.addEventListener('click',e=>{
-  const cp=e.target.closest('.tk[data-copy]');if(cp){const v=cp.dataset.copy;navigator.clipboard&&navigator.clipboard.writeText(v);const o=cp.textContent;cp.classList.add('copied');cp.textContent='✓ copiado';setTimeout(()=>{cp.textContent=o;cp.classList.remove('copied');},900);return;}
+  const cp=e.target.closest('.tk[data-copy]');if(cp){const v=cp.dataset.copy;navigator.clipboard&&navigator.clipboard.writeText(v);const o=cp.textContent;cp.classList.add('copied');cp.textContent='✓';setTimeout(()=>{cp.textContent=o;cp.classList.remove('copied');},800);return;}
   const ex=e.target.closest('[data-exec]');if(ex){execItem(ex.dataset.exec);return;}
   const sk=e.target.closest('[data-skip]');if(sk){skipItem(sk.dataset.skip);return;}
+  const cl=e.target.closest('[data-close]');if(cl){closePos(cl.dataset.close);return;}
 });
-// init
 marketStatus();setInterval(marketStatus,60000);
 loadAll().then(render);
 setInterval(()=>{loadAll().then(render);},45000);
