@@ -117,6 +117,7 @@
     <div class="mkt"><span class="dot" id="mktdot"></span><span id="mktlbl">—</span></div>
     <div class="top-right">
       <span class="pill">Live: <b id="dlatest">—</b></span>
+      <span class="pill" id="refreshpill" title="próxima atualização de preço">⟳ preço em <b id="rcount" class="mono">60</b>s</span>
       <span class="pill" style="background:var(--baixa-bg);border-color:#f3c6cf;color:var(--baixa);font-weight:700">⚡ EXECUÇÃO REAL ligada</span>
     </div>
   </div>
@@ -357,7 +358,16 @@ async function renderHilo(){
   }catch(e){console.warn('hilo',e);}
 }
 marketStatus();setInterval(marketStatus,60000);
-loadAll().then(render);renderHilo();
-setInterval(()=>{loadAll().then(render);},45000);
+// refresh de preço a cada 60s com contador regressivo na tela
+let _rc=60;
+function tickRefresh(){
+  const el=document.getElementById('rcount');
+  _rc--;
+  if(_rc<=0){ if(el)el.textContent='…'; _rc=60; loadAll().then(()=>{render();if(el)el.textContent=_rc;}); }
+  else if(el){ el.textContent=_rc; }
+}
+loadAll().then(()=>{render();renderHilo();});
+setInterval(tickRefresh,1000);
+setInterval(renderHilo,300000);
 </script>
 </body></html>

@@ -22,8 +22,16 @@ def sb(method, path, body=None):
         return json.loads(t) if t else []
 
 
-def opcoes_ultimos(acao):
-    """codigo -> último negociado, varrendo todos os vencimentos do ativo."""
+def serie_mes(cod):
+    """Mês de vencimento pela letra da série (5º char): A-L=CALL jan-dez, M-X=PUT jan-dez."""
+    if not cod or len(cod) < 5:
+        return None
+    return (ord(cod[4].upper()) - 65) % 12 + 1
+
+
+def opcoes_ultimos(acao, meses=None):
+    """codigo -> último negociado. Se `meses` for dado, busca SÓ os vencimentos desses
+    meses (1 req por mês) — bem mais leve que varrer todos os vencimentos."""
     base = f"https://opcoes.net.br/listaopcoes/completa?idLista=ML&idAcao={acao}"
     d = json.load(urllib.request.urlopen(
         urllib.request.Request(base + "&listarVencimentos=true&cotacoes=true", headers=UA), timeout=25))
@@ -40,6 +48,8 @@ def opcoes_ultimos(acao):
 
     collect(d)
     for v in [x["value"] for x in d["data"]["vencimentos"]]:
+        if meses and int(v[5:7]) not in meses:
+            continue
         try:
             dd = json.load(urllib.request.urlopen(
                 urllib.request.Request(base + f"&cotacoes=true&vencimentos={v}", headers=UA), timeout=25))
@@ -77,8 +87,9 @@ def main():
 
     n = 0
     for u, cods in under.items():
+        meses = {serie_mes(c) for c in cods if serie_mes(c)}
         try:
-            ult = opcoes_ultimos(u)
+            ult = opcoes_ultimos(u, meses)
         except Exception as e:
             print(f"  {u}: erro {e}")
             continue
