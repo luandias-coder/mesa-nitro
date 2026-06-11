@@ -1,7 +1,9 @@
 name: captura-diaria
 on:
-  schedule:
-    - cron: '0 21 * * 1-5'       # 18:00 BRT (UTC-3) = 21:00 UTC, dias úteis
+  # SCHEDULE DESLIGADO 2026-06-11: o cloud do GitHub sofre bot-block de datacenter no YouTube
+  # e só gerava spam de "processando/FALHOU" no Telegram sem nunca capturar. A captura agora é
+  # residencial: cron OpenClaw 18:05 (Mac, com Keychain) + launchd backstop 18:20. Mantido só o
+  # disparo manual (workflow_dispatch) pra emergência.
   workflow_dispatch: {}           # botão de teste manual
 concurrency:
   group: captura

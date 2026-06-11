@@ -47,6 +47,9 @@ def criar_ordens_pendentes(data):
     # posições ABERTAS do usuário: compras valendo (executada/aprovada/fila) menos as já vendidas
     abertos = {o["codigo"] for o in todas if o.get("acao") == "comprar" and o.get("status") in ("executada", "aprovada", "fila_abertura")}
     abertos -= {o["codigo"] for o in todas if o.get("acao") == "vender" and o.get("status") == "executada"}
+    # código que já tem QUALQUER ordem viva (não cancelada/erro/inválida) -> não recriar entrada
+    # (evita duplicata no Telegram quando o Luan já lançou na mão com outro op_id)
+    ja_tem = {o["codigo"] for o in todas if o.get("status") not in ("cancelada", "erro", "ticker_invalido")}
     novas = []; pulados = 0
     for op in data["today"]:
         oid = op.get("id"); acao_live = op.get("acao")
@@ -54,6 +57,10 @@ def criar_ordens_pendentes(data):
             continue
         # saída/ajuste só fazem sentido se JÁ temos a posição (carteira limpa não fecha o que não tem)
         if acao_live in ("saida", "ajuste_delta") and op["codigo"] not in abertos:
+            pulados += 1
+            continue
+        # entrada de código que já tem ordem viva = duplicata (ex: lançado na mão) -> pula
+        if acao_live == "entrada" and op["codigo"] in ja_tem:
             pulados += 1
             continue
         acao = "vender" if acao_live == "saida" else "comprar"
