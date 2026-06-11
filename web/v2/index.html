@@ -119,6 +119,7 @@
       <span class="pill">Live: <b id="dlatest">—</b></span>
       <span class="pill" id="refreshpill" title="próxima atualização de preço">⟳ preço em <b id="rcount" class="mono">60</b>s</span>
       <span class="pill" style="background:var(--baixa-bg);border-color:#f3c6cf;color:var(--baixa);font-weight:700">⚡ EXECUÇÃO REAL ligada</span>
+      <span class="pill" id="authpill" style="cursor:pointer">🔒 Entrar</span>
     </div>
   </div>
 </header>
@@ -147,6 +148,20 @@
 </main>
 <div class="foot" id="foot">Mesa Nitro v2 · <a href="/">← dashboard clássico</a></div>
 
+<div id="loginbg" style="position:fixed;inset:0;background:rgba(26,31,54,.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:100">
+  <div style="background:#fff;border-radius:14px;padding:26px;width:min(360px,92vw);box-shadow:0 20px 60px rgba(0,0,0,.3)">
+    <h3 style="margin:0 0 4px;font-size:17px">🔒 Mesa de Replicação</h3>
+    <p style="color:#5A6577;font-size:13px;margin:0 0 16px">Login pra criar ou encerrar posições (dinheiro real).</p>
+    <input id="lg-email" type="email" placeholder="email" autocomplete="username" style="width:100%;padding:11px;border:1px solid #E3E8EF;border-radius:9px;margin-bottom:9px;font-size:14px;box-sizing:border-box">
+    <input id="lg-pw" type="password" placeholder="senha" autocomplete="current-password" style="width:100%;padding:11px;border:1px solid #E3E8EF;border-radius:9px;font-size:14px;box-sizing:border-box">
+    <div id="lg-err" style="color:#D6324B;font-size:12.5px;margin-top:8px;display:none">Email ou senha inválidos.</div>
+    <div style="display:flex;gap:8px;margin-top:14px">
+      <button id="lg-cancel" style="flex:0 0 auto;padding:12px 16px;background:#fff;color:#5A6577;border:1px solid #E3E8EF;border-radius:9px;font-weight:600;cursor:pointer">Fechar</button>
+      <button id="lg-btn" style="flex:1;padding:12px;background:#5469D4;color:#fff;border:none;border-radius:9px;font-weight:700;font-size:14px;cursor:pointer">Entrar</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const SB_URL="https://mqcryomwdwnosoqfmyak.supabase.co", SB_KEY="sb_publishable_GozaOIA6rPwYFpgiOh60lg_OAmWvMCP";
 const sbh={apikey:SB_KEY,Authorization:"Bearer "+SB_KEY,"Content-Type":"application/json"};
@@ -155,6 +170,21 @@ const CFG={pool:12000,caixa_pct:0,peso_pct:0.05,n_alvo:19,lote:100};
 const LOTE=CFG.lote;
 const ACTIVE=new Set(['aprovada','fila_abertura','executada','validada_dry_run']); // ordem "viva" = posição minha
 let DATA={meta:{},today:[],portfolio:[],ordens:{}};
+
+// ===== AUTH (Supabase) — só logado cria/encerra (writes em ordens exigem role authenticated) =====
+const AUTH=SB_URL+"/auth/v1";
+let SESSION=null; try{SESSION=JSON.parse(localStorage.getItem('nitro_sess')||'null');}catch(e){}
+function isAuthed(){return !!(SESSION&&SESSION.access_token&&SESSION.expires_at>Date.now()/1000+20);}
+function writeHeaders(){return {apikey:SB_KEY,Authorization:"Bearer "+(SESSION&&SESSION.access_token||SB_KEY),"Content-Type":"application/json"};}
+function _saveSess(d){SESSION={access_token:d.access_token,refresh_token:d.refresh_token,expires_at:d.expires_at};localStorage.setItem('nitro_sess',JSON.stringify(SESSION));}
+async function login(email,pw){const r=await fetch(AUTH+"/token?grant_type=password",{method:"POST",headers:{apikey:SB_KEY,"Content-Type":"application/json"},body:JSON.stringify({email,password:pw})});if(!r.ok)return false;_saveSess(await r.json());updateAuthUI();return true;}
+async function refresh(){if(!SESSION||!SESSION.refresh_token)return false;const r=await fetch(AUTH+"/token?grant_type=refresh_token",{method:"POST",headers:{apikey:SB_KEY,"Content-Type":"application/json"},body:JSON.stringify({refresh_token:SESSION.refresh_token})});if(!r.ok){SESSION=null;localStorage.removeItem('nitro_sess');updateAuthUI();return false;}_saveSess(await r.json());updateAuthUI();return true;}
+async function ensureAuth(){if(isAuthed())return true;return await refresh();}
+function logout(){SESSION=null;localStorage.removeItem('nitro_sess');updateAuthUI();render();}
+function openLogin(){document.getElementById('loginbg').style.display='flex';setTimeout(()=>document.getElementById('lg-email').focus(),50);}
+function closeLogin(){document.getElementById('loginbg').style.display='none';}
+function updateAuthUI(){const p=document.getElementById('authpill');if(!p)return;if(isAuthed()){p.innerHTML='👤 logado · <b>sair</b>';p.title='clique pra sair';}else{p.innerHTML='🔒 Entrar';p.title='login pra operar';}}
+async function requireAuth(){if(await ensureAuth())return true;openLogin();return false;}
 
 async function sbGet(p){try{const r=await fetch(SB_URL+"/rest/v1/"+p,{headers:sbh});return r.ok?await r.json():[];}catch(e){return [];}}
 function sizeContracts(p){if(!p||!CFG)return null;const N=CFG.n_alvo;const alvo=Math.min(CFG.pool*CFG.peso_pct,CFG.pool*(1-CFG.caixa_pct)/N);return Math.max(1,Math.round(alvo/(p*LOTE)));}
@@ -275,6 +305,7 @@ function metrics(){
 let _idx={};
 async function execItem(opid){
   const it=_idx[opid];if(!it)return;
+  if(!await requireAuth())return;
   if(it.bad){alert('Ticker inválido no broker.');return;}
   if(it.manual){if(!confirm('⚠️ Precisa validação manual ('+it.manual+'). Executar mesmo assim?'))return;}
   const c=it._create;
@@ -282,27 +313,29 @@ async function execItem(opid){
   try{
     const ex=ordOf(opid);
     if(ex&&(ex.status==='pendente'||ex.status==='notificada'))
-      await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:sbh,body:JSON.stringify({status:'aprovada',atualizado_em:new Date().toISOString()})});
+      await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:writeHeaders(),body:JSON.stringify({status:'aprovada',atualizado_em:new Date().toISOString()})});
     else
-      await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([c])});
+      await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...writeHeaders(),Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([c])});
     await reloadOrdens();render();
   }catch(e){console.warn(e);alert('Falhou — tenta de novo.');}
 }
 async function skipItem(opid){
   const it=_idx[opid];if(!it)return;
+  if(!await requireAuth())return;
   if(!confirm('Pular '+(it.codigo||it.underlying)+'?'))return;
   try{
     const ex=ordOf(opid);
-    if(ex)await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:sbh,body:JSON.stringify({status:'cancelada',atualizado_em:new Date().toISOString()})});
-    else await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([{...it._create,status:'cancelada'}])});
+    if(ex)await fetch(SB_URL+"/rest/v1/ordens?op_id=eq."+encodeURIComponent(opid),{method:"PATCH",headers:writeHeaders(),body:JSON.stringify({status:'cancelada',atualizado_em:new Date().toISOString()})});
+    else await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...writeHeaders(),Prefer:"return=minimal,resolution=merge-duplicates"},body:JSON.stringify([{...it._create,status:'cancelada'}])});
     await reloadOrdens();render();
   }catch(e){console.warn(e);}
 }
 async function closePos(cod){
   const h=buildCarteira().find(x=>x.cod===cod);if(!h)return;
+  if(!await requireAuth())return;
   if(!confirm('⚡ ENCERRAR DE VERDADE '+cod+' (dinheiro real):\n\nVENDER '+(h.qtd||1)+' contrato(s) @ '+brl(h.live)+'\nConta REAL · AUTO_SEND=1 → a ponte ENVIA a venda ao broker.\n\nConfirmar?'))return;
   try{
-    await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...sbh,Prefer:"return=minimal,resolution=merge-duplicates"},
+    await fetch(SB_URL+"/rest/v1/ordens",{method:"POST",headers:{...writeHeaders(),Prefer:"return=minimal,resolution=merge-duplicates"},
       body:JSON.stringify([{op_id:'encerra__'+cod+'__'+(DATA.meta.fila_data||'x'),conta:ORDEM_CONTA,codigo:cod,acao:'vender',volume:h.qtd||1,preco_limite:h.live,status:'aprovada'}])});
     await reloadOrdens();render();alert('Ordem de encerramento criada (venda). Acompanhe no Telegram/carteira.');
   }catch(e){console.warn(e);alert('Falhou encerrar.');}
@@ -357,6 +390,23 @@ async function renderHilo(){
     }).join('');
   }catch(e){console.warn('hilo',e);}
 }
+// ---- auth UI ----
+document.getElementById('authpill').onclick=()=>{ if(isAuthed()){ if(confirm('Sair da conta?'))logout(); } else openLogin(); };
+document.getElementById('lg-cancel').onclick=closeLogin;
+document.getElementById('loginbg').onclick=e=>{if(e.target.id==='loginbg')closeLogin();};
+document.getElementById('lg-btn').onclick=async()=>{
+  const e=document.getElementById('lg-email').value.trim(),p=document.getElementById('lg-pw').value;
+  document.getElementById('lg-err').style.display='none';
+  const b=document.getElementById('lg-btn');b.textContent='Entrando…';b.disabled=true;
+  const ok=await login(e,p);b.textContent='Entrar';b.disabled=false;
+  if(ok){closeLogin();document.getElementById('lg-pw').value='';render();}
+  else document.getElementById('lg-err').style.display='block';
+};
+document.getElementById('lg-pw').addEventListener('keydown',ev=>{if(ev.key==='Enter')document.getElementById('lg-btn').click();});
+updateAuthUI();
+if(SESSION&&!isAuthed())refresh();                 // renova sessão salva ao abrir
+setInterval(()=>{if(SESSION)refresh();},45*60*1000); // mantém o token vivo
+
 marketStatus();setInterval(marketStatus,60000);
 // refresh de preço a cada 60s com contador regressivo na tela
 let _rc=60;
