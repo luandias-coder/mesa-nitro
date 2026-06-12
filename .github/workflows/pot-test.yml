@@ -1,0 +1,44 @@
+name: pot-test
+# Teste ISOLADO: o YouTube entrega legenda automática do IP do GitHub (datacenter)
+# usando PO token (bgutil), SEM cookie? Só baixa a legenda e reporta — NÃO roda o
+# pipeline, NÃO toca no Supabase, NÃO cria ordem. Seguro pra rodar quantas vezes quiser.
+on:
+  workflow_dispatch:
+    inputs:
+      video:
+        description: 'YouTube video id pra testar'
+        required: false
+        default: '0IAzZiF4yh8'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      pot:
+        image: brainicism/bgutil-ytdlp-pot-provider:latest
+        ports: ['4416:4416']
+    steps:
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Instalar yt-dlp + plugin POT
+        run: pip install -q -U yt-dlp bgutil-ytdlp-pot-provider
+      - name: Esperar provider PO token
+        run: |
+          for i in $(seq 1 20); do curl -sf http://127.0.0.1:4416/ping && { echo; echo "POT up"; break; } || sleep 2; done
+      - name: IP do runner (contexto)
+        run: curl -s https://api.ipify.org; echo
+      - name: TESTE A — cookieless, cliente default (web) + POT
+        continue-on-error: true
+        run: |
+          VID='${{ inputs.video }}'
+          mkdir -p A
+          yt-dlp -v --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt \
+            -o "A/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID" 2>&1 | grep -iE "pot|token|subtitle|writing|destination|missing|sign in|bot|http error|403|429|forbidden" | head -30
+          echo "--- arquivo A ---"; ls -l A/ 2>/dev/null; [ -s "A/$VID.pt-orig.vtt" ] && echo "RESULTADO_A=OK bytes=$(wc -c < A/$VID.pt-orig.vtt)" || echo "RESULTADO_A=FALHOU"
+      - name: TESTE B — cookieless, player_client=mweb + POT
+        continue-on-error: true
+        run: |
+          VID='${{ inputs.video }}'
+          mkdir -p B
+          yt-dlp -v --extractor-args "youtube:player_client=mweb" --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt \
+            -o "B/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID" 2>&1 | grep -iE "pot|token|subtitle|writing|destination|missing|sign in|bot|http error|403|429|forbidden" | head -30
+          echo "--- arquivo B ---"; ls -l B/ 2>/dev/null; [ -s "B/$VID.pt-orig.vtt" ] && echo "RESULTADO_B=OK bytes=$(wc -c < B/$VID.pt-orig.vtt)" || echo "RESULTADO_B=FALHOU"
