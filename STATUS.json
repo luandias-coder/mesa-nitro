@@ -1,0 +1,49 @@
+{
+  "_nota": "Estado vivo do projeto Mesa Nitro. Atualizado ao fim de cada bloco. Fonte detalhada = V2_PLAN.md; índice = MEMORY.md.",
+  "atualizado_em": "2026-06-10T21:45-03:00",
+  "guardrails": {
+    "AUTO_SEND": 1,
+    "ESTADO": "⚡ EXECUÇÃO REAL LIGADA (Luan autorizou 2026-06-11). Ordens aprovadas DISPARAM no broker. Todo [Executar]/[Encerrar] do /v2 = dinheiro real.",
+    "conta_ordens": "real (6824926/Rico-PRD)",
+    "fills_reais": "COGNS273 46c@0,13 t5772707102; WEGES439 5c@1,18 t5772879910; BEEFG386 29c@0,21 t5775370441",
+    "gate_humano": "1-tap cria ordem aprovada -> ponte envia. SEM trava de dry-run agora.",
+    "live_diaria": "coração do produto — processar SEMPRE pós-fechamento"
+  },
+  "v2": {
+    "arquivo": "web/v2/index.html",
+    "url": "https://mesa-nitro.vercel.app/v2",
+    "modelo": "Luan redefiniu (2026-06-10): SEM catch-up. Só (a) executar ordens NOVAS da live, (b) ajustar/encerrar as que já tenho. Carteira com P&L. Meta aderência 100% a partir de hoje.",
+    "blocos": {
+      "1_carteira_pnl": "FEITO/no ar — mata catch-up; 'Minha carteira' com P&L ao vivo (executadas saem das ações); painel de métricas (P&L carteira, investido, PUT/CALL, posições, aderência placeholder 100%); botão Encerrar (cria venda aprovada). Validado vs dados reais: WEG +2,5%, COGN -30,8%.",
+      "2_metricas": "PARCIAL — painel básico no Bloco 1. Falta aderência REAL (sinais desde início vs executados) e mais cortes (movimentos compra/venda, histórico).",
+      "3_livro_da_sala": "FEITO/no ar — tabela 'Livro da Sala' espelha posicoes_analista (ativo/estrutura/ticker/strike/venc/entrada/live/P&L), marca 'você tem'. FUTURO: coluna F = preço do ATIVO subjacente (hoje mostra prêmio da opção; underlying não é bombeado).",
+      "4_hilo": "FEITO/no ar — módulo À PARTE. hilo.py calcula Hi-Lo Activator (period 3) do OHLC diário (Yahoo Finance, .SA) dos ativos vs direção do analista (CALL=alta/PUT=baixa) -> web/v2/hilo.json -> seção no dash (verde/vermelho + ⚠️ divergências). VALIDADO: 78% concordância (14/18) SEM calibrar. Divergências PETR4/WEG/MBRF3/BOVA11 (WEG=analista virou PUT hoje, Hi-Lo ainda alta). FOLLOW-UPS: (a) agendar hilo.py diário (hoje é snapshot manual) — fácil plugar no run_local_fallback.sh + push do hilo.json; (b) calibrar period contra chamadas históricas p/ subir a concordância."
+    }
+  },
+  "live_hoje_2026_06_10": {
+    "status": "CARREGADA (captura residencial neste Mac; cloud falhou bot-block datacenter)",
+    "ordem": "WEGES439 PUT 5c @1,18 conta real (executada). 2 ajustes (MRV/MGLU) ficam como ações pendentes (não tinha as posições).",
+    "analista": "Miramato (nome comido pela legenda; provável substituto)"
+  },
+  "fix_preco_pump": {
+    "bug": "pump da ponte usava sempre mid (bid+ask)/2 -> estoura em opção ilíquida (WEG mostrava 1,60 vs 1,22 real do broker).",
+    "fix": "mt5_bridge.py: mid só com book apertado (ask<=bid*1.30); ilíquido usa último negociado. Deployado na VPS (base64) + ponte reiniciada. VALIDADO: WEG 1,60->1,21.",
+    "deploy": "scp falhou com PowerShell remoto; usar base64-chunks via expect (_ssh_check.exp) -> [IO.File]::WriteAllBytes; restart: Stop-Process python + schtasks /Run /TN NitroBridge."
+  },
+  "captura_diaria": {
+    "PRIMARIO": "cron OpenClaw 'captura-live-nitro-18h05' (id 0ad37ea4) @ 18:05 BRT seg-sex, sessionTarget=session:agent:trading:main (agentTurn). Roda no MEU contexto (TEM Keychain) -> cookie do Chrome funciona. Avisa Telegram em sucesso E falha.",
+    "BACKSTOP": "launchd com.nitro.fallback @ 18:20 (só alerta se às 18:05 nada carregou; a captura dele falha por falta de keychain em background).",
+    "script": "ops/run_local_fallback.sh (idempotente: no-op se a live de hoje já está no Supabase)",
+    "BUG_2026-06-11": "launchd às 18:05 FALHOU a captura: (1) cookie salvo ROTACIONADO pelo YouTube; (2) --cookies-from-browser chrome falha em background (launchd não tem Keychain p/ descriptografar). FIX: mover gatilho pro cron do agente (keychain ok). Resolvi a live de hoje na mão.",
+    "SOLUCAO_COOKIE_DEFINITIVA_2026-06-11": "MATEI a dependência de cookie (pedido do Luan: cookie rotaciona diário, insustentável). YouTube exige PO TOKEN p/ legenda automática desde 2025 (sem token = 'subtitles missing, PO token not provided'; cookie era só paliativo). FIX = provider bgutil de PO token: (a) plugin yt-dlp instalado em ~/yt-dlp-plugins/bgutil-ytdlp-pot-provider — ERA o elo faltante (server já rodava órfão mas yt-dlp não falava com ele sem o plugin); (b) POT server (provider/server/build/main.js :4416 v1.3.1) agora PERSISTENTE via launchd com.nitro.potserver (KeepAlive, sobrevive reboot/crash; log ops/potserver.launchd.log); (c) run_local_fallback.sh reescrito: ensure_pot()+fetch_subs() cookieless, cadeia HTTP-POT->script-POT(generate_once.js)->cookie-from-browser->cookie-file. VALIDADO SEM cookie: playlist lista + legenda 366KB baixou + generate_once minta poToken real. NÃO precisa mais Chrome logado/Keychain. run_daily.sh já era cookieless (só faltava o plugin). PENDENTE: commit/push do run_local_fallback.sh (mudei local, não pushei).",
+    "DEPENDENCIAS": "PO token server no ar (launchd com.nitro.potserver :4416) + Mac acordado + gateway vivo. NÃO precisa mais de cookie/Chrome logado (virou último recurso). yt-dlp pega PO token fresco a cada run.",
+    "BUG_DEDUP": "criar_ordens_pendentes NÃO deduplica por código: recriou ordens p/ BEEFG386/LRENG157 que o Luan já comprou manual -> cancelei na mão (ids 41,42). Corrigir no load_supabase (pular se código já tem ordem ativa).",
+    "venv": "/Users/luandias/.openclaw/mesa-nitro-venv (yt-dlp, anthropic, pyyaml, pynacl)"
+  },
+  "infra_notas": {
+    "api_github_workaround": "api.github.com bloqueado (IP Azure); usar curl --resolve api.github.com:443:140.82.112.6",
+    "secrets_locais": ".env tem SUPABASE_SECRET (sb_secret_, REST write) + ANTHROPIC + TG + PLAYLIST. Cookie YT em ~/.openclaw/secrets/youtube-cookies-fresh.txt. YOUTUBE_COOKIES no GH atualizado.",
+    "vps": "216.238.118.28 (Rico-PRD/6824926, AUTO_SEND=0). Ponte = C:\\mt5_bridge.py, task NitroBridge."
+  },
+  "limpeza_pendente": "ordens de teste Supabase (id=12 WEGES444, demo_test/TESTE/PUBTEST). WEGES439 tem 2 op_ids (manual__ executada + entrada__ notificada) — a carteira casa por código então não duplica visualmente, mas conferir."
+}

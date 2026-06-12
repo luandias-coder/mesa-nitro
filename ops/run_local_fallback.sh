@@ -9,7 +9,9 @@
 # onde o YouTube não bloqueia. Idempotente: se o cloud já carregou, não faz nada.
 #
 # Requisitos: venv persistente + .env (SUPABASE_*, ANTHROPIC_API_KEY, TG, PLAYLIST)
-#             + Chrome logado no YouTube (conta premium) p/ --cookies-from-browser.
+#             + provider de PO TOKEN (bgutil) no ar (porta 4416) -> captura SEM cookie,
+#               imune à rotação diária do YouTube e funciona em background (sem Keychain).
+#               Cookie do Chrome fica só como último recurso.
 # ============================================================================
 set -uo pipefail
 ROOT="/Users/luandias/.openclaw/workspace-trading/projetos/live-mercado"
@@ -19,8 +21,41 @@ VENV="/Users/luandias/.openclaw/mesa-nitro-venv"
 PY="$VENV/bin/python"
 YTDLP="$VENV/bin/yt-dlp"
 COOKIE_FILE="/Users/luandias/.openclaw/secrets/youtube-cookies-fresh.txt"
+POT_GEN="$ROOT/provider/server/build/generate_once.js"   # modo script (sem daemon)
+POT_MAIN="$ROOT/provider/server/build/main.js"           # server :4416
 LOG="ops/fallback.log"
 mkdir -p ops subs
+
+# Garante o provider de PO token no ar (HTTP :4416). Sem ele o YouTube não entrega
+# a legenda automática (exige PO token desde 2025). Boot idempotente.
+ensure_pot(){
+  if curl -sf -m3 http://127.0.0.1:4416/ping >/dev/null 2>&1; then return 0; fi
+  echo "[pot] server caído — subindo $POT_MAIN"
+  ( cd "$ROOT/provider/server" && nohup node build/main.js >/tmp/pot_provider.log 2>&1 & )
+  for i in 1 2 3 4 5 6; do sleep 2; curl -sf -m3 http://127.0.0.1:4416/ping >/dev/null 2>&1 && { echo "[pot] UP"; return 0; }; done
+  echo "[pot] FALHOU boot — yt-dlp vai tentar modo script como fallback"
+}
+# Baixa legenda automática SEM cookie via PO token. $1=VID $2=saida.vtt
+# 1ª tentativa: HTTP server (já no ar). 2ª: modo script (node on-demand). 3ª: cookie.
+fetch_subs(){
+  local vid="$1" out="$2"
+  rm -f "$out"
+  "$YTDLP" --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt \
+    -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$vid" 2>&1 | tail -2
+  [ -s "$out" ] && return 0
+  echo "[subs] HTTP-POT vazio — tentando modo script"
+  "$YTDLP" --extractor-args "youtubepot-bgutilscript:script_path=$POT_GEN" \
+    --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt \
+    -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$vid" 2>&1 | tail -2
+  [ -s "$out" ] && return 0
+  echo "[subs] POT falhou — último recurso: cookie do Chrome"
+  "$YTDLP" --cookies-from-browser chrome --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt \
+    -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$vid" 2>&1 | tail -2
+  [ -s "$out" ] && return 0
+  [ -s "$COOKIE_FILE" ] && "$YTDLP" --cookies "$COOKIE_FILE" --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt \
+    -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$vid" 2>&1 | tail -2
+  [ -s "$out" ]
+}
 exec >> "$LOG" 2>&1
 
 # carrega .env (exporta tudo)
@@ -49,8 +84,11 @@ fi
 echo "cloud NÃO carregou ($ISO) - acionando fallback local"
 tg "🖥️ <b>Mesa Nitro</b> — cloud não carregou $ISO. Rodando captura de <b>fallback</b> neste Mac…"
 
-# 2) achar o vídeo do dia na playlist
-VID=$("$YTDLP" --cookies-from-browser chrome --flat-playlist --print '%(id)s|%(title)s' "$PLAYLIST" 2>/dev/null | grep -F "$DDMM" | head -1 | cut -d'|' -f1)
+# garante o provider de PO token antes de falar com o YouTube
+ensure_pot
+
+# 2) achar o vídeo do dia na playlist (cookieless via POT)
+VID=$("$YTDLP" --flat-playlist --print '%(id)s|%(title)s' "$PLAYLIST" 2>/dev/null | grep -F "$DDMM" | head -1 | cut -d'|' -f1)
 if [ -z "$VID" ]; then
   echo "sem vídeo p/ $DDMM na playlist"
   tg "🔕 <b>Mesa Nitro</b> — fallback local: nenhuma live encontrada na playlist p/ $ISO (feriado/sem live?)."
@@ -58,17 +96,11 @@ if [ -z "$VID" ]; then
 fi
 echo "vídeo do dia: $VID"
 
-# 3) capturar legenda — tenta cookie do Chrome (sempre fresco), fallback p/ arquivo salvo
+# 3) capturar legenda — PO token (cookieless) primário; cookie só como último recurso
 VTT="subs/$VID.pt-orig.vtt"
-rm -f "$VTT"
-"$YTDLP" --cookies-from-browser chrome --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID" 2>&1 | tail -3
-if [ ! -s "$VTT" ] && [ -s "$COOKIE_FILE" ]; then
-  echo "cookies-from-browser falhou — tentando cookie salvo"
-  "$YTDLP" --cookies "$COOKIE_FILE" --skip-download --write-auto-subs --sub-langs pt-orig --sub-format vtt -o "subs/%(id)s.%(ext)s" "https://www.youtube.com/watch?v=$VID" 2>&1 | tail -3
-fi
-if [ ! -s "$VTT" ]; then
+if ! fetch_subs "$VID" "$VTT"; then
   echo "captura FALHOU (sem .vtt)"
-  tg "⚠️ <b>Mesa Nitro</b> — fallback local $ISO FALHOU na captura (sem legenda). Cookie do YouTube pode ter expirado — reexporta e me manda."
+  tg "⚠️ <b>Mesa Nitro</b> — fallback local $ISO FALHOU na captura (sem legenda). Provider de PO token caiu E cookie expirou — checar /tmp/pot_provider.log e relogar o Chrome."
   exit 1
 fi
 echo "legenda capturada: $(wc -l < "$VTT") linhas"

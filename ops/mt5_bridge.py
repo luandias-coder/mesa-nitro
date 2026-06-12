@@ -192,6 +192,10 @@ def executar(mt5, o):
         "type_filling": mt5.ORDER_FILLING_RETURN, "comment": "mesa-nitro",
     }
     MARKET_CLOSED = 10018  # TRADE_RETCODE_MARKET_CLOSED — mercado fechado, enfileira p/ abertura
+    REJECT = 10006         # TRADE_RETCODE_REJECT — a Rico devolve isto (não 10018) ao recusar
+                           # COLOCAÇÃO FORA DO PREGÃO. Como o order_check abaixo já validou
+                           # margem/preço/volume, um REJECT no order_send => recusa de sessão
+                           # (mercado não aceita agora) e NÃO erro de parâmetro => enfileira p/ abertura.
     chk = mt5.order_check(req)
     if chk is not None and chk.retcode == MARKET_CLOSED:
         return "fila_abertura", None, None, "mercado fechado - na fila p/ executar na abertura"
@@ -200,8 +204,9 @@ def executar(mt5, o):
     if not AUTO_SEND:
         return "validada_dry_run", None, None, "order_check OK (margem ok) - AUTO_SEND desligado, nada enviado"
     res = mt5.order_send(req)
-    if res is not None and res.retcode == MARKET_CLOSED:
-        return "fila_abertura", None, None, "mercado fechado - na fila p/ executar na abertura"
+    if res is not None and res.retcode in (MARKET_CLOSED, REJECT):
+        # order_check passou => params OK; recusa aqui = mercado/sessão fechada -> fila de abertura
+        return "fila_abertura", None, None, f"mercado não aceitou agora (retcode {res.retcode}) - na fila p/ executar na abertura"
     if res is None or res.retcode != mt5.TRADE_RETCODE_DONE:
         return "erro", None, None, f"order_send retcode={getattr(res,'retcode','?')} {getattr(res,'comment','')}"
     return "executada", res.order, res.price, "ok"

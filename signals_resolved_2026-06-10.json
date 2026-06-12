@@ -1,0 +1,394 @@
+{
+  "data": "2026-06-10",
+  "analista": "Miramato",
+  "vencimento_padrao": "2026-07-17",
+  "resumo_analista": "2 ajustes de delta (MRV e Magalu) + 1 virada de tendência (WEG: saiu CALL, entrou PUT)",
+  "sinais": [
+    {
+      "underlying": "MRVE3",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "MRVS520",
+      "strike": 5.2,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 0.31,
+      "delta": null,
+      "motivo": "Opção anterior (MRVS580) comprada a R$0,31 atingiu R$0,66 (+112% de lucro). Ajuste de delta: encerra posição antiga e abre nova PUT mais próxima ao dinheiro para continuar exposto à tendência de baixa.",
+      "confianca": "alta",
+      "timestamp": "4:24",
+      "trecho": "MRVS520, tá? MRVS520. [...] Estou pagando 31 centavos nessa posição.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "MRVS580",
+        "preco": 0.66,
+        "resolucao": {
+          "codigo_resolvido": "MRVES580",
+          "strike_real": 5.8,
+          "ultimo_hoje": 0.55,
+          "delta_hoje": null,
+          "vencimento": "2026-07-17",
+          "metodo": "exato",
+          "confianca": "alta"
+        }
+      },
+      "codigo_resolvido": "MRVES520",
+      "resolucao": {
+        "codigo_resolvido": "MRVES520",
+        "strike_real": 5.2,
+        "ultimo_hoje": 0.25,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "MGLU3",
+      "acao": "ajuste_delta",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "MGLUS513",
+      "strike": 5.13,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 0.33,
+      "delta": null,
+      "motivo": "Opção anterior (MGLUS593) comprada atingiu R$0,84 (+95% de lucro). Ajuste de delta: encerra posição antiga e abre nova PUT mais próxima ao dinheiro para continuar exposto à tendência de baixa.",
+      "confianca": "alta",
+      "timestamp": "6:35",
+      "trecho": "Então, eu vou pegar aqui a Magazine, eu vou pegar bem na linha do dinheiro, tá? Eu vou pegar Magalu S513. Magalu S513.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "MGLUS593",
+        "preco": 0.84,
+        "resolucao": {
+          "codigo_resolvido": "MGLUS593",
+          "strike_real": 5.93,
+          "ultimo_hoje": 0.63,
+          "delta_hoje": null,
+          "vencimento": "2026-07-17",
+          "metodo": "exato",
+          "confianca": "alta"
+        }
+      },
+      "codigo_resolvido": "MGLUS513",
+      "resolucao": {
+        "codigo_resolvido": "MGLUS513",
+        "strike_real": 5.13,
+        "ultimo_hoje": 0.22,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    },
+    {
+      "underlying": "WEGE3",
+      "acao": "entrada",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "WEGES439",
+      "strike": 43.9,
+      "vencimento": "2026-07-17",
+      "preco_sugerido": 1.18,
+      "delta": null,
+      "motivo": "Virada de tendência: WEG saiu da tendência de alta e virou para baixa. Encerra CALL anterior e abre PUT nova. Operação aberta a todos, incluindo quem não tinha posição anterior.",
+      "confianca": "alta",
+      "timestamp": "11:43",
+      "trecho": "Ó, nós vamos comprar aqui a Veg S439. Veg S439, beleza? [...] Veg 439 saindo a 1,18.",
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "WEGEG???",
+        "preco": 0.8,
+        "resolucao": {
+          "codigo_resolvido": null,
+          "metodo": "sem_codigo",
+          "confianca": "baixa"
+        }
+      },
+      "codigo_resolvido": "WEGES439",
+      "resolucao": {
+        "codigo_resolvido": "WEGES439",
+        "strike_real": 41.96,
+        "ultimo_hoje": 0.9,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      }
+    }
+  ],
+  "posicoes_em_aberto": [
+    {
+      "codigo_falado": "PRIOQ???",
+      "underlying": "PRIO3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "1:40",
+      "nota": "Primeira operação citada. Tendência de baixa, mantém. Preço não atualizado explicitamente nesta sessão.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "PETRT???",
+      "underlying": "PETR4",
+      "tipo": "PUT",
+      "preco": 1.69,
+      "timestamp": "14:41",
+      "nota": "Tendência de baixa, mantém. Preço atualizado: R$1,69.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "MRVES???",
+      "underlying": "MRVE3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "2:17",
+      "nota": "Após ajuste de delta, nova posição é MRVS520 a R$0,31.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "MGLUS???",
+      "underlying": "MGLU3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "2:31",
+      "nota": "Após ajuste de delta, nova posição é MGLUS513 a R$0,33.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "BEEFQ???",
+      "underlying": "BEEF3",
+      "tipo": "PUT",
+      "preco": 0.13,
+      "timestamp": "14:53",
+      "nota": "Legenda: 'Bif'. Tendência de baixa. Preço atualizado: R$0,13.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "USIMG???",
+      "underlying": "USIM5",
+      "tipo": "CALL",
+      "preco": 0.2,
+      "timestamp": "15:05",
+      "nota": "Tendência de alta, mantém. Legenda: 'Us minas'. Preço atualizado: R$0,20. Analista também cita possível ajuste USIMG15 para quem tiver F110 com +100%.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "CYREG???",
+      "underlying": "CYRE3",
+      "tipo": "PUT",
+      "preco": 1.1,
+      "timestamp": "15:16",
+      "nota": "Legenda: 'Cirela'. Tendência de baixa. Preço atualizado: R$1,10 (inferido de 'R$1,1').",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "EMBJS???",
+      "underlying": "EMBJ3",
+      "tipo": "PUT",
+      "preco": 2.65,
+      "timestamp": "15:24",
+      "nota": "Legenda: 'Braer', 'MBJ'. Tendência de baixa. Preço atualizado: R$2,65.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "CSANS???",
+      "underlying": "CSAN3",
+      "tipo": "PUT",
+      "preco": 0.34,
+      "timestamp": "15:36",
+      "nota": "Legenda: 'Czan', 'Cozan'. Tendência de baixa. Preço atualizado: R$0,34.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "BRAPV???",
+      "underlying": "BRAP4",
+      "tipo": "PUT",
+      "preco": 1.01,
+      "timestamp": "15:45",
+      "nota": "Legenda: 'Bra...um e um'. Tendência de baixa. Preço atualizado: R$1,01 (inferido).",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "BOVAG52",
+      "underlying": "BOVA11",
+      "tipo": "PUT",
+      "preco": 4.42,
+      "timestamp": "16:00",
+      "nota": "Operação recomendada pelo analista 'Will/Ule'. Legenda: 'Bola G 4:42'. Preço atualizado: R$4,42.",
+      "resolucao": {
+        "codigo_resolvido": "BOVAG52",
+        "strike_real": 167.0,
+        "ultimo_hoje": 4.9,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "BOVAG52"
+    },
+    {
+      "codigo_falado": "CSNAS???",
+      "underlying": "CSNA3",
+      "tipo": "PUT",
+      "preco": 0.4,
+      "timestamp": "16:09",
+      "nota": "Tendência de baixa. Preço atualizado: R$0,40.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "BRKMS900",
+      "underlying": "BRKM5",
+      "tipo": "PUT",
+      "preco": 0.63,
+      "timestamp": "16:17",
+      "nota": "Legenda: 'BRKMS 900'. Strike provavelmente R$9,00. Tendência de baixa. Preço atualizado: R$0,63.",
+      "resolucao": {
+        "codigo_resolvido": "BRKMS900",
+        "strike_real": 9.0,
+        "ultimo_hoje": 0.68,
+        "delta_hoje": null,
+        "vencimento": "2026-07-17",
+        "metodo": "exato",
+        "confianca": "alta"
+      },
+      "codigo_resolvido": "BRKMS900"
+    },
+    {
+      "codigo_falado": "CMINS???",
+      "underlying": "CMIN3",
+      "tipo": "PUT",
+      "preco": 0.2,
+      "timestamp": "16:30",
+      "nota": "Legenda: 'Temim'. Tendência de baixa. Preço atualizado: R$0,20.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "LRENS???",
+      "underlying": "LREN3",
+      "tipo": "PUT",
+      "preco": 0.75,
+      "timestamp": "16:41",
+      "nota": "Legenda: 'loja Zen'. Tendência de baixa. Preço atualizado: R$0,75.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "BRAVG???",
+      "underlying": "BRAV3",
+      "tipo": "CALL",
+      "preco": 0.74,
+      "timestamp": "17:03",
+      "nota": "Tendência de alta, mantém. Preço atualizado: R$0,74.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "COGNS???",
+      "underlying": "COGN3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "12:47",
+      "nota": "Legenda: 'Cógna'. Tendência de baixa, mantém.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "RENTH???",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": 2.2,
+      "timestamp": "13:12",
+      "nota": "Legenda: 'Localiza', código citado como 'HTS403'. Preço atualizado: R$2,20. Analista verificou ajuste mas decidiu esperar.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    },
+    {
+      "codigo_falado": "MBRFS???",
+      "underlying": "MBRF3",
+      "tipo": "PUT",
+      "preco": 0.61,
+      "timestamp": "17:26",
+      "nota": "Tendência de baixa. Preço atualizado: R$0,61.",
+      "resolucao": {
+        "codigo_resolvido": null,
+        "metodo": "sem_codigo",
+        "confianca": "baixa"
+      }
+    }
+  ],
+  "avisos": [
+    "MRVS580 (código da posição encerrada no ajuste de MRV): confirmado pelo analista como posição que 'compramos a 31 centavos' e atingiu 66 centavos. Ticker MRVE3, PUT julho, strike R$5,80.",
+    "MGLUS593 (código da posição encerrada no ajuste de Magalu): vendida a R$0,84 (+95%). Ticker MGLU3, PUT julho, strike R$5,93.",
+    "WEG CALL encerrada (vira-mão): legenda cantou 'Cold Vag', 'Vagí', 'Veg Ss'. Código não totalmente decifrável — possivelmente WEGEG??? (CALL julho). Preço de saída R$0,80.",
+    "BOVA11: posição gerida por outro analista ('Will/Ule'), não pelo Miramato. Código falado como 'Bola G52' — possível BOVAG52 (CALL julho). Preço atualizado R$4,42. Ambiguidade de tipo (CALL vs PUT) pois 'G' = CALL mas contexto é incerto.",
+    "RENT3: código falado como 'HTS403' — raiz 'HTS' não pertence ao padrão RENT. Possível erro de legenda. Registrado como RENTH??? com nota.",
+    "BRKMS900: strike '900' pode ser R$9,00 (ativo vale ~R$9) ou erro de legenda. Registrado com nota.",
+    "USIM5: analista cita possível ajuste para 'USIMG15' para quem tiver F110 com +100% de lucro — operação condicional, não executada ao vivo.",
+    "Legenda embolou repetidamente 'veg' / 'vag' / 'bag' para WEG (WEGE3). Casamento feito com alta confiança pelo contexto.",
+    "Legenda 'Temim' casada com CMIN3 (CSN Mineração) — alias 'cemin/cmin'. Confiança média.",
+    "Legenda 'Cozan'/'Czan' casada com CSAN3 (Cosan). Confiança alta.",
+    "Legenda 'Braer'/'MBJ' casada com EMBJ3 (Embraer). Confiança alta.",
+    "Legenda 'Bif' casada com BEEF3 (Minerva Foods). Confiança alta.",
+    "Legenda 'Brasquen' casada com BRKM5 (Braskem). Confiança alta.",
+    "Analista menciona 20 operações em aberto no total; nem todos os códigos exatos foram pronunciados claramente na transcrição automática."
+  ],
+  "fonte": "live_youtube"
+}

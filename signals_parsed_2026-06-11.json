@@ -1,0 +1,266 @@
+{
+  "data": "2026-06-11",
+  "analista": "Meramato",
+  "vencimento_padrao": "2026-07-17",
+  "resumo_analista": "2 viradas confirmadas (LREN e MBRF) + 1 entrada bidirecional (BEEF call sem sair da put)",
+  "sinais": [
+    {
+      "underlying": "LREN3",
+      "acao": "saida",
+      "tipo_opcao": "PUT",
+      "codigo_falado": "Lin S1",
+      "confianca": "media",
+      "timestamp": "7:43",
+      "trecho": "Você deve pegar a sua push loja Zener S1, abrir a boleta de venda e vendê-la. Último negócio dela, 51 centavos",
+      "preco_sugerido": 0.51,
+      "strike": null,
+      "vencimento": null,
+      "motivo": "Virada de tendência de baixa para alta em Lojas Renner; encerra put para montar call",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "LREN3",
+      "acao": "entrada",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Lin G157",
+      "confianca": "alta",
+      "timestamp": "8:29",
+      "trecho": "vamos procurar aqui uma opção acima de 20 dias úteis... Lin G17... Lin G157. Então, abrem a boleta de compra aí. Essa é uma operação que todos vocês devem fazer",
+      "preco_sugerido": 0.75,
+      "strike": 15.7,
+      "vencimento": "2026-07-17",
+      "motivo": "Virada de tendência de baixa para alta em Lojas Renner; vencimento julho, próximo ao dinheiro",
+      "delta": null,
+      "relacionada": {
+        "acao": "saida",
+        "codigo_falado": "Lin S1",
+        "preco": 0.51
+      },
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "BEEF3",
+      "acao": "entrada",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "Bif G386",
+      "confianca": "media",
+      "timestamp": "11:36",
+      "trecho": "Vamos pegar aqui, pessoal, a Bif G86, tá? Bif G386. Bif G386. Compra de call, data de 8, saindo aqui a 21 centavos",
+      "preco_sugerido": 0.21,
+      "strike": 3.86,
+      "vencimento": "2026-07-17",
+      "motivo": "Indicador nitro sambando para tendência de alta em Minerva (Bif); estratégia bidirecional — NÃO sair da put existente ainda",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    },
+    {
+      "underlying": "MBRF3",
+      "acao": "entrada",
+      "tipo_opcao": "CALL",
+      "codigo_falado": "MBRFG166",
+      "confianca": "media",
+      "timestamp": "13:39",
+      "trecho": "nós vamos fazer aqui uma compra de call da NBRFG16... MBRFG 166. Compra de call. O valor dessa call nesse momento tá saindo aqui a 70 e 79 centavos",
+      "preco_sugerido": 0.79,
+      "strike": 16.6,
+      "vencimento": "2026-07-17",
+      "motivo": "Virada de tendência em MBRF (Marfrig/BRF); estratégia bidirecional — manter put até amanhã para confirmação",
+      "delta": null,
+      "relacionada": null,
+      "codigo_resolvido": null
+    }
+  ],
+  "posicoes_em_aberto": [
+    {
+      "codigo_falado": "Pri (PRIO put)",
+      "underlying": "PRIO3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "2:33",
+      "nota": "Comprada em put; tendência de baixa confirmada, nada a fazer"
+    },
+    {
+      "codigo_falado": "Petr4 put",
+      "underlying": "PETR4",
+      "tipo": "PUT",
+      "preco": 1.81,
+      "timestamp": "15:20",
+      "nota": "Tendência de baixa; preço atualizado 1,81"
+    },
+    {
+      "codigo_falado": "Bif S346",
+      "underlying": "BEEF3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "36:24",
+      "nota": "Put existente — manter junto com nova call G386 (bidirecional); ajuste já feito várias vezes com +100%"
+    },
+    {
+      "codigo_falado": "USim put",
+      "underlying": "USIM5",
+      "tipo": "PUT",
+      "preco": 0.16,
+      "timestamp": "15:41",
+      "nota": "Tendência de alta em USI Minas — comprado em put, quase virando; nada a fazer"
+    },
+    {
+      "codigo_falado": "Cirela put",
+      "underlying": "CYRE3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "4:44",
+      "nota": "Tendência de baixa; nada a fazer"
+    },
+    {
+      "codigo_falado": "Embraer put",
+      "underlying": "EMBJ3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "4:57",
+      "nota": "Tendência de baixa; nada a fazer"
+    },
+    {
+      "codigo_falado": "Cosan put",
+      "underlying": "CSAN3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "5:10",
+      "nota": "Tendência de baixa; nada a fazer"
+    },
+    {
+      "codigo_falado": "Bradespar put",
+      "underlying": "BRAP4",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "5:22",
+      "nota": "Tendência de baixa; nada a fazer"
+    },
+    {
+      "codigo_falado": "Bova call",
+      "underlying": "BOVA11",
+      "tipo": "CALL",
+      "preco": null,
+      "timestamp": "5:38",
+      "nota": "Operação de proteção estrutural; não entrar agora se não pegou no início"
+    },
+    {
+      "codigo_falado": "CSNA put",
+      "underlying": "CSNA3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "6:38",
+      "nota": "CSN Siderúrgica Nacional; tendência de baixa, nada a fazer"
+    },
+    {
+      "codigo_falado": "Braço quente put",
+      "underlying": "BRKM5",
+      "tipo": "PUT",
+      "preco": 0.52,
+      "timestamp": "17:15",
+      "nota": "Braskem; tendência de baixa; preço atualizado 52 centavos. Legenda cantou 'Brasquin/Brasquem'"
+    },
+    {
+      "codigo_falado": "Lojas put (encerrada)",
+      "underlying": "LREN3",
+      "tipo": "PUT",
+      "preco": 0.51,
+      "timestamp": "7:53",
+      "nota": "Put encerrada ao vivo a 51 centavos — virada de tendência"
+    },
+    {
+      "codigo_falado": "MBRF put",
+      "underlying": "MBRF3",
+      "tipo": "PUT",
+      "preco": 0.48,
+      "timestamp": "18:16",
+      "nota": "Manter put até amanhã; aguardar confirmação da virada"
+    },
+    {
+      "codigo_falado": "MRV put",
+      "underlying": "MRVE3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "10:05",
+      "nota": "Tendência de baixa; nada a fazer"
+    },
+    {
+      "codigo_falado": "Magalu put",
+      "underlying": "MGLU3",
+      "tipo": "PUT",
+      "preco": 0.27,
+      "timestamp": "18:39",
+      "nota": "Tendência de baixa; preço atualizado 27 centavos"
+    },
+    {
+      "codigo_falado": "Veg put (WEG)",
+      "underlying": "WEGE3",
+      "tipo": "PUT",
+      "preco": 0.99,
+      "timestamp": "18:45",
+      "nota": "WEG; tendência de baixa; operação feita ontem; preço atualizado 99 centavos"
+    },
+    {
+      "codigo_falado": "Cogna put",
+      "underlying": "COGN3",
+      "tipo": "PUT",
+      "preco": 0.08,
+      "timestamp": "18:00",
+      "nota": "Tendência de baixa; preço atualizado 8 centavos"
+    },
+    {
+      "codigo_falado": "Localiza put",
+      "underlying": "RENT3",
+      "tipo": "PUT",
+      "preco": 1.51,
+      "timestamp": "18:09",
+      "nota": "Tendência de baixa; preço atualizado 1,51"
+    },
+    {
+      "codigo_falado": "Bravo call (Brava)",
+      "underlying": "BRAV3",
+      "tipo": "CALL",
+      "preco": null,
+      "timestamp": "9:06",
+      "nota": "Brava Energia; compra de call; tendência de alta; nada a fazer"
+    },
+    {
+      "codigo_falado": "BBDC S168",
+      "underlying": "BBDC4",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "49:40",
+      "nota": "Bradesco PN; citado no chat; tendência de queda"
+    },
+    {
+      "codigo_falado": "Vag S439 (WEG)",
+      "underlying": "WEGE3",
+      "tipo": "PUT",
+      "preco": null,
+      "timestamp": "19:39",
+      "nota": "WEG put; mencionado por aluno que entrou em Vag S439 (out of the money)"
+    }
+  ],
+  "avisos": [
+    "LREN (Lojas Renner): legenda canta 'loja Zener', 'loja Zenor', 'loja Henner' — todos mapeados para LREN3 com confiança alta pelo contexto.",
+    "BEEF (Minerva Foods): legenda canta 'Bif', 'Bip', 'Bife' — mapeado para BEEF3/BEEF.",
+    "MBRF (Marfrig+BRF): legenda canta 'MDRF', 'NBRFG16', 'Marfrig G16' — código corrigido para MBRFG166; raiz MBRF confirmada.",
+    "WEGE3 (WEG): legenda canta 'Veg', 'Velga' — mapeado para WEGE3.",
+    "BRKM5 (Braskem): legenda canta 'Brasquin', 'Brasquem', 'Braço quente' — mapeado para BRKM5.",
+    "USIM5 (Usiminas): legenda canta 'US Minas', 'O Minas', 'USI Minas' — mapeado para USIM5.",
+    "CYRE3 (Cyrela): legenda canta 'Cirela', 'Pirela', 'Tirela' — mapeado para CYRE3.",
+    "BRAP4 (Bradespar): legenda canta 'Braço quente' em um momento e 'Bradespar' em outro — 'Braço quente' mapeado para BRKM5 (Braskem) com base no contexto sequencial da lista; 'Bradespar' mapeado para BRAP4.",
+    "CSAN3 (Cosan): legenda canta 'Cozan' — mapeado para CSAN3.",
+    "EMBJ3 (Embraer): legenda canta 'Embraer' — mapeado para EMBJ3.",
+    "Lin G157: strike lido como 15.7 (R$15,70) — incerto, pode ser 157 inteiro dependendo da cotação de LREN3.",
+    "MBRFG166: strike lido como 16.6 (R$16,60) — incerto; legenda oscilou entre 'G16', 'G166', 'G 166'.",
+    "Bif G386: strike lido como 3.86 (R$3,86) — incerto; legenda cantou 'G86' e 'G386'; cotação de BEEF3 compatível com casa dos R$3-4.",
+    "BOVA11: operação de proteção estrutural; analista explicitou que quem não entrou na abertura não deve entrar agora.",
+    "Preço da BEEF put existente (Bif S346) não foi atualizado explicitamente nesta sessão; valor null.",
+    "Vag S439 / Veg S409: aluno mencionou WEG put out of the money; não é recomendação nova do analista.",
+    "BBDC S168: citado apenas no chat por aluno, não operado pelo analista nesta sessão."
+  ],
+  "fonte": "live_youtube"
+}

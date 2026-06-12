@@ -31,3 +31,6 @@ ops/launchd.out.log
 ops/launchd.err.log
 ops/precos.log
 ops/precos.launchd.log
+
+# launchd logs (machine-local)
+ops/*.launchd.log
